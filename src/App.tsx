@@ -109,38 +109,13 @@ function App() {
     // Preload all images in public/assets/images
     const imagePaths = [
       // List all image paths here
-      '/assets/images/Apricot_Gol.png',
-      '/assets/images/Apricot_Kishta.png',
-      '/assets/images/Apricot_Naag.png',
-      '/assets/images/Banu_Chilas_Pinenuts_in_shell.png',
-      '/assets/images/Banu_Chilas_Pinenuts_wo_shell.png',
-      '/assets/images/Black Raisin.png',
-      '/assets/images/Chakwal Peanuts in shell.png',
-      '/assets/images/Chakwal Peanuts wo shells.png',
-      '/assets/images/Faraka Hazlenuts in hard shell.png',
-      '/assets/images/Faraka Hazlenuts peeled.png',
-      '/assets/images/Fig Dried Premium.png',
-      '/assets/images/fig regular.png',
-      '/assets/images/Green Raisin.png',
-      '/assets/images/Kaghzi Walnuts in shell.png',
-      '/assets/images/Kaghzi Walnuts wo shell.png',
-      '/assets/images/Kalam Dana Almonds.png',
-      '/assets/images/Kambri Almonds.png',
-      '/assets/images/Kambri_Almonds-removebg.png',
-      '/assets/images/Khiley Hazlenut in shell.png',
-      '/assets/images/Khiley Hazlenut wo shell.png',
-      '/assets/images/Killa-saifullah Pista w shell.png',
-      '/assets/images/Killa-Saifullah Pista wo shell.png',
-      '/assets/images/Para Chinar Peanuts w Shell.png',
-      '/assets/images/Para Chinar Peanuts wo shell.png',
-      '/assets/images/Said-Kheli Almonds.png',
-      '/assets/images/Swat Walnuts w shell.png',
-      '/assets/images/Swat Walnuts wo shell.png',
-      '/assets/images/Waziristan Pinenuts in shell.png',
-      '/assets/images/Waziristan Pinenuts wo shell.png',
-      '/assets/images/Yellow Raisin.png',
-      '/assets/images/Ziarat Pistachio w shell.png',
-      '/assets/images/Ziarat Pistachio without shell.png',
+   '/assets/images/Kambri Almonds.png',
+   '/assets/images/Green Raisin.png',
+   '/assets/images/Ziarat Pistachio without shell.png',
+   '/assets/images/Swat Walnuts wo shell.png',
+   '/assets/images/Banu_Chilas_Pinenuts_wo_shell.png',
+   '/assets/images/Faraka Hazlenuts peeled.png',
+     
     ];
     let loaded = 0;
     imagePaths.forEach((src) => {
@@ -149,7 +124,7 @@ function App() {
       img.onload = img.onerror = () => {
         loaded++;
         if (loaded === imagePaths.length) {
-          setTimeout(() => setLoading(false), 800); // add fade-out delay
+          setTimeout(() => setLoading(false), 600); // add fade-out delay
         }
       };
     });
