@@ -45,8 +45,8 @@ export const productsData: Record<string, Product> = {
   almonds: {
     id: 'almonds',
     name: 'Almonds',
-    heroImage: '/src/assets/images/Kambri Almonds.png',
-    imageNoBg: '/src/assets/images/Kambri_Almonds-removebg.png',
+    heroImage: '/assets/images/Kambri Almonds.png',
+    imageNoBg: '/assets/images/Kambri_Almonds-removebg.png',
     description: 'Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.',
     detailedDescription: 'Our almonds are carefully selected from the best orchards across Pakistan. These nutrient-dense nuts are perfect for snacking, baking, or adding to your favorite recipes. Rich in vitamin E, magnesium, and healthy monounsaturated fats, almonds support heart health and provide sustained energy throughout the day.',
     varieties: [
@@ -80,7 +80,7 @@ export const productsData: Record<string, Product> = {
   raisin: {
     id: 'raisin',
     name: 'Raisin',
-    heroImage: '/src/assets/images/Green Raisin.png',
+    heroImage: '/assets/images/Green Raisin.png',
     description: 'Peela Kandhari raisins are a prized variety of golden-green raisins, traditionally sun-dried in Kandahar. These raisins are juicy, sweet, and slightly chewy, with a natural sugary taste.',
     detailedDescription: 'Our raisins are naturally sun-dried to preserve their nutritional value and enhance their natural sweetness. These golden gems are packed with antioxidants, fiber, and essential minerals. Whether enjoyed as a healthy snack or used in baking and cooking, our raisins deliver exceptional quality and taste.',
     varieties: [
@@ -114,7 +114,7 @@ export const productsData: Record<string, Product> = {
   pistachio: {
     id: 'pistachio',
     name: 'Pistachio',
-    heroImage: '/src/assets/images/Ziarat Pistachio without shell.png',
+    heroImage: '/assets/images/Ziarat Pistachio without shell.png',
     description: 'World-renowned Pakistani pistachios with exceptional taste and quality. A perfect blend of flavor and nutrition.',
     detailedDescription: 'Pakistan produces some of the world\'s finest pistachios, known for their distinctive flavor and superior quality. Our pistachios are carefully harvested and processed to maintain their natural taste and nutritional benefits. Rich in protein, healthy fats, and antioxidants, they make an excellent healthy snack.',
     varieties: [
@@ -154,7 +154,7 @@ export const productsData: Record<string, Product> = {
   walnuts: {
     id: 'walnuts',
     name: 'Walnuts',
-    heroImage: '/src/assets/images/Swat Walnuts wo shell.png',
+    heroImage: '/assets/images/Swat Walnuts wo shell.png',
     description: 'Premium walnuts from the northern regions of Pakistan, known for their rich taste and excellent nutritional profile.',
     detailedDescription: 'Our walnuts come from the pristine valleys of northern Pakistan, where the climate and soil conditions produce nuts of exceptional quality. These brain-healthy nuts are rich in omega-3 fatty acids, protein, and antioxidants. Perfect for snacking, baking, or adding to salads and cereals.',
     varieties: [
@@ -194,7 +194,7 @@ export const productsData: Record<string, Product> = {
   pinenuts: {
     id: 'pinenuts',
     name: 'Pine Nuts',
-    heroImage: '/src/assets/images/Banu_Chilas_Pinenuts_wo_shell.png',
+    heroImage: '/assets/images/Banu_Chilas_Pinenuts_wo_shell.png',
     description: 'Exotic pine nuts harvested from the pristine forests of northern Pakistan. A delicacy prized for its unique flavor.',
     detailedDescription: 'Pine nuts are harvested from pine cones in the remote forests of northern Pakistan. These premium nuts have a distinctive buttery flavor and are considered a delicacy worldwide. Rich in protein, healthy fats, and minerals, they\'re perfect for gourmet cooking and traditional recipes.',
     varieties: [
@@ -234,7 +234,7 @@ export const productsData: Record<string, Product> = {
   hazelnuts: {
     id: 'hazelnuts',
     name: 'Hazelnuts',
-    heroImage: '/src/assets/images/Faraka Hazlenuts peeled.png',
+    heroImage: '/assets/images/Faraka Hazlenuts peeled.png',
     description: 'Premium hazelnuts with rich, buttery flavor. Perfect for confectionery and gourmet applications.',
     detailedDescription: 'Our hazelnuts are sourced from select regions known for producing nuts with exceptional flavor and texture. These versatile nuts are perfect for both sweet and savory applications, from chocolate making to salad toppings. Rich in healthy fats, vitamin E, and minerals.',
     varieties: [
@@ -274,7 +274,7 @@ export const productsData: Record<string, Product> = {
   peanuts: {
     id: 'peanuts',
     name: 'Peanuts',
-    heroImage: '/src/assets/images/Para Chinar Peanuts wo shell.png',
+    heroImage: '/assets/images/Para Chinar Peanuts wo shell.png',
     description: 'Fresh, crunchy peanuts packed with protein and flavor. Available in various preparations to suit every taste.',
     detailedDescription: 'Our peanuts are sourced from the best agricultural regions of Pakistan, known for producing high-quality groundnuts. Whether raw or roasted, shelled or unshelled, our peanuts deliver consistent quality and taste. High in protein, healthy fats, and essential nutrients.',
     varieties: [
@@ -314,7 +314,7 @@ export const productsData: Record<string, Product> = {
   fig: {
     id: 'fig',
     name: 'Fig',
-    heroImage: '/src/assets/images/Fig Dried Premium.png',
+    heroImage: '/assets/images/Fig Dried Premium.png',
     description: 'Sun-dried premium figs with natural sweetness and chewy texture. A healthy and delicious treat.',
     detailedDescription: 'Our figs are carefully sun-dried to preserve their natural sweetness and nutritional benefits. These fiber-rich fruits are perfect for healthy snacking, baking, or adding to cereals and salads. Rich in fiber, potassium, and antioxidants, figs support digestive health and overall wellness.',
     varieties: [
@@ -341,7 +341,7 @@ export const productsData: Record<string, Product> = {
   apricot: {
     id: 'apricot',
     name: 'Apricot',
-    heroImage: '/src/assets/images/Apricot_Gol.png',
+    heroImage: '/assets/images/Apricot_Gol.png',
     description: 'Premium dried apricots from the valleys of northern Pakistan. Sweet, nutritious, and naturally preserved.',
     detailedDescription: 'Our apricots come from the pristine valleys of northern Pakistan, where the climate produces fruits of exceptional quality. These sun-dried apricots retain their natural sweetness and are packed with vitamins A and C, fiber, and antioxidants. Perfect for healthy snacking and culinary applications.',
     varieties: [
@@ -383,4 +383,4 @@ export const getProductById = (id: string): Product | undefined => {
 // Helper function to get all product names for navigation
 export const getAllProductNames = (): string[] => {
   return Object.keys(productsData);
-}; 
+};
