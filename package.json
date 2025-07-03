@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource/lora": "^5.2.6",
     "@fontsource/playfair-display": "^5.2.6",
+    "@vercel/analytics": "^1.5.0",
     "leaflet": "^1.9.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
