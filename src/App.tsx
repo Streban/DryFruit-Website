@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Navbar from './components/Navbar';
 import ContactBottomBar from './components/ContactBottomBar';
 import './App.css';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import ProductPage from './components/ProductPage';
+import { allProducts } from './data/productsData';
 
 // Easing function
 const easeOutQuart = (t: number): number => {
@@ -17,6 +18,9 @@ function App() {
     products: 0,
     experience: 0
   });
+
+  const [isAboutVisible, setIsAboutVisible] = useState(false);
+  const aboutRef = useRef<HTMLElement>(null);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -53,6 +57,32 @@ function App() {
         }
       }, frameDuration);
     });
+  }, []);
+
+  // Intersection Observer for About section animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsAboutVisible(true);
+        }
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the section is visible
+        rootMargin: '0px 0px -100px 0px' // Trigger a bit before the section is fully visible
+      }
+    );
+
+    const currentRef = aboutRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
   }, []);
 
   // Scroll to section if hash is present in URL, or scroll to top if navigating to home
@@ -117,61 +147,151 @@ function App() {
                   <div className="products-content">
                     <div className="products-text">
                       <h2>Our products</h2>
-                      <p>We offer premium quality dry fruits and nuts. Our extensive range includes cashews, almonds, dates, and quality products sourced directly from growers at exceptional prices for all our customers.</p>
+                      <p>We offer premium quality dry fruits and nuts sourced directly from the finest regions of Pakistan. Our extensive range includes almonds, raisins, pistachios, walnuts, pine nuts, hazelnuts, peanuts, figs, and apricots - all carefully selected and naturally processed to deliver exceptional quality and authentic taste.</p>
                       <button className="products-button">Explore all products</button>
                     </div>
                     <div className="products-grid">
-                      <div className="product-item">
-                        <div className="product-icon">🍓</div>
-                        <h3>Premium Dates</h3>
-                      </div>
-                      <div className="product-item">
-                        <div className="product-icon">🥜</div>
-                        <h3>Mixed Nuts</h3>
-                      </div>
-                      <div className="product-item">
-                        <div className="product-icon">🌰</div>
-                        <h3>Cashews</h3>
-                      </div>
-                      <div className="product-item">
-                        <div className="product-icon">🥝</div>
-                        <h3>Almonds</h3>
-                      </div>
-                      <div className="product-item">
-                        <div className="product-icon">🍊</div>
-                        <h3>Walnuts</h3>
-                      </div>
-                      <div className="product-item">
-                        <div className="product-icon">🥒</div>
-                        <h3>Pistachios</h3>
-                      </div>
+                      {allProducts.slice(0, 6).map((product, idx) => (
+                        <div
+                          className="product-item"
+                          key={product.id || idx}
+                          onClick={() => navigate(`/product/${product.id}`)}
+                        >
+                          <div className="product-photo">
+                            <img
+                              src={product.heroImage}
+                              alt={product.name}
+                            />
+                          </div>
+                          <h3>{product.name}</h3>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
               </section>
               {/* About Us Section */}
-              <section id="about" className="about-section">
+              <section id="about" className="about-section" ref={aboutRef}>
                 <div className="container">
                   <div className="about-content">
-                    <div className="about-text">
-                      <h2>Who are we?</h2>
+                    <div className={`about-text ${isAboutVisible ? 'animate' : ''}`}>
+                      <h2>About us</h2>
                       <p>
-                        DryFruit Co. is a family business founded in 1985 and established in the heart of premium agriculture regions. We have built our reputation on providing the highest quality dry fruits and nuts to customers worldwide.
+                        We're two friends - one French, one Pakistani – who met at business school in Lyon.
                       </p>
                       <p>
-                        Our expertise spans over 39 years in the business of sourcing, processing, and distributing premium dry fruits. Our key ingredients are quality, freshness, and customer satisfaction.
+                        It all started when one of us went looking for the dried fruits he loved back home in Pakistan, only to realise how hard it was to find that same authentic taste in France.
                       </p>
                       <p>
-                        Our know-how and our 39 years of experience in the business world has enabled us to be among all of our suppliers.
+                        That's when we had an idea: bring it here ourselves.
                       </p>
-                      <button className="about-button">Read more about us</button>
+                      <div className="story-highlight">
+                        <p>
+                          With one of us connected to the best harvests of Pakistan, and the other familiar with the European market, our duo became our strength.
+                        </p>
+                      </div>
+                      <button className="about-button">Learn more about our journey</button>
                     </div>
-                    <div className="about-image">
-                      <img src="/api/placeholder/500/400" alt="Our facility and team" />
+                    <div className={`about-image ${isAboutVisible ? 'animate' : ''}`}>
+                      <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Two business partners - French and Pakistani friends working together" />
                     </div>
                   </div>
                 </div>
               </section>
+              
+              {/* Our Mission Section */}
+              <section id="mission" className="mission-section">
+                <div className="container">
+                  <div className="mission-content">
+                    <div className="mission-header">
+                      <h2>Our Mission?</h2>
+                      <div className="mission-intro">
+                        <p>To share truly exceptional dried fruits - hand-picked, sun-dried, and naturally preserved, with full respect for the environment.</p>
+                        <p><strong>Healthy, traceable, and above all, delicious.</strong></p>
+                        <p className="mission-tagline">We're not just importers. We're ambassadors of flavour.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="mission-features">
+                      <div className="feature-card">
+                        <div className="feature-icon">
+                          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 8L12 3L7 8V21H17V8Z" fill="#2d5a27" stroke="#2d5a27" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M9 21V12H15V21" fill="#5cb85c" stroke="#5cb85c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        <h3>Exceptional Origins</h3>
+                        <p>Our dried fruits come from the remote mountains of northern Pakistan, near the Afghan border — wild, unspoiled regions whose unique terroirs yield bold, authentic flavors.</p>
+                      </div>
+                      
+                      <div className="feature-card">
+                        <div className="feature-icon">
+                          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="#2d5a27" stroke="#2d5a27" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        <h3>Premium Quality & Artisanal Methods</h3>
+                        <p>Hand-picked, sun-dried, and additive-free, our fruits reflect generations of traditional craftsmanship. We focus on rare, heritage varieties with true character — far from industrial norms.</p>
+                      </div>
+                      
+                      <div className="feature-card">
+                        <div className="feature-icon">
+                          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H8M16 4V2M16 4V6M8 4V2M8 4V6" stroke="#2d5a27" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M8 10H16M8 14H16M8 18H12" stroke="#2d5a27" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        <h3>Ethical & Direct Sourcing</h3>
+                        <p>We partner directly with small-scale producers to ensure fair pay, no child labor, and sustainable practices. This direct model supports local communities and allows us to offer competitive prices through a fully transparent supply chain.</p>
+                      </div>
+                      
+                      <div className="feature-card">
+                        <div className="feature-icon">
+                          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" fill="#f8f9fa" stroke="#2d5a27" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M14 2V8H20" stroke="#2d5a27" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M16 13H8M16 17H8M10 9H8" stroke="#2d5a27" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        <h3>Full Traceability & Certifications</h3>
+                        <p>Each batch is traceable from field to warehouse, backed by phytosanitary certificates, certificates of origin, and ISO 17025 lab testing.</p>
+                      </div>
+                      
+                      <div className="feature-card">
+                        <div className="feature-icon">
+                          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 3H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="#2d5a27" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <circle cx="9" cy="20" r="1" fill="#2d5a27"/>
+                            <circle cx="20" cy="20" r="1" fill="#2d5a27"/>
+                          </svg>
+                        </div>
+                        <h3>Flexible & Reliable Logistics</h3>
+                        <p>Available in bulk or custom packaging, we offer tailored Incoterms (FOB, CIF, DDP) and reliable maritime or air freight — with consistent, on-time delivery.</p>
+                      </div>
+                      
+                      <div className="feature-card">
+                        <div className="feature-icon">
+                          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C13.1046 2 14 2.89543 14 4C14 5.10457 13.1046 6 12 6C10.8954 6 10 5.10457 10 4C10 2.89543 10.8954 2 12 2Z" fill="#2d5a27"/>
+                            <path d="M12 8C15.3137 8 18 10.6863 18 14C18 17.3137 15.3137 20 12 20C8.68629 20 6 17.3137 6 14C6 10.6863 8.68629 8 12 8Z" fill="#5cb85c" stroke="#2d5a27" strokeWidth="2"/>
+                            <path d="M12 11C13.6569 11 15 12.3431 15 14C15 15.6569 13.6569 17 12 17C10.3431 17 9 15.6569 9 14C9 12.3431 10.3431 11 12 11Z" fill="#2d5a27"/>
+                          </svg>
+                        </div>
+                        <h3>Unique Taste, Proven Quality</h3>
+                        <p>From aromatic pistachios to buttery pine nuts, our dried fruits are naturally rich in flavor and nutrients.</p>
+                        <div className="sample-offer">
+                          <strong>Want proof? Samples available on request.</strong>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="mission-cta">
+                      <button className="sample-button">Request Samples</button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
               {/* History Section */}
               <section id="history" className="history-section">
                 <div className="container">
@@ -295,7 +415,7 @@ function App() {
                     <div className="map-container">
                       <div className="map-placeholder">
                         <iframe
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1635959342716!5m2!1sen!2s"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13610.80926516913!2d74.308013!3d31.520370!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904ddc8b1b1b1%3A0x1b1b1b1b1b1b1b1b!2sLahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1635959342716!5m2!1sen!2s"
                           width="100%"
                           height="400"
                           style={{ border: 0, borderRadius: '12px' }}

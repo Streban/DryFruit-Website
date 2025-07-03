@@ -55,6 +55,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds', onProd
     if (onProductChange) {
       onProductChange(newProductId);
     }
+    // Scroll to top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleNavbarProductSelect = (productId: string) => {
@@ -223,7 +225,10 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds', onProd
                   onClick={() => handleProductChange(product.id)}
                 >
                   <div className="fruit-image">
-                    <img src={product.heroImage} alt={product.name} />
+                    <img
+                      src={product.heroImage}
+                      alt={product.name}
+                    />
                   </div>
                   <div className="fruit-name">{product.name}</div>
                 </div>
@@ -244,4 +249,4 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds', onProd
   );
 };
 
-export default ProductPage; 
+export default ProductPage;

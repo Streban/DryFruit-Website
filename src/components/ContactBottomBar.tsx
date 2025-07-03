@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './ContactBottomBar.css';
 
 const ContactBottomBar: React.FC = () => {
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -13,6 +16,28 @@ const ContactBottomBar: React.FC = () => {
     setNewsletterEmail('');
     setFirstName('');
     setLastName('');
+  };
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    
+    // If we're not on the homepage, navigate to homepage first
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation to complete, then scroll to section
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // We're already on homepage, just scroll to section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   return (
@@ -36,15 +61,15 @@ const ContactBottomBar: React.FC = () => {
           <div className="footer-column">
             <h4>Quick Links</h4>
             <ul className="footer-links">
-              <li><a href="#company">The Company</a></li>
-              <li><a href="#about">Who Are We?</a></li>
-              <li><a href="#team">Our Team</a></li>
-              <li><a href="#career">Career</a></li>
-              <li><a href="#products">Our Products</a></li>
-              <li><a href="#fruits">Our Fruits</a></li>
-              <li><a href="#vegetables">Our Vegetables</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#privacy">Privacy Policy</a></li>
+              <li><a href="#about" onClick={(e) => handleLinkClick(e, 'about')}>The Company</a></li>
+              <li><a href="#about" onClick={(e) => handleLinkClick(e, 'about')}>Who Are We?</a></li>
+              <li><a href="#about" onClick={(e) => handleLinkClick(e, 'about')}>Our Team</a></li>
+              <li><a href="#about" onClick={(e) => handleLinkClick(e, 'about')}>Career</a></li>
+              <li><a href="#products" onClick={(e) => handleLinkClick(e, 'products')}>Our Products</a></li>
+              <li><a href="#products" onClick={(e) => handleLinkClick(e, 'products')}>Our Fruits</a></li>
+              <li><a href="#products" onClick={(e) => handleLinkClick(e, 'products')}>Our Vegetables</a></li>
+              <li><a href="#contact" onClick={(e) => handleLinkClick(e, 'visit')}>Contact</a></li>
+              <li><a href="#" onClick={(e) => e.preventDefault()}>Privacy Policy</a></li>
             </ul>
           </div>
 
