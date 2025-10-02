@@ -20,12 +20,18 @@ export interface Product {
   id: string;
   name: string;
   heroImage: string;
+  images?: string[]; // New: array of image URLs for gallery
   imageNoBg?: string; // Optional, used for products with no background image
-  description: string;
-  detailedDescription: string;
   varieties: Variety[];
   origins: OriginLocation[];
   nutritionalInfo?: string;
+  details?: {
+    reasonToBelieve?: string[];
+    storage?: string;
+    origin?: string[];
+    calibre?: string[];
+    application?: string[];
+  };
 }
 
 const months = [
@@ -46,9 +52,38 @@ export const productsData: Record<string, Product> = {
     id: 'almonds',
     name: 'Almonds',
     heroImage: '/assets/images/Kambri Almonds.png',
+    images: [
+      '/assets/images/Images-2/Kalam Dana Almond.png',
+      '/assets/images/Images-2/Kalamdana Almond shelled.png',
+      '/assets/images/Images-2/Kambri Almond Unshelled.png',
+      '/assets/images/Images-2/Kambri Almond.png',
+      '/assets/images/Images-2/Katta Jumbo Shelled.png',
+      '/assets/images/Images-2/Katta Jumbo.png'
+    ],
     imageNoBg: '/assets/images/Kambri_Almonds-removebg.png',
-    description: 'Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.',
-    detailedDescription: 'Our almonds are carefully selected from the best orchards across Pakistan. These nutrient-dense nuts are perfect for snacking, baking, or adding to your favorite recipes. Rich in vitamin E, magnesium, and healthy monounsaturated fats, almonds support heart health and provide sustained energy throughout the day.',
+    details: {
+      reasonToBelieve: [
+        'Firm, rich, and flavourful with a nutty depth - Kambri',
+        'Soft, slightly bitter-sweet, and aromatic – Kalam Dana',
+        'Distinctively large, crunchy and delicately flavoured with a hint of sweetness– Katta Jumbo'
+      ],
+      storage: 'Ambient',
+      origin: [
+        'Peshawar - Kambri',
+        'Kalat – Kalam Dana',
+        'Skardu – Katta Jumbo'
+      ],
+      calibre: [
+        '26/28 per ounce – Kambri',
+        '30/32 per ounce – Kalamdana',
+        '20/22 per ounce – Katta Jumbo'
+      ],
+      application: [
+        'Premium nut mixes, dessert toppings (ice creams, yogurts), and chocolate coatings – Kambri',
+        'Nutritional supplements, energy/protein bars, and functional bakery products. – Kalamdana',
+        'Cold-pressed almond oil, specialty liqueurs, and gourmet dry fruit snacks – Katta Jumbo'
+      ]
+    },
     varieties: [
       {
         id: 'kambri-blanched',
@@ -79,10 +114,37 @@ export const productsData: Record<string, Product> = {
 
   raisin: {
     id: 'raisin',
-    name: 'Raisin',
+    name: 'Raisins',
     heroImage: '/assets/images/Green Raisin.png',
-    description: 'Peela Kandhari raisins are a prized variety of golden-green raisins, traditionally sun-dried in Kandahar. These raisins are juicy, sweet, and slightly chewy, with a natural sugary taste.',
-    detailedDescription: 'Our raisins are naturally sun-dried to preserve their nutritional value and enhance their natural sweetness. These golden gems are packed with antioxidants, fiber, and essential minerals. Whether enjoyed as a healthy snack or used in baking and cooking, our raisins deliver exceptional quality and taste.',
+    images: [
+
+      '/assets/images/Images-2/Kala Pishin - Black Raisin.png',
+      '/assets/images/Images-2/Peela Khandhari - Golden Raisin.png',
+      '/assets/images/Images-2/Sultana Raisin.png'
+    ],
+    details: {
+      reasonToBelieve: [
+        'Juicy, sweet, and slightly chewy, with a natural sugary taste - (Peela Kandhari / Golden Raisin)',
+        'Rich, chewy, and full-bodied with deep, fruity flavor - (Kala Pishin / Black Raisin)',
+        'Sweet, soft, and juicy with a light golden hue - (Sultana Raisin)'
+      ],
+      storage: 'Ambient',
+      origin: [
+        'Chamman - Sabz Chamman / Golden Raisin',
+        'Kandhar – (Sultana Raisin)',
+        'Pishin – (Kala Pishin / Black Raisin)'
+      ],
+      calibre: [
+        '50/60 per ounce – (Sultana Raisin)',
+        '45/55 per ounce – (Peela Kandhari / Golden Raisin)',
+        '55/65 per ounce - (Kala Pishin / Black Raisin)'
+      ],
+      application: [
+        'Pastries, curries, pilafs, cheese boards – (Sultana Raisin)',
+        'Cakes, cereals, salads, chutneys – (Peela Kandhari / Golden Raisin)',
+        'Snacks, hearty breads, pilafs, stews – (Kala Pishin / Black Raisin)'
+      ]
+    },
     varieties: [
       {
         id: 'peela-kandhari',
@@ -113,10 +175,33 @@ export const productsData: Record<string, Product> = {
 
   pistachio: {
     id: 'pistachio',
-    name: 'Pistachio',
+    name: 'Pistachios',
     heroImage: '/assets/images/Ziarat Pistachio without shell.png',
-    description: 'World-renowned Pakistani pistachios with exceptional taste and quality. A perfect blend of flavor and nutrition.',
-    detailedDescription: 'Pakistan produces some of the world\'s finest pistachios, known for their distinctive flavor and superior quality. Our pistachios are carefully harvested and processed to maintain their natural taste and nutritional benefits. Rich in protein, healthy fats, and antioxidants, they make an excellent healthy snack.',
+    images: [
+      '/assets/images/Images-2/Ziarat Pista.png',
+      '/assets/images/Images-2/Ziarat Pistachio Shelled.png',
+      '/assets/images/Images-2/Killah Saifullah Pistachio.png',
+      '/assets/images/Images-2/Killah Saifullah Pistachio Shelled.png'
+    ],
+    details: {
+      reasonToBelieve: [
+        'Rich, earthy, and slightly chewy with a bold nutty taste – Ziarat Pista',
+        'Smooth, slightly rounder and delicately sweet with a soft crunch – Killa Saifullah Pista'
+      ],
+      storage: 'Ambient',
+      origin: [
+        'Quetta – Ziarat Pista',
+        'Kalat – Killa Saifullah Pista'
+      ],
+      calibre: [
+        '45/50 per ounce – Ziarat Pista',
+        '40/45 per ounce – Killa Saifullah Pista'
+      ],
+      application: [
+        'Nougats, pralines, biscotti, and rich Mediterranean pastries. – Ziarat Pista',
+        'Gelato, luxury chocolates, macarons, and gourmet bakery toppings. – Killa Saifullah Pista'
+      ]
+    },
     varieties: [
       {
         id: 'ziarat-pista',
@@ -155,8 +240,31 @@ export const productsData: Record<string, Product> = {
     id: 'walnuts',
     name: 'Walnuts',
     heroImage: '/assets/images/Swat Walnuts wo shell.png',
-    description: 'Premium walnuts from the northern regions of Pakistan, known for their rich taste and excellent nutritional profile.',
-    detailedDescription: 'Our walnuts come from the pristine valleys of northern Pakistan, where the climate and soil conditions produce nuts of exceptional quality. These brain-healthy nuts are rich in omega-3 fatty acids, protein, and antioxidants. Perfect for snacking, baking, or adding to salads and cereals.',
+    images: [
+      '/assets/images/Images-2/Swat-dir Walnut.png',
+      '/assets/images/Images-2/Swat-dir Walnut Shelled.png',
+      '/assets/images/Images-2/Kaghzi Walnut.png',
+      '/assets/images/Images-2/Kaghzi Walnut Shelled.png'
+    ],
+    details: {
+      reasonToBelieve: [
+        'Mildly sweet with a faint bitterness and have a soft, oily texture – Swat-dir',
+        'Paper-thin shells and easy cracking with pale, plump, and subtly sweet flavour – Kaghzi'
+      ],
+      storage: 'Ambient',
+      origin: [
+        'Swat – Swat-dir',
+        'Gilgit – Kaghzi'
+      ],
+      calibre: [
+        '6/8 halves per ounce – Swat-dir',
+        '10/12 halves per ounce – Kaghzi'
+      ],
+      application: [
+        'Baking, winter snacks, artisan breads, savory salads, cheese pairings, hearty sauces, and walnut oil – Swat-dir',
+        'Desserts (cakes, tarts), confectionery, chocolates, and gourmet nut mixes – Kaghzi'
+      ]
+    },
     varieties: [
       {
         id: 'swat-dir-shell',
@@ -193,10 +301,33 @@ export const productsData: Record<string, Product> = {
 
   pinenuts: {
     id: 'pinenuts',
-    name: 'Pine Nuts',
+    name: 'Pinenuts',
     heroImage: '/assets/images/Banu_Chilas_Pinenuts_wo_shell.png',
-    description: 'Exotic pine nuts harvested from the pristine forests of northern Pakistan. A delicacy prized for its unique flavor.',
-    detailedDescription: 'Pine nuts are harvested from pine cones in the remote forests of northern Pakistan. These premium nuts have a distinctive buttery flavor and are considered a delicacy worldwide. Rich in protein, healthy fats, and minerals, they\'re perfect for gourmet cooking and traditional recipes.',
+    images: [
+      '/assets/images/Images-2/Bannu Pinenut.png',
+      '/assets/images/Images-2/Bannu Pinenut Shelled.png',
+      '/assets/images/Images-2/Waziri Pinenuts.png',
+      '/assets/images/Images-2/Waziri Pinenut Shelled.png'
+    ],
+    details: {
+      reasonToBelieve: [
+        'Delicate, buttery sweetness paired with a subtle crunch— rich in nutritiouns - Banu Chillas',
+        'Globally Prized; known for slightly firmer, rich, distinct, premium & nutty flavor.   - Waziri'
+      ],
+      storage: 'Ambient',
+      origin: [
+        'Bannu - Banu Chillas',
+        'Wazisristan - Waziri'
+      ],
+      calibre: [
+        '150/160 per ounce - Banu Chillas',
+        '120/130 per ounce - Waziri'
+      ],
+      application: [
+        'Luxury pesto, gourmet baked goods, salad & grain bowl, fine pastry & confections - Banu Chillas',
+        'Artisan confections, fine chocolate, creamy desserts or cheese boards, luxury snack- Waziri'
+      ]
+    },
     varieties: [
       {
         id: 'banu-chilas-shell',
@@ -231,12 +362,39 @@ export const productsData: Record<string, Product> = {
     nutritionalInfo: 'High in protein, healthy fats, and essential minerals'
   },
 
-  hazelnuts: {
-    id: 'hazelnuts',
-    name: 'Hazelnuts',
+  channa: {
+    id: 'channa',
+    name: 'Channa',
     heroImage: '/assets/images/Faraka Hazlenuts peeled.png',
-    description: 'Premium hazelnuts with rich, buttery flavor. Perfect for confectionery and gourmet applications.',
-    detailedDescription: 'Our hazelnuts are sourced from select regions known for producing nuts with exceptional flavor and texture. These versatile nuts are perfect for both sweet and savory applications, from chocolate making to salad toppings. Rich in healthy fats, vitamin E, and minerals.',
+    images: [
+      '/assets/images/Faraka Hazlenuts peeled.png',
+      '/assets/images/Faraka Hazlenuts in hard shell.png',
+      '/assets/images/Khiley Hazlenut wo shell.png',
+      '/assets/images/Khiley Hazlenut in shell.png',
+      '/assets/images/Images-2/Faraka Chanay.png',
+      '/assets/images/Images-2/Faraka Channa Shelled.png',
+      '/assets/images/Images-2/Khilay Channy.png',
+      '/assets/images/Images-2/Khilay Channa Shelled.png'
+    ],
+    details: {
+      reasonToBelieve: [
+        'Brownish, nutty premium taste, and firm bite. Highly satiety & rustic, traditional appeal- Khilay',
+        'Brighter in appearance, slightly softer texture, cleaner and versatile - Faraka'
+      ],
+      storage: 'Ambient',
+      origin: [
+        'Layyah - Fara Ka',
+        'Thal - Khilay'
+      ],
+      calibre: [
+        '150/155 per ounce – Fara ka',
+        '145/150 per ounce - Khilay'
+      ],
+      application: [
+        'Savory high-protein snacks; hearty stews, soups & slow-cooked Mediterranean dishes - Fara ka',
+        'Salads, mezze spreads, and gourmet snack mixes. Baking for health-focused products - Khilay'
+      ]
+    },
     varieties: [
       {
         id: 'fara-ka-hazlenut',
@@ -275,8 +433,35 @@ export const productsData: Record<string, Product> = {
     id: 'peanuts',
     name: 'Peanuts',
     heroImage: '/assets/images/Para Chinar Peanuts wo shell.png',
-    description: 'Fresh, crunchy peanuts packed with protein and flavor. Available in various preparations to suit every taste.',
-    detailedDescription: 'Our peanuts are sourced from the best agricultural regions of Pakistan, known for producing high-quality groundnuts. Whether raw or roasted, shelled or unshelled, our peanuts deliver consistent quality and taste. High in protein, healthy fats, and essential nutrients.',
+    images: [
+      '/assets/images/Para Chinar Peanuts wo shell.png',
+      '/assets/images/Para Chinar Peanuts w Shell.png',
+      '/assets/images/Chakwal Peanuts wo shells.png',
+      '/assets/images/Chakwal Peanuts in shell.png',
+      '/assets/images/Images-2/Para chinar Peanut.png',
+      '/assets/images/Images-2/Parachinar Peanut Shelled.png',
+      '/assets/images/Images-2/Chakwali Peanut.png',
+      '/assets/images/Images-2/Chawali Peanut Shelled.png'
+    ],
+    details: {
+      reasonToBelieve: [
+        'Unique flavor, high quality, rich in protein, healthy fats, vitamins & minerals - Para Chinar',
+        'Sweet taste, high nutrition, grown in Pothohar region - Chakwali'
+      ],
+      storage: 'Ambient',
+      origin: [
+        'Para Chinar - Para Chinar',
+        'Chakwal - Chakwali'
+      ],
+      calibre: [
+        '45/50 per ounce - Para Chinar',
+        '50/55 per ounce - Chakwali'
+      ],
+      application: [
+        'Gourmet roasted snacks, luxury peanut butter spreads, salad topper, artisan baking - Para Chinar',
+        'Creamier peanut butters, velvety savory sauces, protein snacks, baking and chocolate - Chakwali'
+      ]
+    },
     varieties: [
       {
         id: 'para-chinar-shell',
@@ -313,10 +498,31 @@ export const productsData: Record<string, Product> = {
 
   fig: {
     id: 'fig',
-    name: 'Fig',
+    name: 'Figs',
     heroImage: '/assets/images/Fig Dried Premium.png',
-    description: 'Sun-dried premium figs with natural sweetness and chewy texture. A healthy and delicious treat.',
-    detailedDescription: 'Our figs are carefully sun-dried to preserve their natural sweetness and nutritional benefits. These fiber-rich fruits are perfect for healthy snacking, baking, or adding to cereals and salads. Rich in fiber, potassium, and antioxidants, figs support digestive health and overall wellness.',
+    images: [
+      '/assets/images/Images-2/Fig Premium.png',
+      '/assets/images/Images-2/Fig Regular.png'
+    ],
+    details: {
+      reasonToBelieve: [
+        'Classic sweet-chewy flavour, nutrient-rich and slightly earthy undertone - Regular',
+        'Tree-sun dried for enhanced sweetness, lighter appearance & larger size, gourmet appeal - Premium'
+      ],
+      storage: 'Ambient',
+      origin: [
+        'Chitral – Regular',
+        'Chitral – Premium'
+      ],
+      calibre: [
+        '4/5 per ounce - Regular',
+        '3/4 per ounce – Premium'
+      ],
+      application: [
+        'Granolas, smoothies, everyday baking, home-style snacking – Regular',
+        'Fine confectionery, charcuterie, luxury pastries, artisanal spreads – Premium'
+      ]
+    },
     varieties: [
       {
         id: 'chitrali-regular',
@@ -342,8 +548,34 @@ export const productsData: Record<string, Product> = {
     id: 'apricot',
     name: 'Apricot',
     heroImage: '/assets/images/Apricot_Gol.png',
-    description: 'Premium dried apricots from the valleys of northern Pakistan. Sweet, nutritious, and naturally preserved.',
-    detailedDescription: 'Our apricots come from the pristine valleys of northern Pakistan, where the climate produces fruits of exceptional quality. These sun-dried apricots retain their natural sweetness and are packed with vitamins A and C, fiber, and antioxidants. Perfect for healthy snacking and culinary applications.',
+    images: [
+      '/assets/images/Images-2/Gol Apricot.png',
+      '/assets/images/Images-2/Kishta Apricot.png',
+      '/assets/images/Images-2/Naag Apricot.png'
+    ],
+    details: {
+      reasonToBelieve: [
+        'Split & enriched by natural sun-dried method; unique sweet-tart taste and are loaded with vitamins & antioxidants - Kishta',
+        'Round, flat, and pitted, Bright golden hue with large size, softer and sweeter – Gol',
+        'Known for their rich nutritional profile, they are packed with healthy fats, proteins, and even vitamin B17 – Naag'
+      ],
+      storage: 'Ambient',
+      origin: [
+        'Hunza - Kishta',
+        'Gilgit - Gol',
+        'Hunza – Naag'
+      ],
+      calibre: [
+        '6/7 - Kishta',
+        '5/6 - Gol',
+        '2/3 – Naag'
+      ],
+      application: [
+        'Luxury confectionery, cheese platters, gourmet baking; artisanal bars - Kishta',
+        'Granola, smoothies, everyday snacks, baking, trail mixes – Gol',
+        'Wholesome energy snacks, sports nutrition blends, immunity-boosting mixes and premium health supplement – Naag'
+      ]
+    },
     varieties: [
       {
         id: 'naag-seed',

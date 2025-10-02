@@ -43,8 +43,8 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
   // Search logic
   const filteredProducts = searchTerm.trim()
     ? allProducts.filter(product =>
-        product.name.toLowerCase().includes(searchTerm.trim().toLowerCase())
-      )
+      product.name.toLowerCase().includes(searchTerm.trim().toLowerCase())
+    )
     : [];
 
   // Handle click outside to close search dropdown
@@ -72,7 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
       <div className="navbar-container">
         {/* Logo - Left Side */}
         <div className="navbar-logo">
-          <Link to="/" className="logo-link" onClick={() => setIsMenuOpen(false)} style={{display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none'}}>
+          <Link to="/" className="logo-link" onClick={() => setIsMenuOpen(false)} style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
             <img src="/api/placeholder/120/60" alt="DryFruit Co." className="logo-img" />
             <span className="logo-text">DryFruit Co.</span>
           </Link>
@@ -83,30 +83,30 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
           <li className="navbar-item">
             <Link to="/" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
           </li>
-          <li 
+          <li
             className="navbar-item dropdown"
             onMouseEnter={handleProductsHover}
             onMouseLeave={handleProductsLeave}
           >
             <Link to="/#products" onClick={() => setIsMenuOpen(false)}>
 
-            <button 
-              className="navbar-link dropdown-toggle"
-              onClick={handleDropdownToggle}
-              type="button"
+              <button
+                className="navbar-link dropdown-toggle"
+                onClick={handleDropdownToggle}
+                type="button"
               >
-              Our Products
-              <svg 
-                width="16" 
-                height="16" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                className={`dropdown-arrow ${isProductsDropdownOpen ? 'open' : ''}`}
+                Our Products
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`dropdown-arrow ${isProductsDropdownOpen ? 'open' : ''}`}
                 >
-                <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
+                  <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
             </Link>
             <div className={`dropdown-menu ${isProductsDropdownOpen ? 'show' : ''}`}>
               <Link to="/product/almonds" onClick={() => handleProductClick('almonds')} className="dropdown-item">Almonds</Link>
@@ -114,7 +114,7 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
               <Link to="/product/pistachio" onClick={() => handleProductClick('pistachio')} className="dropdown-item">Pistachio</Link>
               <Link to="/product/walnuts" onClick={() => handleProductClick('walnuts')} className="dropdown-item">Walnuts</Link>
               <Link to="/product/pinenuts" onClick={() => handleProductClick('pinenuts')} className="dropdown-item">Pine Nuts</Link>
-              <Link to="/product/hazelnuts" onClick={() => handleProductClick('hazelnuts')} className="dropdown-item">Hazelnuts</Link>
+              <Link to="/product/channa" onClick={() => handleProductClick('channa')} className="dropdown-item">Channa</Link>
               <Link to="/product/peanuts" onClick={() => handleProductClick('peanuts')} className="dropdown-item">Peanuts</Link>
               <Link to="/product/fig" onClick={() => handleProductClick('fig')} className="dropdown-item">Fig</Link>
               <Link to="/product/apricot" onClick={() => handleProductClick('apricot')} className="dropdown-item">Apricot</Link>
@@ -134,16 +134,16 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
         {/* Search and Mobile Menu - Right Side */}
         <div className="navbar-right">
           <div className="search-container" style={{ position: 'relative' }}>
-            <input 
-              type="text" 
-              placeholder="Search products..." 
+            <input
+              type="text"
+              placeholder="Search products..."
               className="search-input"
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
               onFocus={() => setIsSearchFocused(true)}
               ref={searchInputRef}
             />
-        
+
             {isSearchFocused && filteredProducts.length > 0 && (
               <div className="search-dropdown" style={{
                 position: 'absolute',
@@ -180,7 +180,7 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
               </div>
             )}
           </div>
-          
+
           <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle menu">
             <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}>
               <span></span>
