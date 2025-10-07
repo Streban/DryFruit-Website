@@ -142,7 +142,7 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
                 </div>
               ))}
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 10, minWidth: isMobile ? undefined : 300 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 4, minWidth: isMobile ? undefined : 300 }}>
               {productsKeys && productsKeys.map((key) => {
                 const product = productsData[key];
                 if (!product) return null;
@@ -151,9 +151,8 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
                     key={key}
                     className="dropdown-item"
                     onMouseDown={() => handleProductClick(key)}
-                    style={{ display: 'flex', alignItems: 'center', gap: 10 }}
+                    style={{ display: 'block', padding: '6px 8px', margin: 0 }}
                   >
-                    <img src={product.heroImage} alt={product.name} style={{ width: 28, height: 28, borderRadius: 6, objectFit: 'cover' }} />
                     <span>{product.name}</span>
                   </div>
                 );
@@ -162,7 +161,7 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
           </>
         ) : (
           <>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, minWidth: 300 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 4, minWidth: 300 }}>
               {productsKeys && productsKeys.map((key) => {
                 const product = productsData[key];
                 if (!product) return null;
@@ -171,9 +170,8 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
                     key={key}
                     className="dropdown-item"
                     onMouseDown={() => handleProductClick(key)}
-                    style={{ display: 'flex', alignItems: 'center', gap: 10 }}
+                    style={{ display: 'block', padding: '6px 8px', margin: 0 }}
                   >
-                    <img src={product.heroImage} alt={product.name} style={{ width: 28, height: 28, borderRadius: 6, objectFit: 'cover' }} />
                     <span>{product.name}</span>
                   </div>
                 );

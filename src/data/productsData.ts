@@ -56,7 +56,7 @@ const createAvailability = (availableMonths: number[]): AvailabilityMonth[] => {
 export const productsData: Record<string, Product> = {
   KambriAlmondsShelled: {
     id: "kambri-almonds-shelled",
-    name: "KambriAlmonds",
+    name: "Kambri Almonds",
     heroImage: "/assets/images/latestphotos/Kambri Almond.png",
     coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
     imageNoBg: "/assets/images/latestphotos/Kambri Almond.png",
