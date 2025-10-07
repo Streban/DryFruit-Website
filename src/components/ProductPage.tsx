@@ -18,6 +18,23 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds', onProd
   const [fruitsSectionVisible, setFruitsSectionVisible] = useState<boolean>(false);
   const fruitsSectionRef = useRef<HTMLDivElement>(null);
 
+  // Renders a product point with the prefix (before '-' or ':') in bold
+  const renderPoint = (point: string) => {
+    const match = point.match(/(.*?)([-:])(.*)/);
+    if (match) {
+      const [, before, delimiter, after] = match;
+      return (
+        <span>
+          <strong>{before.trim()}</strong>
+          {delimiter}
+          {after}
+        </span>
+      );
+    }
+    // If no delimiter present, bold the entire point
+    return <span><strong>{point}</strong></span>;
+  };
+
   useEffect(() => {
     const product = getProductById(productId);
     setCurrentProduct(product || null);
@@ -101,6 +118,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds', onProd
   }
 
   const visibleProducts = getVisibleProducts();
+  // Prefer coverPhoto for the hero section if available; fall back to heroImage
+  const heroSrc = currentProduct.coverPhoto ?? currentProduct.heroImage;
 
   return (
     <div className="product-page">
@@ -109,7 +128,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds', onProd
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-image-container">
-          <img src={currentProduct.heroImage} alt={currentProduct.name} className="hero-image" />
+          <img src={heroSrc} alt={currentProduct.name} className="hero-image" />
           <div className="hero-title-overlay">
             <h1 className="hero-title">Our {currentProduct.name}</h1>
           </div>
@@ -128,9 +147,18 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds', onProd
               </div>
               <div className="description-text">
                 <p className="main-description">{currentProduct.description}</p>
-                <p className="detailed-description">{currentProduct.detailedDescription}</p>
+                {/* Replace detailedDescription with a bullet list of points */}
+                {currentProduct.points && currentProduct.points.length > 0 && (
+                  <div className="product-points">
+                    <ul>
+                      {currentProduct.points.map((pt, idx) => (
+                        <li key={idx}>{renderPoint(pt)}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 {currentProduct.nutritionalInfo && (
-                  <div className="nutritional-info">
+                  <div className="nutritional-info" style={{marginTop: '20px'}}>
                     <h4>Nutritional Benefits:</h4>
                     <p>{currentProduct.nutritionalInfo}</p>
                   </div>
@@ -189,7 +217,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds', onProd
               <h3>Origin</h3>
               <div className="origin-map">
                 <ProductOriginMap origins={currentProduct.origins} />
-                <div className="origin-list">
+                <div className="origin-list" style={{marginTop: '20px'}}>
                   <h4>Our sources:</h4>
                   <ul>
                     {currentProduct.origins.map((origin) => (

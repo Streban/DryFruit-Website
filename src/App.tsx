@@ -5,62 +5,21 @@ import './App.css';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import ProductPage from './components/ProductPage';
 import { allProducts } from './data/productsData';
-import LoadingScreen from './components/LoadingScreen';
 import { Analytics } from '@vercel/analytics/react';
 
 // Easing function
-const easeOutQuart = (t: number): number => {
-  return 1 - --t * t * t * t;
-};
+
 
 function App() {
-  const [counts, setCounts] = useState({
-    suppliers: 0,
-    customers: 0,
-    products: 0,
-    experience: 0,
-  });
-
+  
   const [isAboutVisible, setIsAboutVisible] = useState(false);
   const aboutRef = useRef<HTMLElement>(null);
 
   const navigate = useNavigate();
   const location = useLocation();
-  const [loading, setLoading] = useState(true);
 
   // Counter animation effect
-  useEffect(() => {
-    const targets = {
-      suppliers: 300,
-      customers: 850,
-      products: 150,
-      experience: 39,
-    };
 
-    const duration = 5000; // 2 seconds
-    const frameDuration = 1000 / 60; // 60 FPS
-    const totalFrames = Math.round(duration / frameDuration);
-
-    Object.keys(targets).forEach((key) => {
-      let frame = 0;
-      const countTo = targets[key as keyof typeof targets];
-
-      const counter = setInterval(() => {
-        frame++;
-        const progress = easeOutQuart(frame / totalFrames);
-        const currentCount = Math.round(countTo * progress);
-
-        setCounts((prev) => ({
-          ...prev,
-          [key]: currentCount,
-        }));
-
-        if (frame === totalFrames) {
-          clearInterval(counter);
-        }
-      }, frameDuration);
-    });
-  }, []);
 
   // Intersection Observer for About section animations
   useEffect(() => {
@@ -106,33 +65,10 @@ function App() {
     navigate(`/product/${productId}`);
   };
 
-  useEffect(() => {
-    // Preload all images in public/assets/images
-    const imagePaths = [
-      // List all image paths here
-      '/assets/images/Kambri Almonds.png',
-      '/assets/images/Green Raisin.png',
-      '/assets/images/Ziarat Pistachio without shell.png',
-      '/assets/images/Swat Walnuts wo shell.png',
-      '/assets/images/Banu_Chilas_Pinenuts_wo_shell.png',
-      '/assets/images/Faraka Hazlenuts peeled.png',
-    ];
-    let loaded = 0;
-    imagePaths.forEach((src) => {
-      const img = new window.Image();
-      img.src = src;
-      img.onload = img.onerror = () => {
-        loaded++;
-        if (loaded === imagePaths.length) {
-          setTimeout(() => setLoading(false), 600); // add fade-out delay
-        }
-      };
-    });
-  }, []);
+
 
   return (
     <div className="App">
-      {loading && <LoadingScreen />}
       <Analytics />
       <Routes>
         <Route
@@ -518,7 +454,7 @@ function App() {
               </section>
 
               {/* History Section */}
-              <section id="history" className="history-section">
+              {/* <section id="history" className="history-section">
                 <div className="container">
                   <h2>Our history</h2>
                   <div className="timeline">
@@ -578,9 +514,9 @@ function App() {
                     </div>
                   </div>
                 </div>
-              </section>
+              </section> */}
               {/* Statistics Section */}
-              <section className="stats-section">
+              {/* <section className="stats-section">
                 <div className="container">
                   <div className="stats-grid">
                     <div className="stat-item">
@@ -601,7 +537,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-              </section>
+              </section> */}
               {/* Follow Us Section */}
               <section className="follow-section">
                 <div className="container">

@@ -7,7 +7,7 @@
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto ;
   padding: 0 20px;
 }
 
@@ -55,7 +55,7 @@
 
 /* Product Description Section */
 .product-description-section {
-  padding: 80px 0;
+  padding: 0px 0;
   background: #f8f9fa;
 }
 
@@ -80,16 +80,19 @@
 }
 
 .description-image {
-  text-align: center;
+  text-align: left; /* align image block to the left so empty space stays on right */
 }
 
 .description-image img {
-  width: 100%;
-  max-width: 400px;
-  height: 300px;
-  object-fit: cover;
+  width: 150%;
+  max-width: 140%;
+  height: 140%;
+  object-fit: contain; /* show full image; no cropping on sides */
+  object-position: left center; /* keep image anchored to the left side */
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: transparent; /* ensure transparent PNG/WebP show the section background */
+  box-shadow: none; /* avoid white-looking halo under transparent edges */
+  margin-left: -100px;
 }
 
 .description-text {
@@ -404,15 +407,15 @@
   transition: box-shadow 0.2s, transform 0.2s;
   padding: 18px 0 10px 0;
   border-radius: 18px;
-  background: #fff;
+  background: transparent; /* allow transparent PNG/WebP to show the section background */
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  border: 1.5px solid #e0e0e0;
+  border: 1.5px solid rgba(34, 97, 59, 0.12);
   margin: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 160px;
-  max-width: 180px;
+  max-width: 100%;
   min-height: 220px;
 }
 
@@ -422,7 +425,7 @@
 }
 
 .fruit-image {
-  width: 110px;
+  width: 100%;
   height: 110px;
   margin: 0 auto 10px auto;
   border-radius: 14px;
@@ -437,7 +440,8 @@
 .fruit-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* prevent cropping inside thumbnails */
+  object-position: left center; /* align thumbnail content to the left */
   border-radius: 14px;
   border: none;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
