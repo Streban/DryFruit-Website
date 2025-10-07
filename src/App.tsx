@@ -4,7 +4,7 @@ import ContactBottomBar from './components/ContactBottomBar';
 import './App.css';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import ProductPage from './components/ProductPage';
-import { allProducts } from './data/productsData';
+import { productsData } from './data/productsData';
 import { Analytics } from '@vercel/analytics/react';
 
 // Easing function
@@ -149,11 +149,11 @@ function App() {
                       </button>
                     </div>
                     <div className="products-grid">
-                      {allProducts.slice(0, 6).map((product, idx) => (
+                      {Object.entries(productsData).slice(0, 6).map(([key, product]) => (
                         <div
                           className="product-item"
-                          key={product.id || idx}
-                          onClick={() => navigate(`/product/${product.id}`)}
+                          key={key}
+                          onClick={() => navigate(`/product/${key}`)}
                         >
                           <div className="product-photo">
                             <img src={product.heroImage} alt={product.name} />

@@ -223,7 +223,7 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
         {/* Logo - Left Side */}
         <div className="navbar-logo">
           <Link to="/" className="logo-link" onClick={() => setIsMenuOpen(false)} style={{display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none'}}>
-            <img src="/api/placeholder/120/60" alt="DryFruit Co." className="logo-img" />
+            <img src="/assets/images/latestphotos/Nutrinoix LOGO wb.png" alt="DryFruit Co." className="logo-img" />
             <span className="logo-text">DryFruit Co.</span>
           </Link>
         </div>

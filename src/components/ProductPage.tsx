@@ -5,18 +5,20 @@ import Navbar from './Navbar';
 import ContactBottomBar from './ContactBottomBar';
 import './ProductPage.css';
 import ProductOriginMap from './ProductOriginMap';
+import { useNavigate } from 'react-router-dom';
 
 interface ProductPageProps {
   productId?: string;
-  onProductChange?: (productId: string) => void;
 }
 
-const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds', onProductChange }) => {
+const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds' }) => {
   const [currentProduct, setCurrentProduct] = useState<Product | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [selectedVariety, setSelectedVariety] = useState<string>('');
   const [carouselIndex, setCarouselIndex] = useState<number>(0);
   const [fruitsSectionVisible, setFruitsSectionVisible] = useState<boolean>(false);
   const fruitsSectionRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   // Renders a product point with the prefix (before '-' or ':') in bold
   const renderPoint = (point: string) => {
@@ -36,9 +38,11 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds', onProd
   };
 
   useEffect(() => {
+    setIsLoading(true);
     const product = getProductById(productId);
     setCurrentProduct(product || null);
     setSelectedVariety('');
+    setIsLoading(false);
   }, [productId]);
 
   // Intersection Observer for 'Even more fruits' section
@@ -65,19 +69,11 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds', onProd
     };
   }, [fruitsSectionVisible]);
 
-  const handleProductChange = (newProductId: string) => {
-    const product = getProductById(newProductId);
-    setCurrentProduct(product || null);
-    setSelectedVariety('');
-    if (onProductChange) {
-      onProductChange(newProductId);
-    }
-    // Scroll to top of the page
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  // Navigate to a different product page when a product is chosen
 
   const handleNavbarProductSelect = (productId: string) => {
-    handleProductChange(productId);
+    navigate(`/product/${productId}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleVarietyClick = (varietyId: string) => {
@@ -113,8 +109,33 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds', onProd
   // Get the selected variety object
   const selectedVarietyObj = currentProduct?.varieties.find(v => v.id === selectedVariety) || currentProduct?.varieties[0];
 
+  // Show loading state while fetching product data
+  if (isLoading) {
+    return (
+      <div className="product-page">
+        <Navbar onProductSelect={handleNavbarProductSelect} />
+        <div className="loading-container">
+          <div className="loading-spinner"></div>
+          <p>Loading product...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Show error state only if product is not found after loading
   if (!currentProduct) {
-    return <div>Product not found</div>;
+    return (
+      <div className="product-page">
+        <Navbar onProductSelect={handleNavbarProductSelect} />
+        <div className="error-container">
+          <h2>Product not found</h2>
+          <p>The requested product could not be found.</p>
+          <button onClick={() => navigate('/')} className="back-button">
+            Return to Home
+          </button>
+        </div>
+      </div>
+    );
   }
 
   const visibleProducts = getVisibleProducts();
@@ -250,7 +271,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds', onProd
                 <div 
                   key={`${product.id}-${carouselIndex}-${index}`}
                   className="fruit-item"
-                  onClick={() => handleProductChange(product.id)}
+                  onClick={() => navigate(`/product/${visibleProducts[index]}`)}
                 >
                   <div className="fruit-image">
                     <img
