@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
+  background: #003d12;
   padding: 0;
   position: fixed;
   top: 0;
@@ -27,7 +27,7 @@
 
 .logo-img {
   width: 120px;
-  height: 100px;
+  height: 120px;
   border-radius: 8px;
   object-fit: cover;
 }

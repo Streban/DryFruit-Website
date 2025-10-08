@@ -219,17 +219,20 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
     <nav className="navbar">
       <div className="navbar-container">
         {/* Logo - Left Side */}
-        <div className="navbar-logo">
+        <div className="">
           <Link to="/" className="logo-link" onClick={() => setIsMenuOpen(false)} style={{display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none'}}>
             <img src="/assets/images/latestphotos/Nutrinoix LOGO wb.png" alt="DryFruit Co." className="logo-img" />
-            <span className="logo-text">DryFruit Co.</span>
+            <span className="logo-text">Nutrinoix</span>
           </Link>
         </div>
 
         {/* Navigation Links - Center */}
         <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
-          <li className="navbar-item">
+          {/* <li className="navbar-item">
             <Link to="/" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
+          </li> */}
+           <li className="navbar-item">
+            <Link to="/#about" className="navbar-link" onClick={() => setIsMenuOpen(false)}>About Us</Link>
           </li>
           <li 
             className="navbar-item dropdown"
@@ -286,11 +289,9 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
               )}
             </div>
           </li>
+         
           <li className="navbar-item">
-            <Link to="/#about" className="navbar-link" onClick={() => setIsMenuOpen(false)}>About Us</Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/#history" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Our History</Link>
+            <Link to="/#history" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Our Mission</Link>
           </li>
           <li className="navbar-item">
             <Link to="/#visit" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Contact</Link>
@@ -298,7 +299,7 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
         </ul>
 
         {/* Search and Mobile Menu - Right Side */}
-        <div className="navbar-right">
+        {/* <div className="navbar-right">
           <div className="search-container" style={{ position: 'relative' }}>
             <input 
               type="text" 
@@ -354,7 +355,7 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
               <span></span>
             </span>
           </button>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

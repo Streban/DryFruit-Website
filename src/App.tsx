@@ -1,17 +1,15 @@
-import React, { useEffect, useState, useRef } from 'react';
-import Navbar from './components/Navbar';
-import ContactBottomBar from './components/ContactBottomBar';
-import './App.css';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
-import ProductPage from './components/ProductPage';
-import { productsData } from './data/productsData';
-import { Analytics } from '@vercel/analytics/react';
+import React, { useEffect, useState, useRef } from "react";
+import Navbar from "./components/Navbar";
+import ContactBottomBar from "./components/ContactBottomBar";
+import "./App.css";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import ProductPage from "./components/ProductPage";
+import { productsData } from "./data/productsData";
+import { Analytics } from "@vercel/analytics/react";
 
 // Easing function
 
-
 function App() {
-  
   const [isAboutVisible, setIsAboutVisible] = useState(false);
   const aboutRef = useRef<HTMLElement>(null);
 
@@ -19,7 +17,6 @@ function App() {
   const location = useLocation();
 
   // Counter animation effect
-
 
   // Intersection Observer for About section animations
   useEffect(() => {
@@ -31,8 +28,8 @@ function App() {
       },
       {
         threshold: 0.3, // Trigger when 30% of the section is visible
-        rootMargin: '0px 0px -100px 0px', // Trigger a bit before the section is fully visible
-      },
+        rootMargin: "0px 0px -100px 0px", // Trigger a bit before the section is fully visible
+      }
     );
 
     const currentRef = aboutRef.current;
@@ -49,14 +46,14 @@ function App() {
 
   // Scroll to section if hash is present in URL, or scroll to top if navigating to home
   React.useEffect(() => {
-    if (location.pathname === '/' && location.hash) {
-      const id = location.hash.replace('#', '');
+    if (location.pathname === "/" && location.hash) {
+      const id = location.hash.replace("#", "");
       const el = document.getElementById(id);
       if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-    } else if (location.pathname === '/' && !location.hash) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (location.pathname === "/" && !location.hash) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
 
@@ -64,8 +61,6 @@ function App() {
   const handleNavbarProductSelect = (productId: string) => {
     navigate(`/product/${productId}`);
   };
-
-
 
   return (
     <div className="App">
@@ -118,7 +113,7 @@ function App() {
                 </div>
               </section>
               {/* Service Info */}
-              <section className="service-info">
+              {/* <section className="service-info">
                 <div className="container">
                   <div className="service-content">
                     <h2>At the service of Dry Fruits and Nuts</h2>
@@ -128,10 +123,16 @@ function App() {
                     </p>
                   </div>
                 </div>
-              </section>
+              </section> */}
               {/* Products Section */}
               <section id="products" className="products-section">
-                <div className="container">
+                <div
+                  className=""
+                  style={{
+                    maxWidth: "1600px",
+                    paddingLeft: "10rem",
+                  }}
+                >
                   <div className="products-content">
                     <div className="products-text">
                       <h2>Our products</h2>
@@ -140,7 +141,7 @@ function App() {
                         directly from the finest regions of Pakistan. Our
                         extensive range includes almonds, raisins, pistachios,
                         walnuts, pine nuts, hazelnuts, peanuts, figs, and
-                        apricots - all carefully selected and naturally
+                        apricots – all carefully selected and naturally
                         processed to deliver exceptional quality and authentic
                         taste.
                       </p>
@@ -149,18 +150,29 @@ function App() {
                       </button>
                     </div>
                     <div className="products-grid">
-                      {Object.entries(productsData).slice(0, 6).map(([key, product]) => (
-                        <div
-                          className="product-item"
-                          key={key}
-                          onClick={() => navigate(`/product/${key}`)}
-                        >
-                          <div className="product-photo">
-                            <img src={product.heroImage} alt={product.name} />
+                      {[
+                        "KambriAlmondsShelled",
+                        "KillaSaifullahPistachiosUnshelled",
+                        "RegularFigs",
+                        "BanuChillasPineNutsUnshelled",
+                        "ChakwaliPeanutsUnshelled",
+                        "KhilayKalaChannaShelled",
+                      ].map((key) => {
+                        const product = productsData[key];
+                        if (!product) return null;
+                        return (
+                          <div
+                            className="product-item"
+                            key={key}
+                            onClick={() => navigate(`/product/${key}`)}
+                          >
+                            <div className="product-photo">
+                              <img src={product.heroImage} alt={product.name} />
+                            </div>
+                            <h3>{product.type}</h3>
                           </div>
-                          <h3>{product.name}</h3>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -171,37 +183,41 @@ function App() {
                   <div className="about-content">
                     <div
                       className={`about-text ${
-                        isAboutVisible ? 'animate' : ''
+                        isAboutVisible ? "animate" : ""
                       }`}
                     >
                       <h2>About us</h2>
                       <p>
-                        We're two friends - one French, one Pakistani – who met
-                        at business school in Lyon.
+                        A committed player in agri-food trade between Pakistan
+                        and Europe, we source premium dried fruits and nuts
+                        grown in the most fertile regions of Pakistan.
                       </p>
                       <p>
-                        It all started when one of us went looking for the dried
-                        fruits he loved back home in Pakistan, only to realise
-                        how hard it was to find that same authentic taste in
-                        France.
+                        Based in Pakistan, we work hand-in-hand with local
+                        producers to offer our clients premium quality, full
+                        traceability, and ethical sourcing. Handpicked from
+                        trusted farms and packed to international standards, our
+                        range includes almonds, walnuts, pistachios, raisins,
+                        apricots and figs ensuring premium quality and natural
+                        freshness. With seamless global shipping and reliable
+                        supply, we are your trusted partner in delivering
+                        nature’s best.
                       </p>
-                      <p>
-                        That's when we had an idea: bring it here ourselves.
-                      </p>
-                      <div className="story-highlight">
+
+                      {/* <div className="story-highlight">
                         <p>
                           With one of us connected to the best harvests of
                           Pakistan, and the other familiar with the European
                           market, our duo became our strength.
                         </p>
-                      </div>
+                      </div> */}
                       <button className="about-button">
                         Learn more about our journey
                       </button>
                     </div>
                     <div
                       className={`about-image ${
-                        isAboutVisible ? 'animate' : ''
+                        isAboutVisible ? "animate" : ""
                       }`}
                     >
                       <img
@@ -629,7 +645,7 @@ function App() {
                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13610.80926516913!2d74.308013!3d31.520370!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904ddc8b1b1b1%3A0x1b1b1b1b1b1b1b1b!2sLahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1635959342716!5m2!1sen!2s"
                           width="100%"
                           height="400"
-                          style={{ border: 0, borderRadius: '12px' }}
+                          style={{ border: 0, borderRadius: "12px" }}
                           allowFullScreen
                           loading="lazy"
                           referrerPolicy="no-referrer-when-downgrade"
@@ -651,7 +667,7 @@ function App() {
 }
 
 // Wrapper to extract productId param and pass to ProductPage
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 const ProductPageWrapper = () => {
   const { productId } = useParams<{ productId: string }>();
   return <ProductPage productId={productId} />;

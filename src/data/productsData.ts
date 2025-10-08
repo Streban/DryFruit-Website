@@ -28,6 +28,7 @@ export interface Product {
   nutritionalInfo?: string;
   points: string[];
   coverPhoto?: string;
+  type: string; // Added type property
 }
 
 const months = [
@@ -101,6 +102,7 @@ export const productsData: Record<string, Product> = {
       { name: "Mastung", coordinates: [29.7969, 66.8453] },
     ],
     nutritionalInfo: "High in protein, vitamin E, magnesium, and healthy fats",
+    type: "Almonds",
   },
   KambriAlmondsUnshelled: {
     id: "kambri-almonds-unshelled",
@@ -149,6 +151,7 @@ export const productsData: Record<string, Product> = {
       { name: "Mastung", coordinates: [29.7969, 66.8453] },
     ],
     nutritionalInfo: "High in protein, vitamin E, magnesium, and healthy fats",
+    type: "Almonds",
   },
   KalamDanaAlmondsShelled: {
     id: "kalamdana-almonds-shelled",
@@ -197,6 +200,7 @@ export const productsData: Record<string, Product> = {
       { name: "Mastung", coordinates: [29.7969, 66.8453] },
     ],
     nutritionalInfo: "High in protein, vitamin E, magnesium, and healthy fats",
+    type: "Almonds",
   },
   KalamDanaAlmondsUnshelled: {
     id: "kalamdana-almonds-unshelled",
@@ -245,6 +249,7 @@ export const productsData: Record<string, Product> = {
       { name: "Mastung", coordinates: [29.7969, 66.8453] },
     ],
     nutritionalInfo: "High in protein, vitamin E, magnesium, and healthy fats",
+    type: "Almonds",
   },
   KattaJumboAlmondsShelled: {
     id: "katta-jumbo-almonds-shelled",
@@ -293,6 +298,7 @@ export const productsData: Record<string, Product> = {
       { name: "Mastung", coordinates: [29.7969, 66.8453] },
     ],
     nutritionalInfo: "High in protein, vitamin E, magnesium, and healthy fats",
+    type: "Almonds",
   },
   KattaJumboAlmondsUnshelled: {
     id: "katta-jumbo-almonds-unshelled",
@@ -309,7 +315,7 @@ export const productsData: Record<string, Product> = {
       "Delicately Flavoured: A natural hint of sweetness enhances the nut’s refined taste.",
       "Premium Delicacy: Perfect for specialty liqueurs and gourmet dry fruit snacks.",
       "Origin: Skardu – known for its high-altitude almond orchards and rich agricultural heritage.",
-      "Size: 29/31 per ounce – uniform and premium.",
+      "Size: 29/31 per ounce",
       "Storage: Ambient – ideal for maintaining freshness and natural oils.",
     ],
     varieties: [
@@ -341,6 +347,7 @@ export const productsData: Record<string, Product> = {
       { name: "Mastung", coordinates: [29.7969, 66.8453] },
     ],
     nutritionalInfo: "High in protein, vitamin E, magnesium, and healthy fats",
+    type: "Almonds",
   },
 
   PeelaKandhariRaisin: {
@@ -389,6 +396,7 @@ export const productsData: Record<string, Product> = {
       { name: "Chaman", coordinates: [30.9167, 66.45] },
     ],
     nutritionalInfo: "Rich in antioxidants, fiber, and natural sugars",
+    type: "Raisin",
   },
 
   SultanaRaisins: {
@@ -437,6 +445,7 @@ export const productsData: Record<string, Product> = {
       { name: "Chaman", coordinates: [30.9167, 66.45] },
     ],
     nutritionalInfo: "Rich in antioxidants, fiber, and natural sugars",
+    type: "Raisin",
   },
   KalaPishin: {
     id: "kala-pishin",
@@ -484,6 +493,7 @@ export const productsData: Record<string, Product> = {
       { name: "Chaman", coordinates: [30.9167, 66.45] },
     ],
     nutritionalInfo: "Rich in antioxidants, fiber, and natural sugars",
+    type: "Raisin",
   },
   KillaSaifullahPistachiosShelled: {
     id: "killa-saifullah-pistachios-shelled",
@@ -538,6 +548,7 @@ export const productsData: Record<string, Product> = {
       { name: "Sherani", coordinates: [30.2264, 68.9383] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and antioxidants",
+    type: "Pistachio",
   },
   ZiaratPistachiosShelled: {
     id: "ziarat-pistachios-shelled",
@@ -592,6 +603,7 @@ export const productsData: Record<string, Product> = {
       { name: "Sherani", coordinates: [30.2264, 68.9383] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and antioxidants",
+    type: "Pistachio",
   },
   KillaSaifullahPistachiosUnshelled: {
     id: "killa-saifullah-pistachios-unshelled",
@@ -646,6 +658,7 @@ export const productsData: Record<string, Product> = {
       { name: "Sherani", coordinates: [30.2264, 68.9383] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and antioxidants",
+    type: "Pistachio",
   },
   ZiaratPistachiosUnshelled: {
     id: "ziarat-pistachios-unshelled",
@@ -700,6 +713,7 @@ export const productsData: Record<string, Product> = {
       { name: "Sherani", coordinates: [30.2264, 68.9383] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and antioxidants",
+    type: "Pistachio",
   },
 
   SwatdirWalnutsShelled: {
@@ -755,6 +769,7 @@ export const productsData: Record<string, Product> = {
       { name: "Chitral", coordinates: [35.8518, 71.7864] },
     ],
     nutritionalInfo: "Rich in omega-3 fatty acids, protein, and antioxidants",
+    type: "Walnut",
   },
   KaghziWalnutsShelled: {
     id: "kaghzi-walnuts-shelled",
@@ -809,6 +824,7 @@ export const productsData: Record<string, Product> = {
       { name: "Chitral", coordinates: [35.8518, 71.7864] },
     ],
     nutritionalInfo: "Rich in omega-3 fatty acids, protein, and antioxidants",
+    type: "Walnut",
   },
 
   SwatdirWalnutsUnshelled: {
@@ -864,6 +880,7 @@ export const productsData: Record<string, Product> = {
       { name: "Chitral", coordinates: [35.8518, 71.7864] },
     ],
     nutritionalInfo: "Rich in omega-3 fatty acids, protein, and antioxidants",
+    type: "Walnut",
   },
   KaghziWalnutsUnshelled: {
     id: "kaghzi-walnuts-unshelled",
@@ -918,6 +935,7 @@ export const productsData: Record<string, Product> = {
       { name: "Chitral", coordinates: [35.8518, 71.7864] },
     ],
     nutritionalInfo: "Rich in omega-3 fatty acids, protein, and antioxidants",
+    type: "Walnut",
   },
 
   BanuChillasPineNutsShelled: {
@@ -973,6 +991,7 @@ export const productsData: Record<string, Product> = {
       { name: "Waziristan", coordinates: [32.3617, 69.4306] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and essential minerals",
+    type: "Pine Nut",
   },
   WaziriPineNutsShelled: {
     id: "waziri-pinenuts-shelled",
@@ -1027,6 +1046,7 @@ export const productsData: Record<string, Product> = {
       { name: "Waziristan", coordinates: [32.3617, 69.4306] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and essential minerals",
+    type: "Pine Nut",
   },
   BanuChillasPineNutsUnshelled: {
     id: "banu-chillas-pinenuts-unshelled",
@@ -1081,6 +1101,7 @@ export const productsData: Record<string, Product> = {
       { name: "Waziristan", coordinates: [32.3617, 69.4306] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and essential minerals",
+    type: "Pine Nut",
   },
   WaziriPineNutsUnshelled: {
     id: "waziri-pinenuts-unshelled",
@@ -1135,6 +1156,7 @@ export const productsData: Record<string, Product> = {
       { name: "Waziristan", coordinates: [32.3617, 69.4306] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and essential minerals",
+    type: "Pine Nut",
   },
 
   ParaChinarPeanutsShelled: {
@@ -1190,6 +1212,7 @@ export const productsData: Record<string, Product> = {
       { name: "Attock", coordinates: [33.7667, 72.3667] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and niacin",
+    type: "Peanut",
   },
   ChakwaliPeanutsShelled: {
     id: "chakwali-peanuts-shelled",
@@ -1244,6 +1267,7 @@ export const productsData: Record<string, Product> = {
       { name: "Attock", coordinates: [33.7667, 72.3667] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and niacin",
+    type: "Peanut",
   },
   ParaChinarPeanutsUnshelled: {
     id: "para-chinar-peanuts-unshelled",
@@ -1298,6 +1322,7 @@ export const productsData: Record<string, Product> = {
       { name: "Attock", coordinates: [33.7667, 72.3667] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and niacin",
+    type: "Peanut",
   },
   ChakwaliPeanutsUnshelled: {
     id: "chakwali-peanuts-unshelled",
@@ -1352,6 +1377,7 @@ export const productsData: Record<string, Product> = {
       { name: "Attock", coordinates: [33.7667, 72.3667] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and niacin",
+    type: "Peanut",
   },
 
   FaraKaKalaChannaShelled: {
@@ -1386,6 +1412,7 @@ export const productsData: Record<string, Product> = {
       { name: "Layyah", coordinates: [30.9676, 70.9444] },
     ],
     nutritionalInfo: "High in plant protein, fiber, iron, and folate",
+    type: "Chickpea",
   },
 
   KhilayKalaChannaShelled: {
@@ -1421,6 +1448,7 @@ export const productsData: Record<string, Product> = {
       { name: "Layyah", coordinates: [30.9676, 70.9444] },
     ],
     nutritionalInfo: "Rich in protein, dietary fiber, and essential minerals",
+    type: "Chickpea",
   },
 
   FaraKaKalaChannaUnshelled: {
@@ -1455,6 +1483,7 @@ export const productsData: Record<string, Product> = {
       { name: "Layyah", coordinates: [30.9676, 70.9444] },
     ],
     nutritionalInfo: "High in plant protein, fiber, iron, and folate",
+    type: "Chickpea",
   },
 
   KhilayKalaChannaUnshelled: {
@@ -1490,6 +1519,7 @@ export const productsData: Record<string, Product> = {
       { name: "Layyah", coordinates: [30.9676, 70.9444] },
     ],
     nutritionalInfo: "Rich in protein, dietary fiber, and essential minerals",
+    type: "Chickpea",
   },
   RegularFigs: {
     id: "regular-fig",
@@ -1529,6 +1559,7 @@ export const productsData: Record<string, Product> = {
       { name: "Dir", coordinates: [35.2058, 71.8786] },
     ],
     nutritionalInfo: "High in fiber, potassium, and antioxidants",
+    type: "Fig",
   },
   PremiumFigs: {
     id: "premium-fig",
@@ -1568,6 +1599,7 @@ export const productsData: Record<string, Product> = {
       { name: "Dir", coordinates: [35.2058, 71.8786] },
     ],
     nutritionalInfo: "High in fiber, potassium, and antioxidants",
+    type: "Fig",
   },
   KishtaApricots: {
     id: "kishta-apricots",
@@ -1615,6 +1647,7 @@ export const productsData: Record<string, Product> = {
       { name: "Gilgit", coordinates: [35.92, 74.31] },
     ],
     nutritionalInfo: "Rich in vitamin A, vitamin C, and fiber",
+    type: "Apricot",
   },
   GolApricots: {
     id: "gol-apricots",
@@ -1662,6 +1695,7 @@ export const productsData: Record<string, Product> = {
       { name: "Gilgit", coordinates: [35.92, 74.31] },
     ],
     nutritionalInfo: "Rich in vitamin A, vitamin C, and fiber",
+    type: "Apricot",
   },
   NaagApricots: {
     id: "naag-apricots",
@@ -1709,6 +1743,7 @@ export const productsData: Record<string, Product> = {
       { name: "Gilgit", coordinates: [35.92, 74.31] },
     ],
     nutritionalInfo: "Rich in vitamin A, vitamin C, and fiber",
+    type: "Apricot",
   },
 };
 

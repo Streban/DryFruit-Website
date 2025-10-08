@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   line-height: 1.6;
   color: #333;
   overflow-x: hidden;
@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -56,7 +56,7 @@ body {
 }
 
 .hero-text h1 {
-  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.2;
@@ -71,7 +71,7 @@ body {
 }
 
 .hero-text p {
-  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 1.2rem;
   margin-bottom: 32px;
   color: rgba(255, 255, 255, 0.9);
@@ -93,7 +93,7 @@ body {
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
 
 .cta-button:hover {
@@ -110,7 +110,7 @@ body {
 }
 
 .service-content h2 {
-  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 2.5rem;
   color: #2d5a27;
   margin-bottom: 16px;
@@ -118,7 +118,7 @@ body {
 }
 
 .service-content p {
-  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 1.1rem;
   color: #666;
   max-width: 600px;
@@ -130,6 +130,7 @@ body {
 .products-section {
   padding: 100px 0;
   background: white;
+  max-width: 2000px;
 }
 
 .products-content {
@@ -140,15 +141,15 @@ body {
 }
 
 .products-text h2 {
-  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 2.5rem;
   color: #2d5a27;
   margin-bottom: 24px;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .products-text p {
-  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 1.1rem;
   color: #666;
   line-height: 1.7;
@@ -165,7 +166,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
 
 .products-button:hover {
@@ -177,39 +178,30 @@ body {
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-top: 32px;
+  column-gap: 180px; /* Only horizontal gap between product items/images */
 }
 
 .product-item {
   background: #fff;
-  border: 1.5px solid #e0e0e0;
-  border-radius: 18px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  padding: 18px 0 10px 0;
-  margin: 8px;
   display: flex;
+  margin-left: 2rem;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
   transition: box-shadow 0.2s, transform 0.2s;
-  min-width: 160px;
-  max-width: 180px;
-  min-height: 220px;
+  min-width: 50px;
   text-align: center;
 }
 
 .product-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .product-photo {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 10px auto;
-  border-radius: 14px;
-  overflow: hidden;
+  width: 300px;
+  height: 250px;
+  /* margin: 0 auto 10px auto; */
+  /* overflow: hidden; */
   background: none;
   padding: 0;
   display: flex;
@@ -219,15 +211,18 @@ body {
 
 .product-photo img {
   width: 100%;
-  height: 110px;
-  margin: 0 auto 10px auto;
-  border-radius: 14px;
+  height: 50%;
+  /* max-width: 80%; */
+  /* max-height: 80%; */
   overflow: hidden;
   background: none;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  object-fit: cover; /* fill container, crop if needed */
+  image-rendering: crisp-edges; /* sharper on most browsers */
+  image-rendering: -webkit-optimize-contrast; /* sharper on WebKit */
 }
 
 .product-item h3 {
@@ -277,11 +272,11 @@ body {
 }
 
 .about-text h2 {
-  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 2.8rem;
   color: #2d5a27;
   margin-bottom: 30px;
-  font-weight: 700;
+  font-weight: 800;
   position: relative;
   display: inline-block;
 }
@@ -304,7 +299,7 @@ body {
 }
 
 .about-text p {
-  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 1.15rem;
   color: #555;
   line-height: 1.8;
@@ -350,7 +345,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 25px;
-  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   position: relative;
   overflow: hidden;
   opacity: 0;
@@ -465,7 +460,7 @@ body {
 }
 
 .history-section h2 {
-  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 2.5rem;
   color: #2d5a27;
   text-align: center;
@@ -518,7 +513,7 @@ body {
   z-index: 2;
   min-width: 100px;
   text-align: center;
-  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
 
 .timeline-content {
@@ -535,7 +530,7 @@ body {
 }
 
 .timeline-content h3 {
-  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 1.5rem;
   color: #2d5a27;
   margin-bottom: 16px;
@@ -552,7 +547,7 @@ body {
 }
 
 .timeline-content p {
-  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   color: #666;
   line-height: 1.6;
   font-size: 0.95rem;
@@ -577,7 +572,7 @@ body {
 }
 
 .stat-number {
-  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
   color: #a8d5a8;
@@ -585,7 +580,7 @@ body {
 }
 
 .stat-label {
-  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
@@ -599,7 +594,7 @@ body {
 }
 
 .follow-section h2 {
-  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 2.5rem;
   color: #2d5a27;
   margin-bottom: 60px;
@@ -662,7 +657,7 @@ body {
 }
 
 .social-card span {
-  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -681,7 +676,7 @@ body {
 }
 
 .visit-info h2 {
-  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   font-size: 2.5rem;
   color: #2d5a27;
   margin-bottom: 40px;
@@ -703,7 +698,7 @@ body {
 }
 
 .detail-item h3 {
-  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   color: #2d5a27;
   font-size: 1.2rem;
   margin-bottom: 8px;
@@ -711,7 +706,7 @@ body {
 }
 
 .detail-item p {
-  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   color: #666;
   margin-bottom: 4px;
   line-height: 1.5;
@@ -727,7 +722,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
 
 .directions-btn:hover {

@@ -151,16 +151,16 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds' }) => {
         <div className="hero-image-container">
           <img src={heroSrc} alt={currentProduct.name} className="hero-image" />
           <div className="hero-title-overlay">
-            <h1 className="hero-title">Our {currentProduct.name}</h1>
+            <h1 className="hero-title">{currentProduct.type}</h1>
           </div>
         </div>
       </section>
 
       {/* Product Description Section */}
-      <section className="product-description-section">
+      <section className="product-description-section" style={{paddingBottom:'25px'}}>
         <div className="container">
           <div className="description-content">
-            <h2 className="product-name">{currentProduct.name}</h2>
+            <h2 className="product-name" style={{paddingTop: '60px', fontFamily:'revert-layer', fontWeight:800}}>{currentProduct.name}</h2>
             
             <div className="description-layout">
               <div className="description-image">
@@ -170,7 +170,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds' }) => {
                 <p className="main-description">{currentProduct.description}</p>
                 {/* Replace detailedDescription with a bullet list of points */}
                 {currentProduct.points && currentProduct.points.length > 0 && (
-                  <div className="product-points">
+                  <div className="product-points" style={{marginLeft: '20px'}}>
                     <ul>
                       {currentProduct.points.map((pt, idx) => (
                         <li key={idx}>{renderPoint(pt)}</li>
@@ -258,7 +258,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds' }) => {
         ref={fruitsSectionRef}
       >
         <div className="container">
-          <h2>Even more fruits</h2>
+          <h2>Even more product</h2>
           <div className="fruits-carousel">
             <button className="carousel-btn prev-btn" onClick={handlePrevious} aria-label="Previous">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
