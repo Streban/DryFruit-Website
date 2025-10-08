@@ -10,7 +10,6 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const dropdownMenuRef = useRef<HTMLDivElement>(null);
@@ -20,10 +19,6 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
   const [activeSubsection, setActiveSubsection] = useState<string>('');
   const [submenuFlip, setSubmenuFlip] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   const handleProductsHover = () => {
     setIsProductsDropdownOpen(true);
@@ -40,7 +35,6 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
     }
     setIsProductsDropdownOpen(false);
     setIsMenuOpen(false);
-    setSearchTerm('');
     setIsSearchFocused(false);
   };
 
@@ -66,14 +60,8 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
   }, [isProductsDropdownOpen, activeCategory]);
 
   // Build entries for precise selection using productsData keys
-  const productEntries = Object.entries(productsData);
   
   // Search logic over entries so we can send the correct key to onProductSelect
-  const filteredProducts = searchTerm.trim()
-    ? productEntries.filter(([, product]) =>
-        product.name.toLowerCase().includes(searchTerm.trim().toLowerCase())
-      )
-    : [];
 
   // Predefined groupings for the multi-level dropdown. Keys must match productsData keys.
   const dryFruitMap: Record<string, string[]> = {
