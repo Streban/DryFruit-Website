@@ -169,7 +169,7 @@ function App() {
                             <div className="product-photo">
                               <img src={product.heroImage} alt={product.name} />
                             </div>
-                            <h3>{product.type}</h3>
+                            <h3 style={{ fontSize: "18px", fontWeight: "bold" }}>{product.type}</h3>
                           </div>
                         );
                       })}
