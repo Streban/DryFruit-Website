@@ -29,6 +29,7 @@ export interface Product {
   points: string[];
   coverPhoto?: string;
   type: string; // Added type property
+  navName: string;
 }
 
 const months = [
@@ -58,6 +59,7 @@ export const productsData: Record<string, Product> = {
   KambriAlmondsShelled: {
     id: "kambri-almonds-shelled",
     name: "Kambri Almonds",
+    navName: "Kambri",
     heroImage: "/assets/images/latestphotos/Kambri Almond.png",
     coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
     imageNoBg: "/assets/images/latestphotos/Kambri Almond.png",
@@ -107,6 +109,7 @@ export const productsData: Record<string, Product> = {
   KambriAlmondsUnshelled: {
     id: "kambri-almonds-unshelled",
     name: "Kambri Almonds",
+    navName: "Kambri",
     heroImage: "/assets/images/latestphotos/Kambri Almond Unshelled.png",
     coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
     imageNoBg: "/assets/images/latestphotos/Kambri Almond Unshelled.png",
@@ -156,6 +159,7 @@ export const productsData: Record<string, Product> = {
   KalamDanaAlmondsShelled: {
     id: "kalamdana-almonds-shelled",
     name: "Kalam Dana Almonds",
+    navName: "Kalam Dana",
     heroImage: "/assets/images/latestphotos/Kalam Dana Almond.png",
     coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
     imageNoBg: "/assets/images/latestphotos/Kalam Dana Almond.png",
@@ -205,6 +209,7 @@ export const productsData: Record<string, Product> = {
   KalamDanaAlmondsUnshelled: {
     id: "kalamdana-almonds-unshelled",
     name: "Kalam Dana Almonds",
+    navName: "Kalam Dana",
     heroImage: "/assets/images/latestphotos/Kalamdana Almond shelled.png",
     coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
     imageNoBg: "/assets/images/latestphotos/Kalamdana Almond shelled.png",
@@ -254,6 +259,7 @@ export const productsData: Record<string, Product> = {
   KattaJumboAlmondsShelled: {
     id: "katta-jumbo-almonds-shelled",
     name: "Katta Jumbo Almonds",
+    navName: "Katta Jumbo",
     heroImage: "/assets/images/latestphotos/Katta Jumbo Shelled.png",
     coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
     imageNoBg: "/assets/images/latestphotos/Katta Jumbo Shelled.png",
@@ -303,6 +309,7 @@ export const productsData: Record<string, Product> = {
   KattaJumboAlmondsUnshelled: {
     id: "katta-jumbo-almonds-unshelled",
     name: "Katta Jumbo Almonds",
+    navName: "Katta Jumbo",
     heroImage: "/assets/images/latestphotos/Katta Jumbo.png",
     coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
     imageNoBg: "/assets/images/latestphotos/Katta Jumbo.png",
@@ -353,6 +360,7 @@ export const productsData: Record<string, Product> = {
   PeelaKandhariRaisin: {
     id: "peela-kandhari-raisin",
     name: "Peela Kandhari Raisin",
+    navName: "Peela Kandhari",
     heroImage: "/assets/images/latestphotos/Peela Khandhari - Golden Raisin.png",
     coverPhoto: "/assets/images/coverPhotos/raisins.avif",
     description:
@@ -402,6 +410,7 @@ export const productsData: Record<string, Product> = {
   SultanaRaisins: {
     id: "sultana-raisins",
     name: "Sultana Raisins",
+    navName: "Sultana",
     heroImage: "/assets/images/latestphotos/Sultana Raisin.png",
     coverPhoto: "/assets/images/coverPhotos/raisins.avif",
     description:
@@ -450,6 +459,7 @@ export const productsData: Record<string, Product> = {
   KalaPishin: {
     id: "kala-pishin",
     name: "Kala Pishin",
+    navName: "Kala Pishin",
     heroImage: "/assets/images/latestphotos/Kala Pishin - Black Raisin.png",
     coverPhoto: "/assets/images/coverPhotos/raisins.avif",
     description:
@@ -498,6 +508,7 @@ export const productsData: Record<string, Product> = {
   KillaSaifullahPistachiosShelled: {
     id: "killa-saifullah-pistachios-shelled",
     name: "Killa Saifullah Pistachios",
+    navName: "Killa Saifullah",
     heroImage: "/assets/images/latestphotos/Killah Saifullah Pistachio Shelled.png",
     coverPhoto: "/assets/images/coverPhotos/Pistachio.jpg",
     description:
@@ -553,6 +564,7 @@ export const productsData: Record<string, Product> = {
   ZiaratPistachiosShelled: {
     id: "ziarat-pistachios-shelled",
     name: "Ziarat Pistachios",
+    navName: "Ziarat",
     heroImage: "/assets/images/latestphotos/Ziarat Pistachio Shelled.png",
     coverPhoto: "/assets/images/coverPhotos/Pistachio.jpg",
     points: [
@@ -608,6 +620,7 @@ export const productsData: Record<string, Product> = {
   KillaSaifullahPistachiosUnshelled: {
     id: "killa-saifullah-pistachios-unshelled",
     name: "Killa Saifullah Pistachios",
+    navName: "Killa Saifullah",
     heroImage: "/assets/images/latestphotos/Killah Saifullah Pistachio.png",
     coverPhoto: "/assets/images/coverPhotos/Pistachio.jpg",
     description:
@@ -663,6 +676,7 @@ export const productsData: Record<string, Product> = {
   ZiaratPistachiosUnshelled: {
     id: "ziarat-pistachios-unshelled",
     name: "Ziarat Pistachios",
+    navName: "Ziarat",
     heroImage: "/assets/images/latestphotos/Ziarat Pista.png",
     coverPhoto: "/assets/images/coverPhotos/Pistachio.jpg",
     points: [
@@ -719,6 +733,7 @@ export const productsData: Record<string, Product> = {
   SwatdirWalnutsShelled: {
     id: "swat-dir-walnuts-shelled",
     name: "Swat-Dir Walnuts",
+    navName: "Swat-Dir",
     heroImage: "/assets/images/latestphotos/Swat-dir Walnut Shelled.png",
     coverPhoto: "/assets/images/coverPhotos/walnut.webp",
     points: [
@@ -774,6 +789,7 @@ export const productsData: Record<string, Product> = {
   KaghziWalnutsShelled: {
     id: "kaghzi-walnuts-shelled",
     name: "Kaghzi Walnuts",
+    navName: "Kaghzi",
     heroImage: "/assets/images/latestphotos/Kaghzi Walnut Shelled.png",
     coverPhoto: "/assets/images/coverPhotos/walnut.webp",
     points: [
@@ -830,6 +846,7 @@ export const productsData: Record<string, Product> = {
   SwatdirWalnutsUnshelled: {
     id: "swat-dir-walnuts-unshelled",
     name: "Swat-Dir Walnuts",
+    navName: "Swat-Dir",
     heroImage: "/assets/images/latestphotos/Swat-dir Walnut.png",
     coverPhoto: "/assets/images/coverPhotos/walnut.webp",
     points: [
@@ -885,6 +902,7 @@ export const productsData: Record<string, Product> = {
   KaghziWalnutsUnshelled: {
     id: "kaghzi-walnuts-unshelled",
     name: "Kaghzi Walnuts",
+    navName: "Kaghzi",
     heroImage: "/assets/images/latestphotos/Kaghzi Walnut.png",
     coverPhoto: "/assets/images/coverPhotos/walnut.webp",
     points: [
@@ -941,6 +959,7 @@ export const productsData: Record<string, Product> = {
   BanuChillasPineNutsShelled: {
     id: "banu-chillas-pinenuts-shelled",
     name: "Banu Chillas Pine Nuts",
+    navName: "Banu Chillas",
     heroImage: "/assets/images/latestphotos/Bannu Pinenut Shelled.png",
     coverPhoto: "/assets/images/coverPhotos/Pinenuts.jpg",
     points: [
@@ -996,6 +1015,7 @@ export const productsData: Record<string, Product> = {
   WaziriPineNutsShelled: {
     id: "waziri-pinenuts-shelled",
     name: "Waziri Pine Nuts",
+    navName: "Waziri",
     heroImage: "/assets/images/latestphotos/Waziri Pinenut Shelled.png",
     coverPhoto: "/assets/images/coverPhotos/Pinenuts.jpg",
     points: [
@@ -1051,6 +1071,7 @@ export const productsData: Record<string, Product> = {
   BanuChillasPineNutsUnshelled: {
     id: "banu-chillas-pinenuts-unshelled",
     name: "Banu Chillas Pine Nuts",
+    navName: "Banu Chillas",
     heroImage: "/assets/images/latestphotos/Bannu Pinenut.png",
     coverPhoto: "/assets/images/coverPhotos/Pinenuts.jpg",
     points: [
@@ -1106,6 +1127,7 @@ export const productsData: Record<string, Product> = {
   WaziriPineNutsUnshelled: {
     id: "waziri-pinenuts-unshelled",
     name: "Waziri Pine Nuts",
+    navName: "Waziri",
     heroImage: "/assets/images/latestphotos/Waziri Pinenuts.png",
     coverPhoto: "/assets/images/coverPhotos/Pinenuts.jpg",
     points: [
@@ -1162,6 +1184,7 @@ export const productsData: Record<string, Product> = {
   ParaChinarPeanutsShelled: {
     id: "para-chinar-peanuts-shelled",
     name: "Para-Chinar Peanuts",
+    navName: "Para-Chinar",
     heroImage: "/assets/images/latestphotos/Parachinar Peanut Shelled.png",
     coverPhoto: "/assets/images/coverPhotos/Peanuts.jpg",
     points: [
@@ -1217,6 +1240,7 @@ export const productsData: Record<string, Product> = {
   ChakwaliPeanutsShelled: {
     id: "chakwali-peanuts-shelled",
     name: "Chakwali Peanuts",
+    navName: "Chakwali",
     heroImage: "/assets/images/latestphotos/Chawali Peanut Shelled.png",
     coverPhoto: "/assets/images/coverPhotos/Peanuts.jpg",
     points: [
@@ -1272,6 +1296,7 @@ export const productsData: Record<string, Product> = {
   ParaChinarPeanutsUnshelled: {
     id: "para-chinar-peanuts-unshelled",
     name: "Para-Chinar Peanuts",
+    navName: "Para-Chinar",
     heroImage: "/assets/images/latestphotos/Para chinar Peanut.png",
     coverPhoto: "/assets/images/coverPhotos/Peanuts.jpg",
     points: [
@@ -1327,6 +1352,7 @@ export const productsData: Record<string, Product> = {
   ChakwaliPeanutsUnshelled: {
     id: "chakwali-peanuts-unshelled",
     name: "Chakwali Peanuts",
+    navName: "Chakwali",
     heroImage: "/assets/images/latestphotos/Chakwali Peanut.png",
     coverPhoto: "/assets/images/coverPhotos/Peanuts.jpg",
     points: [
@@ -1383,6 +1409,7 @@ export const productsData: Record<string, Product> = {
   FaraKaKalaChannaShelled: {
     id: "fara-ka-kala-channa-shelled",
     name: "Fara Ka Kala Channa",
+    navName: "Fara Ka",
     coverPhoto: "/assets/images/coverPhotos/kalla channa.jpg",
     points: [
       "Bright & Clean: Softer texture and lighter tone with versatile appeal.",
@@ -1418,6 +1445,7 @@ export const productsData: Record<string, Product> = {
   KhilayKalaChannaShelled: {
     id: "khilay-kala-channa-shelled",
     name: "Khilay Kala Channa",
+    navName: "Khilay",
     heroImage: "/assets/images/latestphotos/Khilay Channa Shelled.png",
     coverPhoto: "/assets/images/coverPhotos/kalla channa.jpg",
     points: [
@@ -1454,6 +1482,7 @@ export const productsData: Record<string, Product> = {
   FaraKaKalaChannaUnshelled: {
     id: "fara-ka-kala-channa-unshelled",
     name: "Fara Ka Kala Channa",
+    navName: "Fara Ka",
     coverPhoto: "/assets/images/coverPhotos/kalla channa.jpg",
     points: [
       "Bright & Clean: Softer texture and lighter tone with versatile appeal.",
@@ -1489,6 +1518,7 @@ export const productsData: Record<string, Product> = {
   KhilayKalaChannaUnshelled: {
     id: "khilay-kala-channa-unshelled",
     name: "Khilay Kala Channa",
+    navName: "Khilay",
     heroImage: "/assets/images/latestphotos/Khilay Channy.png",
     coverPhoto: "/assets/images/coverPhotos/kalla channa.jpg",
     points: [
@@ -1524,6 +1554,7 @@ export const productsData: Record<string, Product> = {
   RegularFigs: {
     id: "regular-fig",
     name: "Regular Figs",
+    navName: "Regular",
     coverPhoto: "/assets/images/coverPhotos/Fig.jpg",
     points: [
       "Sweet & Chewy: Classic flavour with soft texture and earthy undertone.",
@@ -1564,6 +1595,7 @@ export const productsData: Record<string, Product> = {
   PremiumFigs: {
     id: "premium-fig",
     name: "Premium Figs",
+    navName: "Premium",
     coverPhoto: "/assets/images/coverPhotos/Fig.jpg",
     heroImage: "/assets/images/latestphotos/Fig Premium.png",
     points: [
@@ -1604,6 +1636,7 @@ export const productsData: Record<string, Product> = {
   KishtaApricots: {
     id: "kishta-apricots",
     name: "Kishta Apricots",
+    navName: "Kishta",
     points: [
       "Sweet-Tart & Natural: Split and enriched by natural sun-drying.",
       "Vitamin-Rich: Loaded with antioxidants and nutrients.",
@@ -1652,6 +1685,7 @@ export const productsData: Record<string, Product> = {
   GolApricots: {
     id: "gol-apricots",
     name: "Gol Apricots",
+    navName: "Gol",
     heroImage: "/assets/images/latestphotos/Gol Apricot.png",
     coverPhoto: "/assets/images/coverPhotos/Apricot.avif",
     points: [
@@ -1700,6 +1734,7 @@ export const productsData: Record<string, Product> = {
   NaagApricots: {
     id: "naag-apricots",
     name: "Naag Apricots",
+    navName: "Naag",
     heroImage: "/assets/images/latestphotos/Naag Apricot.png",
     coverPhoto: "/assets/images/coverPhotos/Apricot.avif",
     points: [

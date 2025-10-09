@@ -25,6 +25,15 @@
   z-index: 1002;
 }
 
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+  z-index: 1002;
+}
+
 .logo-img {
   width: 120px;
   height: 120px;
@@ -37,9 +46,9 @@
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
+  white-space: nowrap;
 }
 
-/* Desktop Navigation */
 .navbar-menu {
   display: flex;
   list-style: none;
@@ -89,166 +98,98 @@
   transition: width 0.3s ease;
 }
 
+
 .navbar-link:hover::after {
   width: 100%;
 }
 
-.dropdown-toggle {
-  cursor: pointer;
-}
-
-.dropdown-arrow {
-  transition: transform 0.3s ease;
-  margin-left: 4px;
-}
-
-.dropdown-arrow.open {
-  transform: rotate(180deg);
-}
-
-.dropdown-menu {
+.main-dropdown {
   position: absolute;
   top: 100%;
   left: 0;
   background: white;
-  min-width: 200px;
   border-radius: 8px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-  z-index: 1001;
-  margin-top: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border: 1px solid rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  padding: 4px 0;
+  z-index: 2000;
 }
 
-.dropdown-menu.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.parent-item {
+  position: relative;
 }
 
 .dropdown-item {
-  display: block;
-  width: 100%;
-  padding: 12px 20px;
-  color: #2d6a4f;
-  text-decoration: none;
-  border: none;
-  background: none;
-  text-align: left;
+  padding: 12px 16px;
+  color: #1a4d2e;
   cursor: pointer;
-  font-family: inherit;
-  font-size: inherit;
-  transition: all 0.3s ease;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.dropdown-item:last-child {
-  border-bottom: none;
-  border-radius: 0 0 8px 8px;
-}
-
-.dropdown-item:first-child {
-  border-radius: 8px 8px 0 0;
+  transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
 .dropdown-item:hover {
   background: #f8f9fa;
-  color: #2d5a27;
-  padding-left: 24px;
+  color: #003d12;
+  padding-left: 22px;
 }
 
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-shrink: 0;
-}
-
-.search-container {
-  display: flex;
-  align-items: center;
-  /* background: rgba(255, 255, 255, 0.1); */
-  border-radius: 25px;
-  padding: 8px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-}
-
-.search-container:focus-within {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
-}
-
-.search-input {
-  background: none;
-  border: none;
-  outline: none;
-  color: white;
-  font-size: 14px;
-  width: 200px;
-  padding: 6px 0;
-}
-
-.search-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.search-btn {
-  background: none;
-  border: none;
-  color: white;
+.dropdown-item.clickable {
   cursor: pointer;
-  padding: 0;
-  margin-left: 8px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item.clickable:hover {
+  background: #e8f5e8;
+  color: #003d12;
+  transform: translateX(2px);
+}
+
+.dropdown-item-content {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  transition: color 0.3s ease;
 }
 
-.search-btn:hover {
-  color: #a8d5a8;
+.arrow-right {
+  font-size: 16px;
+  margin-left: 5px;
+  color: #1a4d2e;
 }
 
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-  z-index: 1002;
-}
-
-.hamburger {
+.dropdown-submenu {
+  position: absolute;
+  top: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  width: 25px;
-  height: 20px;
-  position: relative;
+  min-width: 200px;
+  padding: 4px 0;
+  z-index: 2100;
+  transition: opacity 0.2s ease;
 }
 
-.hamburger span {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background: white;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+/* ↓ smaller horizontal gap between 1st → 2nd dropdown */
+.left-flyout {
+  left: -90%;
 }
 
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+/* ↓ properly space 3rd dropdown (no overlap now) */
+.parent-item .dropdown-submenu .dropdown-submenu {
+  left: -100%;
 }
 
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
+.dropdown-toggle svg {
+  transition: transform 0.3s ease;
 }
 
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+.navbar-link:hover svg {
+  transform: rotate(180deg);
 }
 
 /* Large Desktop (1200px+) */
@@ -408,8 +349,8 @@
   }
 
   .logo-img {
-    width: 200px;
-    height: 200px;
+    width: 40px;
+    height: 40px;
   }
 
   .logo-text {

@@ -1,74 +1,28 @@
-import React, { useState, useRef } from 'react';
-import './Navbar.css';
-import { Link } from 'react-router-dom';
-import { productsData } from '../data/productsData';
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { productsData } from '../data/productsData'
+import './Navbar.css'
 
-interface NavbarProps {
-  onProductSelect?: (productId: string) => void;
-}
+const Navbar = () => {
+  const [hoveredMenu, setHoveredMenu] = useState<string | null>(null)
+  const [hoveredSubMenu, setHoveredSubMenu] = useState<string | null>(null)
+  const [hoveredThirdMenu, setHoveredThirdMenu] = useState<string | null>(null)
+  const navigate = useNavigate()
 
-const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const searchInputRef = useRef<HTMLInputElement>(null);
-  const dropdownMenuRef = useRef<HTMLDivElement>(null);
-
-  // Track which top-level product category is active in the mega dropdown
-  const [activeCategory, setActiveCategory] = useState<'dry' | 'whole' | 'shelled' | ''>('');
-  const [activeSubsection, setActiveSubsection] = useState<string>('');
-  const [submenuFlip, setSubmenuFlip] = useState<boolean>(false);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-
-  const handleProductsHover = () => {
-    setIsProductsDropdownOpen(true);
-  };
-
-  const handleProductsLeave = () => {
-    setIsProductsDropdownOpen(false);
-    setActiveSubsection('');
-  };
-
+  // Handle navigation to product page
   const handleProductClick = (productId: string) => {
-    if (onProductSelect) {
-      onProductSelect(productId);
-    }
-    setIsProductsDropdownOpen(false);
-    setIsMenuOpen(false);
-    setIsSearchFocused(false);
-  };
+    navigate(`/product/${productId}`)
+    // Close the dropdown menus
+    setHoveredMenu(null)
+    setHoveredSubMenu(null)
+    setHoveredThirdMenu(null)
+  }
 
-  const handleDropdownToggle = () => {
-    setIsProductsDropdownOpen(!isProductsDropdownOpen);
-  };
-
-  // Responsive detection and dynamic flip for third panel
-  React.useEffect(() => {
-    const onResize = () => {
-      setIsMobile(window.innerWidth < 768);
-      // Recalculate flip when resizing
-      if (dropdownMenuRef.current) {
-        const rect = dropdownMenuRef.current.getBoundingClientRect();
-        const estimatedWidth = 560; // approx width for middle+right panels
-        const willOverflow = rect.right + estimatedWidth > (window.innerWidth - 16);
-        setSubmenuFlip(willOverflow);
-      }
-    };
-    onResize();
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, [isProductsDropdownOpen, activeCategory]);
-
-  // Build entries for precise selection using productsData keys
-  
-  // Search logic over entries so we can send the correct key to onProductSelect
-
-  // Predefined groupings for the multi-level dropdown. Keys must match productsData keys.
   const dryFruitMap: Record<string, string[]> = {
     Raisins: ['PeelaKandhariRaisin', 'SultanaRaisins', 'KalaPishin'],
     Apricot: ['KishtaApricots', 'GolApricots', 'NaagApricots'],
     Fig: ['RegularFigs', 'PremiumFigs'],
-  };
+  }
 
   const wholeNutsMap: Record<string, string[]> = {
     Almonds: ['KambriAlmondsUnshelled', 'KalamDanaAlmondsUnshelled', 'KattaJumboAlmondsUnshelled'],
@@ -77,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
     Walnut: ['SwatdirWalnutsUnshelled', 'KaghziWalnutsUnshelled'],
     'Kala Channa': ['FaraKaKalaChannaUnshelled', 'KhilayKalaChannaUnshelled'],
     Peanuts: ['ParaChinarPeanutsUnshelled', 'ChakwaliPeanutsUnshelled'],
-  };
+  }
 
   const shelledNutsMap: Record<string, string[]> = {
     Almonds: ['KambriAlmondsShelled', 'KalamDanaAlmondsShelled', 'KattaJumboAlmondsShelled'],
@@ -86,267 +40,116 @@ const Navbar: React.FC<NavbarProps> = ({ onProductSelect }) => {
     Walnut: ['SwatdirWalnutsShelled', 'KaghziWalnutsShelled'],
     'Kala Channa': ['FaraKaKalaChannaShelled', 'KhilayKalaChannaShelled'],
     Peanuts: ['ParaChinarPeanutsShelled', 'ChakwaliPeanutsShelled'],
-  };
+  }
 
   const categoryToMap = (category: 'dry' | 'whole' | 'shelled'): Record<string, string[]> => {
-    if (category === 'dry') return dryFruitMap;
-    if (category === 'whole') return wholeNutsMap;
-    return shelledNutsMap;
-  };
+    if (category === 'dry') return dryFruitMap
+    if (category === 'whole') return wholeNutsMap
+    return shelledNutsMap
+  }
 
-  const renderSubmenu = (category: 'dry' | 'whole' | 'shelled') => {
-    const map = categoryToMap(category);
-    const subsections = Object.keys(map);
-    const ensureSubsection = () => {
-      if (!activeSubsection || !subsections.includes(activeSubsection)) {
-        setActiveSubsection(subsections[0] || '');
-      }
-    };
-    ensureSubsection();
-    const productsKeys = activeSubsection ? map[activeSubsection] : [];
-    return (
-      <div
-        className="submenu-panel"
-        onMouseEnter={() => setActiveCategory(category)}
-        style={{
-          display: 'flex',
-          gap: 16,
-          padding: '12px 8px',
-          minWidth: isMobile ? undefined : 520,
-          flexDirection: isMobile ? 'column' : 'row',
-        }}
-      >
-        {(!submenuFlip || isMobile) ? (
-          <>
-            <div style={{ display: 'flex', flexDirection: 'column', minWidth: 200, borderRight: isMobile ? undefined : '1px solid #eaeaea', paddingRight: isMobile ? 0 : 8 }}>
-              {subsections.map((section) => (
-                <div
-                  key={section}
-                  className={`dropdown-item${activeSubsection === section ? ' active' : ''}`}
-                  onMouseEnter={() => setActiveSubsection(section)}
-                  style={{ fontWeight: activeSubsection === section ? 600 : 400 }}
-                >
-                  {section}
-                </div>
-              ))}
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 4, minWidth: isMobile ? undefined : 300 }}>
-              {productsKeys && productsKeys.map((key) => {
-                const product = productsData[key];
-                if (!product) return null;
-                return (
-                  <div
-                    key={key}
-                    className="dropdown-item"
-                    onMouseDown={() => handleProductClick(key)}
-                    style={{ display: 'block', padding: '6px 8px', margin: 0 }}
-                  >
-                    <span>{product.name}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </>
-        ) : (
-          <>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 4, minWidth: 300 }}>
-              {productsKeys && productsKeys.map((key) => {
-                const product = productsData[key];
-                if (!product) return null;
-                return (
-                  <div
-                    key={key}
-                    className="dropdown-item"
-                    onMouseDown={() => handleProductClick(key)}
-                    style={{ display: 'block', padding: '6px 8px', margin: 0 }}
-                  >
-                    <span>{product.name}</span>
-                  </div>
-                );
-              })}
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', minWidth: 200, borderLeft: '1px solid #eaeaea', paddingLeft: 8 }}>
-              {subsections.map((section) => (
-                <div
-                  key={section}
-                  className={`dropdown-item${activeSubsection === section ? ' active' : ''}`}
-                  onMouseEnter={() => setActiveSubsection(section)}
-                  style={{ fontWeight: activeSubsection === section ? 600 : 400 }}
-                >
-                  {section}
-                </div>
-              ))}
-            </div>
-          </>
-        )}
-      </div>
-    );
-  };
-
-  // Handle click outside to close search dropdown
-  React.useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        searchInputRef.current &&
-        !searchInputRef.current.contains(event.target as Node)
-      ) {
-        setIsSearchFocused(false);
-      }
-    }
-    if (isSearchFocused) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isSearchFocused]);
+  const menuData = [
+    { title: 'Dry Fruits', key: 'dry' },
+    { title: 'Whole Nuts', key: 'whole' },
+    { title: 'Shelled Nuts', key: 'shelled' },
+  ]
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo - Left Side */}
-        <div className="">
-          <Link to="/" className="logo-link" onClick={() => setIsMenuOpen(false)} style={{display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none'}}>
-            <img src="/assets/images/latestphotos/Nutrinoix LOGO wb.png" alt="DryFruit Co." className="logo-img" />
-            <span className="logo-text">Nutrinoix</span>
-          </Link>
-        </div>
+        <Link to="/" className="logo-link">
+          <img src="/assets/images/latestphotos/Nutrinoix LOGO wb.png" alt="Logo" className="logo-img" />
+          <span className="logo-text">Nutrinoix</span>
+        </Link>
 
-        {/* Navigation Links - Center */}
-        <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
-          {/* <li className="navbar-item">
-            <Link to="/" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
-          </li> */}
-           <li className="navbar-item">
-            <Link to="/#about" className="navbar-link" onClick={() => setIsMenuOpen(false)}>About Us</Link>
+        <ul className="navbar-menu">
+          <li className="navbar-item">
+            <Link to="/#about" className="navbar-link">About Us</Link>
           </li>
-          <li 
+
+          <li
             className="navbar-item dropdown"
-            onMouseEnter={handleProductsHover}
-            onMouseLeave={() => { handleProductsLeave(); setActiveCategory(''); }}
+            onMouseEnter={() => setHoveredMenu('products')}
+            onMouseLeave={() => {
+              setHoveredMenu(null)
+              setHoveredSubMenu(null)
+              setHoveredThirdMenu(null)
+            }}
           >
-            <Link to="/#products" onClick={() => setIsMenuOpen(false)}>
-            <button 
-              className="navbar-link dropdown-toggle"
-              onClick={handleDropdownToggle}
-              type="button"
-              >
+            <button className="navbar-link dropdown-toggle">
               Our Products
-              <svg 
-                width="16" 
-                height="16" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                className={`dropdown-arrow ${isProductsDropdownOpen ? 'open' : ''}`}
-                >
-                <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M6 9l6 6 6-6" />
               </svg>
             </button>
-            </Link>
-            <div className={`dropdown-menu ${isProductsDropdownOpen ? 'show' : ''}`} style={{ display: 'flex', gap: 16 }}>
-              {/* Left rail: top-level categories */}
-              <div className="top-level-categories" style={{ display: 'flex', flexDirection: 'column', minWidth: 200 }}>
-                <div
-                  className={`dropdown-item${activeCategory === 'dry' ? ' active' : ''}`}
-                  onMouseEnter={() => setActiveCategory('dry')}
-                >
-                  Dry Fruits
-                </div>
-                <div
-                  className={`dropdown-item${activeCategory === 'whole' ? ' active' : ''}`}
-                  onMouseEnter={() => setActiveCategory('whole')}
-                >
-                  Whole Nuts
-                </div>
-                <div
-                  className={`dropdown-item${activeCategory === 'shelled' ? ' active' : ''}`}
-                  onMouseEnter={() => setActiveCategory('shelled')}
-                >
-                  Shelled Nuts
-                </div>
-              </div>
 
-              {/* Right panel: sub menu for active category */}
-              {activeCategory && (
-                <div style={{ borderLeft: '1px solid #eaeaea', }}>
-                  {renderSubmenu(activeCategory)}
-                </div>
-              )}
-            </div>
-          </li>
-         
-          <li className="navbar-item">
-            <Link to="/#history" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Our Mission</Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/#visit" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Contact</Link>
-          </li>
-        </ul>
-
-        {/* Search and Mobile Menu - Right Side */}
-        {/* <div className="navbar-right">
-          <div className="search-container" style={{ position: 'relative' }}>
-            <input 
-              type="text" 
-              placeholder="Search products..." 
-              className="search-input"
-              value={searchTerm}
-              onChange={e => setSearchTerm(e.target.value)}
-              onFocus={() => setIsSearchFocused(true)}
-              ref={searchInputRef}
-            />
-        
-            {isSearchFocused && filteredProducts.length > 0 && (
-              <div className="search-dropdown" style={{
-                position: 'absolute',
-                top: '110%',
-                left: 0,
-                width: '100%',
-                background: 'white',
-                borderRadius: '8px',
-                boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
-                zIndex: 2000,
-                maxHeight: '320px',
-                overflowY: 'auto',
-                padding: '8px 0',
-              }}>
-                {filteredProducts.map(([key, product]) => (
+            {hoveredMenu === 'products' && (
+              <div className="dropdown-menu main-dropdown">
+                {menuData.map((menu) => (
                   <div
-                    key={key}
-                    className="search-result-item"
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '12px',
-                      padding: '8px 16px',
-                      cursor: 'pointer',
-                      borderBottom: '1px solid #f0f0f0',
-                      color: '#2d6a4f',
+                    key={menu.key}
+                    className="dropdown-item parent-item"
+                    onMouseEnter={() => setHoveredSubMenu(menu.key)}
+                    onMouseLeave={() => {
+                      setHoveredSubMenu(null)
+                      setHoveredThirdMenu(null)
                     }}
-                    onMouseDown={() => handleProductClick(key)}
                   >
-                    <img src={product.heroImage} alt={product.name} style={{ width: 40, height: 40, borderRadius: 8, objectFit: 'cover' }} />
-                    <span style={{ fontWeight: 500 }}>{product.name}</span>
+                    <div className="dropdown-item-content">
+                      {menu.title}
+                      <span className="arrow-right">›</span>
+                    </div>
+
+                    {hoveredSubMenu === menu.key && (
+                      <div className="dropdown-submenu left-flyout">
+                        {Object.entries(categoryToMap(menu.key as 'dry' | 'whole' | 'shelled')).map(
+                          ([itemName, subItems]) => (
+                            <div
+                              key={itemName}
+                              className="dropdown-item parent-item"
+                              onMouseEnter={() => setHoveredThirdMenu(itemName)}
+                              onMouseLeave={() => setHoveredThirdMenu(null)}
+                            >
+                              <div className="dropdown-item-content">
+                                {itemName}
+                                {subItems.length > 0 && <span className="arrow-right">›</span>}
+                              </div>
+
+                              {hoveredThirdMenu === itemName && subItems.length > 0 && (
+                                <div className="dropdown-submenu left-flyout">
+                                  {subItems.map((sub) => (
+                                    <div 
+                                      key={sub} 
+                                      className="dropdown-item clickable"
+                                      onClick={() => handleProductClick(sub)}
+                                    >
+                                      {productsData[sub]?.navName || sub}
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          )
+                        )}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
             )}
-          </div>
-          
-          <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle menu">
-            <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </button>
-        </div> */}
+          </li>
+
+          <li className="navbar-item">
+            <Link to="/#history" className="navbar-link">Our Mission</Link>
+          </li>
+
+          <li className="navbar-item">
+            <Link to="/#visit" className="navbar-link">Contact</Link>
+          </li>
+        </ul>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar; 
+export default Navbar

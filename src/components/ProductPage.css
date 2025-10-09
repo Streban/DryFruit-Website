@@ -1,6 +1,6 @@
 /* Product Page Styles */
 .product-page {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: 'Lora', serif;
   color: #333;
   line-height: 1.6;
 }
@@ -66,15 +66,16 @@
 .product-name {
   font-size: 2.5rem;
   color: #2d6a4f;
+  margin-bottom: 60px;
   font-weight: 400;
 }
 
 .description-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px; /* reduced from 60px */
+  gap: 60px;
   align-items: center;
-  max-width: 1400px; /* increased from 1000px */
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -83,16 +84,16 @@
 }
 
 .description-image img {
-  width: 80%;
+  width: 100%;
   max-width: 100%;
-  height: 80%;
+  height: 100%;
   object-fit: contain; /* show full image; no cropping on sides */
   object-position: left center; /* keep image anchored to the left side */
   border-radius: 8px;
   background: transparent; /* ensure transparent PNG/WebP show the section background */
   box-shadow: none; /* avoid white-looking halo under transparent edges */
-  margin-top: -40px;
-  }
+  margin-left: -100px;
+}
 
 .description-text {
   text-align: left;
@@ -440,7 +441,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain; /* prevent cropping inside thumbnails */
-  object-position: center; /* center thumbnail content */
+  object-position: left center; /* align thumbnail content to the left */
   border-radius: 14px;
   border: none;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -452,16 +453,6 @@
   font-size: 1.1rem;
   margin-top: 8px;
   text-align: center;
-}
-
-/* Increase width for Even More Product section */
-.more-fruits-section .container {
-  max-width: 1800px;
-}
-
-/* Increase width for Product Description section */
-.product-description-section .container {
-  max-width: 1400px;
 }
 
 /* Responsive Design */
@@ -503,34 +494,6 @@
   
   .month-label {
     font-size: 0.7rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-  
-  .product-name {
-    font-size: 2rem;
-  }
-  
-  .fruits-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .varieties-origin-section,
-  .product-description-section,
-  .more-fruits-section {
-    padding: 50px 0;
-  }
-
-  .error-container h2 {
-    font-size: 2rem;
-  }
-  
-  .error-container p {
-    font-size: 1rem;
   }
 }
 
@@ -598,9 +561,36 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: sans-serif;
 }
 
 .back-button:hover {
   background-color: #6B3410;
+}
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .product-name {
+    font-size: 2rem;
+  }
+  
+  .fruits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .varieties-origin-section,
+  .product-description-section,
+  .more-fruits-section {
+    padding: 50px 0;
+  }
+
+  .error-container h2 {
+    font-size: 2rem;
+  }
+  
+  .error-container p {
+    font-size: 1rem;
+  }
 }
