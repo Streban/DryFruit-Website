@@ -71,10 +71,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds' }) => {
 
   // Navigate to a different product page when a product is chosen
 
-  const handleNavbarProductSelect = (productId: string) => {
-    navigate(`/product/${productId}`);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+ 
 
   const handleVarietyClick = (varietyId: string) => {
     setSelectedVariety(selectedVariety === varietyId ? '' : varietyId);
@@ -113,7 +110,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds' }) => {
   if (isLoading) {
     return (
       <div className="product-page">
-        <Navbar onProductSelect={handleNavbarProductSelect} />
+        <Navbar/>
         <div className="loading-container">
           <div className="loading-spinner"></div>
           <p>Loading product...</p>
@@ -126,7 +123,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds' }) => {
   if (!currentProduct) {
     return (
       <div className="product-page">
-        <Navbar onProductSelect={handleNavbarProductSelect} />
+        <Navbar  />
         <div className="error-container">
           <h2>Product not found</h2>
           <p>The requested product could not be found.</p>
@@ -144,7 +141,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds' }) => {
 
   return (
     <div className="product-page">
-      <Navbar onProductSelect={handleNavbarProductSelect} />
+      <Navbar  />
       
       {/* Hero Section */}
       <section className="hero-section">
@@ -238,14 +235,6 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds' }) => {
               <h3>Origin</h3>
               <div className="origin-map">
                 <ProductOriginMap origins={currentProduct.origins} />
-                <div className="origin-list" style={{marginTop: '20px'}}>
-                  <h4>Our sources:</h4>
-                  <ul>
-                    {currentProduct.origins.map((origin) => (
-                      <li key={origin.name}>{origin.name}</li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             </div>
           </div>

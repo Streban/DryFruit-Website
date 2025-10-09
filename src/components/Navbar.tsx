@@ -140,7 +140,7 @@ const Navbar = () => {
           </li>
 
           <li className="navbar-item">
-            <Link to="/#history" className="navbar-link">Our Mission</Link>
+            <Link to="/#mission" className="navbar-link">Our Mission</Link>
           </li>
 
           <li className="navbar-item">

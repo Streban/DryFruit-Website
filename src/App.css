@@ -652,6 +652,10 @@ body {
   background: #1da1f2;
 }
 
+.youtube .social-icon {
+  background: #ff0000;
+}
+
 .linkedin .social-icon {
   background: #0077b5;
 }
