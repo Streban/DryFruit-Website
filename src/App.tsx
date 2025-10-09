@@ -122,7 +122,6 @@ function App() {
               {/* Products Section */}
               <section id="products" className="products-section">
                 <div
-                  className=""
                   style={{
                     maxWidth: "1600px",
                     paddingLeft: "10rem",
