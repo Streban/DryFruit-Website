@@ -128,9 +128,9 @@ body {
 
 /* Products Section */
 .products-section {
-  padding: 100px 0;
+  padding: 100px 0 200px 0;
   background: white;
-  max-width: 2000px;
+  max-width: 2500px;
 }
 
 .products-content {
@@ -178,7 +178,7 @@ body {
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 180px; /* Only horizontal gap between product items/images */
+  column-gap: 200px; /* Only horizontal gap between product items/images */
 }
 
 .product-item {
@@ -225,7 +225,7 @@ body {
   color: #22613b;
   font-weight: 600;
   font-size: 1.1rem;
-  margin-top: 8px;
+  margin-top: 0px; /* bring the label a bit closer to the photo */
   text-align: center;
 }
 
