@@ -3,12 +3,15 @@
   font-family: 'Lora', serif;
   color: #333;
   line-height: 1.6;
+  background: #f8f9fa;
+
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto ;
   padding: 0 20px;
+
 }
 
 /* Hero Section */
@@ -441,7 +444,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain; /* prevent cropping inside thumbnails */
-  object-position: left center; /* align thumbnail content to the left */
+  object-position: center; /* center the thumbnail content */
   border-radius: 14px;
   border: none;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);

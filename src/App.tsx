@@ -1,6 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import Navbar from "./components/Navbar";
 import ContactBottomBar from "./components/ContactBottomBar";
+import ExploreProducts from "./components/ExploreProducts";
+import ProductTypes from "./components/ProductTypes";
+import ContactUs from "./components/ContactUs";
+import AboutUs from "./components/AboutUs";
+import OurMission from "./components/OurMission";
 import "./App.css";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import ProductPage from "./components/ProductPage";
@@ -85,7 +90,10 @@ function App() {
                         finest farms around the world. We bring you the taste of
                         nature with uncompromised quality and freshness.
                       </p>
-                      <button className="cta-button">
+                      <button 
+                        className="cta-button"
+                        onClick={() => navigate('/explore-products')}
+                      >
                         Explore Products
                         <svg
                           width="20"
@@ -127,7 +135,7 @@ function App() {
                     paddingLeft: "10rem",
                   }}
                 >
-                  <div className="products-content">
+                  <div className="products-content" >
                     <div className="products-text">
                       <h2>Our products</h2>
                       <p>
@@ -139,7 +147,10 @@ function App() {
                         processed to deliver exceptional quality and authentic
                         taste.
                       </p>
-                      <button className="products-button">
+                      <button 
+                        className="products-button"
+                        onClick={() => navigate('/explore-products')}
+                      >
                         Explore all products
                       </button>
                     </div>
@@ -205,7 +216,10 @@ function App() {
                           market, our duo became our strength.
                         </p>
                       </div> */}
-                      <button className="about-button">
+                      <button 
+                        className="about-button"
+                        onClick={() => navigate('/about')}
+                      >
                         Learn more about our journey
                       </button>
                     </div>
@@ -215,7 +229,7 @@ function App() {
                       }`}
                     >
                       <img
-                        src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                        src="/assets/images/latestphotos/About Us on homepage.jpg"
                         alt="Two business partners - French and Pakistani friends working together"
                       />
                     </div>
@@ -655,7 +669,12 @@ function App() {
             </>
           }
         />
+        <Route path="/explore-products" element={<ExploreProductsWrapper />} />
+        <Route path="/product-types/:categoryName" element={<ProductTypesWrapper />} />
         <Route path="/product/:productId" element={<ProductPageWrapper />} />
+        <Route path="/contact" element={<ContactUsWrapper />} />
+        <Route path="/about" element={<AboutUsWrapper />} />
+        <Route path="/mission" element={<OurMissionWrapper />} />
       </Routes>
     </div>
   );
@@ -666,6 +685,61 @@ import { useParams } from "react-router-dom";
 const ProductPageWrapper = () => {
   const { productId } = useParams<{ productId: string }>();
   return <ProductPage productId={productId} />;
+};
+
+// Wrapper for ExploreProducts with Navbar and ContactBottomBar
+const ExploreProductsWrapper = () => {
+  return (
+    <>
+      <Navbar />
+      <ExploreProducts />
+      <ContactBottomBar />
+    </>
+  );
+};
+
+// Wrapper for ProductTypes with Navbar and ContactBottomBar
+const ProductTypesWrapper = () => {
+  return (
+    <>
+      <Navbar />
+      <ProductTypes />
+      <ContactBottomBar />
+    </>
+  );
+};
+
+// Wrapper for ContactUs with Navbar and ContactBottomBar
+const ContactUsWrapper = () => {
+  return (
+    <>
+      <Navbar />
+      <ContactUs />
+      <ContactBottomBar />
+    </>
+  );
+};
+
+// Wrapper for AboutUs with Navbar and ContactBottomBar
+const AboutUsWrapper = () => {
+  return (
+    <>
+      <Navbar />
+      <AboutUs />
+      <ContactBottomBar />
+    </>
+  );
+};
+
+// Wrapper for OurMission with Navbar and ContactBottomBar
+const OurMissionWrapper = () => {
+  return (
+    <>
+      <Navbar />
+      <OurMission />
+      <ContactBottomBar />
+    </>
+  );
 };
 
 export default App;

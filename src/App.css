@@ -10,10 +10,12 @@ body {
   line-height: 1.6;
   color: #333;
   overflow-x: hidden;
+  background-color: white;
 }
 
 .App {
   min-height: 100vh;
+  background-color: white;
 }
 
 .container {
@@ -35,6 +37,13 @@ body {
   position: relative;
   color: white;
   margin-top: 80px;
+}
+
+/* Ensure proper spacing on smaller laptop screens */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .hero-section {
+    margin-top: 80px;
+  }
 }
 
 .hero-overlay {
@@ -104,7 +113,7 @@ body {
 
 /* Service Info Section */
 .service-info {
-  background: #f8f9fa;
+  background: white;
   padding: 80px 0;
   text-align: center;
 }
@@ -128,9 +137,27 @@ body {
 
 /* Products Section */
 .products-section {
-  padding: 100px 0 200px 0;
+  padding: 0px 0 200px 0;
   background: white;
   max-width: 2500px;
+}
+
+/* Fix products section overflow on smaller laptop screens */
+@media (max-width: 1440px) and (min-width: 1024px) {
+  .products-section {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .products-section > div {
+    padding-left: 6rem !important;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 1024px) {
+  .products-section > div {
+    padding-left: 4rem !important;
+  }
 }
 
 .products-content {
@@ -179,6 +206,29 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 200px; /* Only horizontal gap between product items/images */
+}
+
+/* Fix products overflow on smaller laptop screens */
+@media (max-width: 1440px) and (min-width: 1024px) {
+  .products-grid {
+    column-gap: 120px;
+  }
+  
+  .product-photo {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 1024px) {
+  .products-grid {
+    column-gap: 80px;
+  }
+  
+  .product-photo {
+    width: 220px;
+    height: 220px;
+  }
 }
 
 .product-item {
@@ -231,7 +281,7 @@ body {
 
 /* About Section */
 .about-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: white;
   padding: 120px 0;
   position: relative;
   overflow: hidden;
@@ -585,7 +635,7 @@ body {
 /* Follow Section */
 .follow-section {
   padding: 100px 0;
-  background: #f8f9fa;
+  background: white;
   text-align: center;
 }
 
@@ -740,7 +790,7 @@ body {
 /* Mission Section */
 .mission-section {
   padding: 120px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: white;
   position: relative;
   overflow: hidden;
 }

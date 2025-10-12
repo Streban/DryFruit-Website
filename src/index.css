@@ -21,10 +21,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 16px;
+  background-color: white;
 }
 
 #root {
   min-height: 100vh;
+  background-color: white;
 }
 
 /* Custom scrollbar */

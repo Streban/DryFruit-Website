@@ -1,53 +1,113 @@
-/* Contact Bottom Bar - Modern Design */
+/* Contact Bottom Bar - Screenshot Design */
 .contact-bottom-bar {
-  background: #1a4d3a;
   color: white;
   padding: 0;
   margin: 0;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
 
+/* Upper Section - Dark Green */
+.footer-upper {
+  background: #1a4d3a; /* Dark green background */
+  padding: 60px 0;
+}
+
+/* Lower Section - Dark Blue */
+.footer-lower {
+  background: #0d1b2a; /* Dark blue background */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-lower p {
+  color: #90ee90; /* Light green/lime color for copyright text */
+  margin: 0;
+  font-size: 0.9rem;
+}
+
 /* Footer Container */
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px 20px;
+  padding: 0 20px;
 }
 
 .footer-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr auto 1.2fr;
-  gap: 80px;
-  align-items: start;
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: stretch;
+  min-height: 200px;
 }
 
 /* Footer Columns */
 .footer-column {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
 }
 
-.footer-column h4 {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  font-size: 1.3rem;
+/* Logo Column */
+.logo-column {
+  align-items: flex-start;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  height: 150px;
+  width: auto;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-info .phone {
+  font-size: 1.1rem;
   font-weight: 600;
-  color: #a8d5a8;
-  margin-bottom: 24px;
-  letter-spacing: -0.02em;
+  color: white;
+  margin: 0;
 }
 
-/* Company Details */
-.company-details p {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  color: rgba(255, 255, 255, 0.9);
+.contact-info .address {
   font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
   line-height: 1.4;
-  margin-bottom: 4px;
 }
 
-.company-details br {
-  margin-bottom: 8px;
+/* Description Column */
+.description-column {
+  align-items: center;
+  text-align: center;
+}
+
+.company-description {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 300px;
+}
+
+/* Navigation Column */
+.navigation-column {
+  align-items: flex-start;
+}
+
+.navigation-column h4 {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
 }
 
 /* Footer Links */
@@ -63,280 +123,133 @@
 
 .footer-links li a {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
   display: block;
   padding: 2px 0;
+  padding-left: 20px; /* Indent sub-items */
 }
 
 .footer-links li a:hover {
   color: #a8d5a8;
 }
 
-/* Social Column */
-.social-column {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 20px;
+/* Add vertical separator lines between columns */
+.footer-column:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding-right: 30px;
 }
 
-.social-icons {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-}
-
-.social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.social-icon.facebook {
-  background: #a8d5a8;
-  color: #1a4d3a;
-}
-
-.social-icon.email {
-  background: #a8d5a8;
-  color: #1a4d3a;
-}
-
-.social-icon.instagram {
-  background: #a8d5a8;
-  color: #1a4d3a;
-}
-
-.social-icon.linkedin {
-  background: #a8d5a8;
-  color: #1a4d3a;
-}
-
-.social-icon:hover {
-  background: #5cb85c;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(168, 213, 168, 0.3);
-}
-
-/* Newsletter Column */
-.newsletter-column {
-  max-width: 320px;
-}
-
-.newsletter-column p {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.85rem;
-  line-height: 1.5;
-  margin-bottom: 24px;
-}
-
-/* Newsletter Form */
-.newsletter-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.form-row {
-  display: flex;
-  flex-direction: column;
-}
-
-.newsletter-form input[type="email"],
-.newsletter-form input[type="text"] {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  padding: 12px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.newsletter-form input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.newsletter-form input:focus {
-  outline: none;
-  border-color: #a8d5a8;
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 0 2px rgba(168, 213, 168, 0.2);
-}
-
-/* Form Checkbox */
-.form-checkbox {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-.form-checkbox input[type="checkbox"] {
-  margin-top: 2px;
-  accent-color: #a8d5a8;
-}
-
-.form-checkbox label {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.8rem;
-  line-height: 1.4;
-  cursor: pointer;
-}
-
-/* Newsletter Button */
-.newsletter-btn {
-  background: #a8d5a8;
-  color: #1a4d3a;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 4px;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 8px;
-}
-
-.newsletter-btn:hover {
-  background: #5cb85c;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(168, 213, 168, 0.3);
-}
-
-/* Footer Bottom */
-.footer-bottom {
-  display: flex;
-  justify-content: center;
-}
-
-.footer-bottom p {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0;
-  font-size: 0.85rem;
-}
-
-.scroll-to-top {
-  background: #a8d5a8;
-  color: #1a4d3a;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.scroll-to-top:hover {
-  background: #5cb85c;
-  transform: translateY(-2px);
+.footer-column:not(:first-child) {
+  padding-left: 30px;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .footer-content {
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: 40px;
   }
   
-  .social-column {
-    grid-column: 1 / -1;
-    justify-content: flex-start;
-    padding-top: 0;
+  .footer-column {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 300px;
+  }
+  
+  .description-column {
+    flex: 1 1 100%;
     margin-top: 20px;
+    padding: 0;
   }
   
-  .social-icons {
-    flex-direction: row;
-    gap: 20px;
+  .footer-column:not(:last-child) {
+    border-right: none;
+    padding-right: 0;
   }
   
-  .newsletter-column {
-    grid-column: 1 / -1;
-    max-width: 100%;
-    margin-top: 20px;
+  .footer-column:not(:first-child) {
+    padding-left: 0;
   }
 }
 
 @media (max-width: 768px) {
+  .footer-upper {
+    padding: 40px 0;
+  }
+  
   .footer-container {
-    padding: 40px 16px 20px;
+    padding: 0 16px;
   }
   
   .footer-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 32px;
   }
   
-  .footer-column h4 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+  .footer-column {
+    flex: none;
+    width: 100%;
   }
   
-  .social-column {
-    margin-top: 16px;
+  .footer-column:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-right: 0;
+    padding-bottom: 30px;
   }
   
-  .social-icons {
-    justify-content: center;
+  .footer-column:not(:first-child) {
+    padding-left: 0;
+    padding-top: 30px;
   }
   
-  .newsletter-column {
-    margin-top: 16px;
+  .footer-logo {
+    height: 120px;
   }
   
-  .footer-bottom {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    text-align: center;
+  .navigation-column h4 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+  
+  .company-description {
+    font-size: 0.9rem;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
+  .footer-upper {
+    padding: 30px 0;
+  }
+  
   .footer-container {
-    padding: 30px 12px 16px;
+    padding: 0 12px;
   }
   
   .footer-content {
     gap: 24px;
   }
   
-  .newsletter-form input[type="email"],
-  .newsletter-form input[type="text"] {
-    padding: 10px 12px;
+  .footer-logo {
+    height: 100px;
+  }
+  
+  .contact-info .phone {
+    font-size: 1rem;
+  }
+  
+  .contact-info .address {
     font-size: 0.85rem;
   }
   
-  .newsletter-btn {
-    padding: 10px 20px;
+  .company-description {
     font-size: 0.85rem;
   }
   
-  .social-icon {
-    width: 44px;
-    height: 44px;
-  }
-  
-  .scroll-to-top {
-    width: 36px;
-    height: 36px;
+  .footer-lower p {
+    font-size: 0.8rem;
   }
 } 

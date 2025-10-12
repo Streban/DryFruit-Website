@@ -43,6 +43,9 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds' }) => {
     setCurrentProduct(product || null);
     setSelectedVariety('');
     setIsLoading(false);
+    
+    // Scroll to top when navigating to a new product
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [productId]);
 
   // Intersection Observer for 'Even more fruits' section
@@ -138,7 +141,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds' }) => {
   const visibleProducts = getVisibleProducts();
   // Prefer coverPhoto for the hero section if available; fall back to heroImage
   const heroSrc = currentProduct.coverPhoto ?? currentProduct.heroImage;
-
+console.log(visibleProducts)
   return (
     <div className="product-page">
       <Navbar  />
@@ -154,10 +157,10 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds' }) => {
       </section>
 
       {/* Product Description Section */}
-      <section className="product-description-section" style={{paddingBottom:'25px'}}>
+      <section className="product-description-section" style={{paddingBottom:'0px'}}>
         <div className="container">
           <div className="description-content">
-            <h2 className="product-name" style={{paddingTop: '60px', fontFamily:'revert-layer', fontWeight:800}}>{currentProduct.name}</h2>
+            <h2 className="product-name" style={{paddingTop: '0px', fontFamily:'revert-layer', fontWeight:800}}>{currentProduct.name}</h2>
             
             <div className="description-layout">
               <div className="description-image">
@@ -254,13 +257,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId = 'almonds' }) => {
                 <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-            
+
             <div className="fruits-grid">
               {visibleProducts.map((product, index) => (
                 <div 
                   key={`${product.id}-${carouselIndex}-${index}`}
                   className="fruit-item"
-                  onClick={() => navigate(`/product/${visibleProducts[index]}`)}
+                  onClick={() => navigate(`/product/${visibleProducts[index].navLink}`)}
                 >
                   <div className="fruit-image">
                     <img

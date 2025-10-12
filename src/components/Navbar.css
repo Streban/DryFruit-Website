@@ -32,6 +32,7 @@
   text-decoration: none;
   flex-shrink: 0;
   z-index: 1002;
+  outline: none; /* Remove default focus outline */
 }
 
 .logo-img {
@@ -81,6 +82,27 @@
   border: none;
   cursor: pointer;
   font-family: inherit;
+  outline: none; /* Remove default focus outline */
+}
+
+/* Remove focus outline for all clickable elements in navbar */
+.navbar-link:focus,
+.logo-link:focus,
+.dropdown-item:focus,
+.navbar button:focus {
+  outline: none;
+}
+
+/* Remove focus outline for all buttons in navbar */
+.navbar button {
+  outline: none;
+}
+
+/* Alternative: Add custom focus styling if needed for accessibility */
+.navbar-link:focus-visible {
+  outline: 2px solid #a8d5a8;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .navbar-link:hover {
@@ -128,6 +150,7 @@
   cursor: pointer;
   transition: all 0.25s ease;
   white-space: nowrap;
+  outline: none; /* Remove default focus outline */
 }
 
 .dropdown-item:hover {
@@ -204,6 +227,26 @@
   
   .search-input {
     width: 250px;
+  }
+}
+
+/* Smaller laptop screens (1024px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .navbar-container {
+    height: 80px;
+    padding: 0 30px;
+  }
+  
+  .navbar-menu {
+    gap: 25px;
+  }
+  
+  .logo-text {
+    font-size: 22px;
+  }
+  
+  .navbar-link {
+    font-size: 15px;
   }
 }
 
