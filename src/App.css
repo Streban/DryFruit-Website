@@ -37,12 +37,161 @@ body {
   position: relative;
   color: white;
   margin-top: 80px;
+  min-height: 600px; /* Ensure minimum height for smaller screens */
 }
 
-/* Ensure proper spacing on smaller laptop screens */
-@media (max-width: 1366px) and (min-width: 1024px) {
+/* Comprehensive laptop screen responsive design */
+
+/* Large laptops (1600px and above) */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px;
+  }
+  
+  .hero-text h1 {
+    font-size: 4.5rem;
+  }
+  
+  .products-grid {
+    column-gap: 250px;
+  }
+  
+  .product-photo {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .mission-intro {
+    max-width: 900px;
+    font-size: 1.3rem;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra large screens (1920px and above) */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1800px;
+  }
+  
+  .hero-text h1 {
+    font-size: 5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.4rem;
+    max-width: 650px;
+  }
+  
+  .products-grid {
+    column-gap: 300px;
+  }
+  
+  .product-photo {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .mission-intro {
+    max-width: 1000px;
+    font-size: 1.4rem;
+  }
+  
+  .about-text p {
+    font-size: 1.3rem;
+  }
+  
+  .mission-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+}
+
+/* Standard laptops (1440px - 1599px) */
+@media (max-width: 1599px) and (min-width: 1440px) {
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+  
+  .products-grid {
+    column-gap: 180px;
+  }
+  
+  .product-photo {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+/* Medium laptops (1366px - 1439px) */
+@media (max-width: 1439px) and (min-width: 1366px) {
   .hero-section {
     margin-top: 80px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3.8rem;
+  }
+  
+  .products-grid {
+    column-gap: 150px;
+  }
+  
+  .product-photo {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Standard laptops (1280px - 1365px) */
+@media (max-width: 1365px) and (min-width: 1280px) {
+  .hero-section {
+    margin-top: 80px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+  
+  .products-grid {
+    column-gap: 120px;
+  }
+  
+  .product-photo {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Smaller laptops (1024px - 1279px) */
+@media (max-width: 1279px) and (min-width: 1024px) {
+  .hero-section {
+    margin-top: 80px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3.2rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+  
+  .products-grid {
+    column-gap: 100px;
+  }
+  
+  .product-photo {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .mission-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
 
@@ -69,7 +218,7 @@ body {
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   color: white;
 }
@@ -86,6 +235,7 @@ body {
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
   font-weight: 400;
+  max-width: 550px; /* Better text wrapping on larger screens */
 }
 
 .cta-button {
@@ -140,10 +290,28 @@ body {
   padding: 0px 0 200px 0;
   background: white;
   max-width: 2500px;
+  overflow-x: hidden; /* Prevent horizontal overflow on all screen sizes */
 }
 
-/* Fix products section overflow on smaller laptop screens */
-@media (max-width: 1440px) and (min-width: 1024px) {
+/* Products section responsive padding for laptops */
+@media (min-width: 1600px) {
+  .products-section > div {
+    padding-left: 12rem !important;
+  }
+}
+
+@media (max-width: 1599px) and (min-width: 1440px) {
+  .products-section {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .products-section > div {
+    padding-left: 8rem !important;
+  }
+}
+
+@media (max-width: 1439px) and (min-width: 1366px) {
   .products-section {
     max-width: 100%;
     overflow-x: hidden;
@@ -154,7 +322,23 @@ body {
   }
 }
 
-@media (max-width: 1280px) and (min-width: 1024px) {
+@media (max-width: 1365px) and (min-width: 1280px) {
+  .products-section {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .products-section > div {
+    padding-left: 5rem !important;
+  }
+}
+
+@media (max-width: 1279px) and (min-width: 1024px) {
+  .products-section {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
   .products-section > div {
     padding-left: 4rem !important;
   }
@@ -165,6 +349,8 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+  max-width: 1400px; /* Better content width control */
+  margin: 0 auto;
 }
 
 .products-text h2 {
@@ -208,26 +394,39 @@ body {
   column-gap: 200px; /* Only horizontal gap between product items/images */
 }
 
-/* Fix products overflow on smaller laptop screens */
-@media (max-width: 1440px) and (min-width: 1024px) {
-  .products-grid {
-    column-gap: 120px;
-  }
-  
-  .product-photo {
-    width: 250px;
-    height: 250px;
+/* Mission features responsive grid for laptops */
+@media (min-width: 1600px) {
+  .mission-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
   }
 }
 
-@media (max-width: 1280px) and (min-width: 1024px) {
-  .products-grid {
-    column-gap: 80px;
+@media (max-width: 1599px) and (min-width: 1440px) {
+  .mission-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
   }
-  
-  .product-photo {
-    width: 220px;
-    height: 220px;
+}
+
+@media (max-width: 1439px) and (min-width: 1366px) {
+  .mission-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1365px) and (min-width: 1280px) {
+  .mission-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 1279px) and (min-width: 1024px) {
+  .mission-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
 }
 
@@ -311,6 +510,8 @@ body {
   align-items: center;
   position: relative;
   z-index: 1;
+  max-width: 1400px; /* Better content width control */
+  margin: 0 auto;
 }
 
 .about-text {
@@ -723,6 +924,8 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: start;
+  max-width: 1400px; /* Better content width control */
+  margin: 0 auto;
 }
 
 .visit-info h2 {
@@ -815,6 +1018,8 @@ body {
 .mission-content {
   position: relative;
   z-index: 1;
+  max-width: 1500px; /* Better content width control for mission section */
+  margin: 0 auto;
 }
 
 .mission-header {
@@ -1052,8 +1257,12 @@ body {
   }
 }
 
-/* Responsive Design */
+/* Tablet and smaller laptop responsive design */
 @media (max-width: 1024px) {
+  .container {
+    padding: 0 16px;
+  }
+  
   .hero-text h1 {
     font-size: 3rem;
   }
@@ -1067,6 +1276,16 @@ body {
 
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  
+  .products-section > div {
+    padding-left: 2rem !important;
+  }
+  
+  .product-photo {
+    width: 200px;
+    height: 200px;
   }
 
   .stats-grid {
@@ -1076,6 +1295,11 @@ body {
 
   .social-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .mission-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
 
   .timeline::before {
@@ -1099,6 +1323,7 @@ body {
   }
 }
 
+/* Mobile and small tablet responsive design */
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
@@ -1106,6 +1331,7 @@ body {
 
   .hero-section {
     height: 80vh;
+    margin-top: 70px;
   }
 
   .hero-text h1 {
@@ -1157,6 +1383,15 @@ body {
   .products-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+  
+  .products-section > div {
+    padding-left: 1rem !important;
+  }
+  
+  .product-photo {
+    width: 180px;
+    height: 180px;
   }
 
   .stats-grid {
@@ -1218,7 +1453,13 @@ body {
   }
 }
 
+/* Small mobile responsive design */
 @media (max-width: 480px) {
+  .hero-section {
+    height: 70vh;
+    margin-top: 60px;
+  }
+  
   .hero-text h1 {
     font-size: 2rem;
   }
@@ -1257,6 +1498,15 @@ body {
 
   .about-image img {
     height: 280px;
+  }
+  
+  .products-section > div {
+    padding-left: 0.5rem !important;
+  }
+  
+  .product-photo {
+    width: 150px;
+    height: 150px;
   }
 
   .timeline-year {

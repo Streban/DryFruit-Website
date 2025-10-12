@@ -104,7 +104,7 @@ const Navbar = () => {
                   >
                     <div className="dropdown-item-content">
                       {menu.title}
-                      <span className="arrow-right">›</span>
+                      <span className="arrow-right">‹</span>
                     </div>
 
                     {hoveredSubMenu === menu.key && (
@@ -119,7 +119,7 @@ const Navbar = () => {
                             >
                               <div className="dropdown-item-content">
                                 {itemName}
-                                {subItems.length > 0 && <span className="arrow-right">›</span>}
+                                {subItems.length > 0 && <span className="arrow-right">‹</span>}
                               </div>
 
                               {hoveredThirdMenu === itemName && subItems.length > 0 && (
