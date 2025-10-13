@@ -142,7 +142,7 @@ function App() {
                         We offer premium quality dry fruits and nuts sourced
                         directly from the finest regions of Pakistan. Our
                         extensive range includes almonds, raisins, pistachios,
-                        walnuts, pine nuts, hazelnuts, peanuts, figs, and
+                        walnuts, pine nuts, chickpea, peanuts, figs, and
                         apricots – all carefully selected and naturally
                         processed to deliver exceptional quality and authentic
                         taste.
@@ -620,48 +620,6 @@ function App() {
                       </div>
                       <span>Connect on LinkedIn</span>
                     </a>
-                  </div>
-                </div>
-              </section>
-              {/* Visit Us Section */}
-              <section id="visit" className="visit-section">
-                <div className="container">
-                  <div className="visit-content">
-                    <div className="visit-info">
-                      <h2>COME AND VISIT US</h2>
-                      <div className="visit-details">
-                        <div className="detail-item">
-                          <h3>DryFruit Co. Premium Store</h3>
-                          <p>123 Fruit Street, Dry Valley</p>
-                          <p>California, CA 90210</p>
-                        </div>
-                        <div className="detail-item">
-                          <h3>Phone: +1 (555) 123-4567</h3>
-                          <p>Email: info@dryfruitco.com</p>
-                        </div>
-                        <div className="detail-item">
-                          <h3>Store Timing</h3>
-                          <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
-                          <p>Sat: 9:00 AM - 4:00 PM</p>
-                          <p>Sun: Closed</p>
-                        </div>
-                      </div>
-                      <button className="directions-btn">Get Directions</button>
-                    </div>
-                    <div className="map-container">
-                      <div className="map-placeholder">
-                        <iframe
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13610.80926516913!2d74.308013!3d31.520370!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904ddc8b1b1b1%3A0x1b1b1b1b1b1b1b1b!2sLahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1635959342716!5m2!1sen!2s"
-                          width="100%"
-                          height="400"
-                          style={{ border: 0, borderRadius: "12px" }}
-                          allowFullScreen
-                          loading="lazy"
-                          referrerPolicy="no-referrer-when-downgrade"
-                          title="DryFruit Co. Location"
-                        ></iframe>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </section>

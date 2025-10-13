@@ -126,8 +126,8 @@
   left: 100%;
 }
 
-/* Address Section */
-.address-section {
+/* Visit Information Section */
+.visit-info-section {
   background: white;
   padding: 50px 40px;
   border-radius: 15px;
@@ -138,7 +138,7 @@
   animation: slideInLeft 0.8s ease-out;
 }
 
-.address-section::before {
+.visit-info-section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -157,35 +157,6 @@
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-.address-content {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-.contact-icon {
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.contact-text {
-  flex: 1;
-}
-
-.contact-text p {
-  color: #333;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0 0 5px 0;
-  font-weight: 400;
 }
 
 /* Form Section */
@@ -386,7 +357,7 @@
     padding: 0 16px;
   }
   
-  .address-section,
+  .visit-info-section,
   .form-section {
     padding: 40px 25px;
   }
@@ -399,16 +370,6 @@
   .checkbox-row {
     flex-direction: column;
     gap: 15px;
-  }
-  
-  .contact-item {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-  }
-  
-  .contact-icon {
-    align-self: center;
   }
   
   .form-group input,
@@ -435,7 +396,7 @@
     padding: 0 12px;
   }
   
-  .address-section,
+  .visit-info-section,
   .form-section {
     padding: 35px 20px;
   }
@@ -451,12 +412,111 @@
     font-size: 0.95rem;
   }
   
-  .contact-text p {
-    font-size: 0.95rem;
-  }
   
   .submit-button {
     padding: 15px 30px;
     font-size: 1rem;
+  }
+}
+
+/* Visit Section Styles */
+.visit-section {
+  padding: 60px 0;
+  background: white;
+}
+
+.visit-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1400px; /* Better content width control */
+  margin: 0 auto;
+}
+
+.visit-info h2 {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-size: 2.5rem;
+  color: #2d5a27;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.visit-details {
+  margin-bottom: 32px;
+}
+
+.detail-item {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item h3 {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  color: #2d5a27;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.detail-item p {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  color: #666;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.directions-btn {
+  background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.directions-btn:hover {
+  background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 90, 39, 0.3);
+}
+
+.visit-info-section .map-container {
+  margin-top: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Visit Section Responsive Styles */
+@media (max-width: 1024px) {
+  .visit-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .visit-section {
+    padding: 40px 0;
+  }
+  
+  .visit-info h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .visit-info h2 {
+    font-size: 1.8rem;
   }
 }

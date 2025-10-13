@@ -282,7 +282,7 @@ body {
 /* Service Info Section */
 .service-info {
   background: white;
-  padding: 80px 0;
+  padding: 40px 0;
   text-align: center;
 }
 
@@ -305,7 +305,7 @@ body {
 
 /* Products Section */
 .products-section {
-  padding: 0px 0 200px 0;
+  padding: 0px 0 100px 0;
   background: white;
   max-width: 1800px;
   overflow-x: hidden; /* Prevent horizontal overflow on all screen sizes */
@@ -365,11 +365,12 @@ body {
 .products-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 100px;
   column-gap: 120px; /* Increase horizontal space between text and photos */
   align-items: center;
-  max-width: 1400px; /* Allow grid to expand so the gap takes effect */
-  margin: 0 0;
+  max-width: 1200px; /* Allow grid to expand so the gap takes effect */
+  margin:  1px 1px 0px 0px;
+  margin-right: 100px;
 }
 
 .products-text h2 {
@@ -500,7 +501,7 @@ body {
 /* About Section */
 .about-section {
   background: white;
-  padding: 120px 0;
+  padding: 0;
   position: relative;
   overflow: hidden;
 }
@@ -721,7 +722,7 @@ body {
 
 /* History Section */
 .history-section {
-  padding: 100px 0;
+  padding: 60px 0;
   background: white;
 }
 
@@ -822,7 +823,7 @@ body {
 /* Statistics Section */
 .stats-section {
   background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
-  padding: 80px 0;
+  padding: 40px 0;
   color: white;
 }
 
@@ -854,7 +855,7 @@ body {
 
 /* Follow Section */
 .follow-section {
-  padding: 100px 0;
+  padding: 60px 0;
   background: white;
   text-align: center;
 }
@@ -932,86 +933,10 @@ body {
   font-size: 0.9rem;
 }
 
-/* Visit Section */
-.visit-section {
-  padding: 100px 0;
-  background: white;
-}
-
-.visit-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-  max-width: 1400px; /* Better content width control */
-  margin: 0 auto;
-}
-
-.visit-info h2 {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  font-size: 2.5rem;
-  color: #2d5a27;
-  margin-bottom: 40px;
-  font-weight: 600;
-}
-
-.visit-details {
-  margin-bottom: 32px;
-}
-
-.detail-item {
-  margin-bottom: 32px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #eee;
-}
-
-.detail-item:last-child {
-  border-bottom: none;
-}
-
-.detail-item h3 {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  color: #2d5a27;
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.detail-item p {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  color: #666;
-  margin-bottom: 4px;
-  line-height: 1.5;
-}
-
-.directions-btn {
-  background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
-  color: white;
-  border: none;
-  padding: 14px 28px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-}
-
-.directions-btn:hover {
-  background: linear-gradient(135deg, #4a7c59 0%, #5a8c69 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(45, 90, 39, 0.3);
-}
-
-.map-container {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
-}
 
 /* Mission Section */
 .mission-section {
-  padding: 120px 0;
+  padding: 80px 0;
   background: white;
   position: relative;
   overflow: hidden;
@@ -1287,8 +1212,7 @@ body {
   }
 
   .products-content,
-  .about-content,
-  .visit-content {
+  .about-content {
     grid-template-columns: 1fr;
     gap: 50px;
   }
@@ -1365,25 +1289,23 @@ body {
   .products-section,
   .about-section,
   .history-section,
-  .follow-section,
-  .visit-section {
-    padding: 60px 0;
+  .follow-section {
+    padding: 40px 0;
   }
 
   .about-section {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
   .stats-section {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .service-content h2,
   .products-text h2,
   .about-text h2,
   .history-section h2,
-  .follow-section h2,
-  .visit-info h2 {
+  .follow-section h2 {
     font-size: 2rem;
   }
 
@@ -1440,7 +1362,7 @@ body {
   }
 
   .mission-section {
-    padding: 80px 0;
+    padding: 60px 0;
   }
   
   .mission-header h2 {
@@ -1492,8 +1414,7 @@ body {
   .products-text h2,
   .about-text h2,
   .history-section h2,
-  .follow-section h2,
-  .visit-info h2 {
+  .follow-section h2 {
     font-size: 1.8rem;
   }
 

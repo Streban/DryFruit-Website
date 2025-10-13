@@ -21,7 +21,7 @@ const ExploreProducts: React.FC = () => {
       'Walnuts': { image: '', count: 0 },
       'Apricots': { image: '', count: 0 },
       'Raisins': { image: '', count: 0 },
-      'Hazelnuts': { image: '', count: 0 }
+      'Chickpea': { image: '', count: 0 }
     };
 
     Object.entries(productsData).forEach(([, product]) => {
@@ -54,9 +54,9 @@ const ExploreProducts: React.FC = () => {
       } else if (type.includes('raisin')) {
         if (!baseCategories['Raisins'].image) baseCategories['Raisins'].image = product.heroImage;
         baseCategories['Raisins'].count++;
-      } else if (type.includes('hazelnut')) {
-        if (!baseCategories['Hazelnuts'].image) baseCategories['Hazelnuts'].image = product.heroImage;
-        baseCategories['Hazelnuts'].count++;
+      } else if (type.includes('chickpea')) {
+        if (!baseCategories['Chickpea'].image) baseCategories['Chickpea'].image = product.heroImage;
+        baseCategories['Chickpea'].count++;
       }
     });
 
@@ -71,7 +71,9 @@ const ExploreProducts: React.FC = () => {
   const handleCategoryClick = (categoryName: string) => {
     navigate(`/product-types/${categoryName.toLowerCase().replace(/\s+/g, '-')}`);
   };
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <div className="explore-products">
       <div className="explore-products-container">

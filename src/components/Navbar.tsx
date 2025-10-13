@@ -18,6 +18,32 @@ const Navbar = () => {
     setHoveredThirdMenu(null)
   }
 
+  // Map category names to URL-friendly types that ProductTypes expects
+  const getCategoryType = (categoryName: string): string => {
+    const typeMap: Record<string, string> = {
+      'Almonds': 'almonds',
+      'Pistachio': 'pistachios', 
+      'Pinenuts': 'pine-nuts',
+      'Walnut': 'walnuts',
+      'Kala Channa': 'chickpeas',
+      'Peanuts': 'peanuts',
+      'Raisins': 'raisins',
+      'Apricot': 'apricots',
+      'Fig': 'figs'
+    }
+    return typeMap[categoryName] || categoryName.toLowerCase().replace(/\s+/g, '-')
+  }
+
+  // Handle navigation to product types page
+  const handleCategoryClick = (categoryName: string) => {
+    const categoryType = getCategoryType(categoryName)
+    navigate(`/product-types/${categoryType}`)
+    // Close the dropdown menus
+    setHoveredMenu(null)
+    setHoveredSubMenu(null)
+    setHoveredThirdMenu(null)
+  }
+
   const dryFruitMap: Record<string, string[]> = {
     Raisins: ['PeelaKandhariRaisin', 'SultanaRaisins', 'KalaPishin'],
     Apricot: ['KishtaApricots', 'GolApricots', 'NaagApricots'],
@@ -117,7 +143,10 @@ const Navbar = () => {
                               onMouseEnter={() => setHoveredThirdMenu(itemName)}
                               onMouseLeave={() => setHoveredThirdMenu(null)}
                             >
-                              <div className="dropdown-item-content">
+                              <div 
+                                className="dropdown-item-content clickable"
+                                onClick={() => handleCategoryClick(itemName)}
+                              >
                                 {itemName}
                                 {subItems.length > 0 && <span className="arrow-right">‹</span>}
                               </div>

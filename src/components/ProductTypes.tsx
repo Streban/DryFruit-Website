@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { productsData, type Product } from '../data/productsData';
 import './ProductTypes.css';
@@ -7,7 +7,9 @@ const ProductTypes: React.FC = () => {
   const navigate = useNavigate();
   const { categoryName } = useParams<{ categoryName: string }>();
   const [selectedSubtype, setSelectedSubtype] = useState<'shelled' | 'unshelled'>('shelled');
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []); 
   // Convert URL parameter back to category name
   const getCategoryDisplayName = (urlName: string | undefined): string => {
     if (!urlName) return '';
@@ -46,7 +48,7 @@ const ProductTypes: React.FC = () => {
         products.push([key, product]);
       } else if (categoryName.includes('raisins') && type.includes('raisin')) {
         products.push([key, product]);
-      } else if (categoryName.includes('hazelnuts') && type.includes('hazelnut')) {
+      } else if (categoryName.includes('chickpea') && type.includes('chickpea')) {
         products.push([key, product]);
       }
     });
