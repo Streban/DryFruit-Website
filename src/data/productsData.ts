@@ -20,7 +20,6 @@ export interface Product {
   id: string;
   name: string;
   heroImage: string;
-  imageNoBg?: string; // Optional, used for products with no background image
   description: string;
   detailedDescription: string;
   varieties: Variety[];
@@ -64,7 +63,6 @@ export const productsData: Record<string, Product> = {
     navName: "Kambri",
     heroImage: "/assets/images/latestphotos/Kambri Almond.png",
     coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
-    imageNoBg: "/assets/images/latestphotos/Kambri Almond.png",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -115,7 +113,6 @@ export const productsData: Record<string, Product> = {
     navName: "Kambri",
     heroImage: "/assets/images/latestphotos/Kambri Almond Unshelled.png",
     coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
-    imageNoBg: "/assets/images/latestphotos/Kambri Almond Unshelled.png",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -166,7 +163,6 @@ export const productsData: Record<string, Product> = {
     navName: "Kalam Dana",
     heroImage: "/assets/images/latestphotos/Kalam Dana Almond.png",
     coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
-    imageNoBg: "/assets/images/latestphotos/Kalam Dana Almond.png",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -217,7 +213,6 @@ export const productsData: Record<string, Product> = {
     navName: "Kalam Dana",
     heroImage: "/assets/images/latestphotos/Kalamdana Almond shelled.png",
     coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
-    imageNoBg: "/assets/images/latestphotos/Kalamdana Almond shelled.png",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -268,7 +263,6 @@ export const productsData: Record<string, Product> = {
     navName: "Katta Jumbo",
     heroImage: "/assets/images/latestphotos/Katta Jumbo Shelled.png",
     coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
-    imageNoBg: "/assets/images/latestphotos/Katta Jumbo Shelled.png",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -319,7 +313,6 @@ export const productsData: Record<string, Product> = {
     navName: "Katta Jumbo",
     heroImage: "/assets/images/latestphotos/Katta Jumbo.png",
     coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
-    imageNoBg: "/assets/images/latestphotos/Katta Jumbo.png",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
