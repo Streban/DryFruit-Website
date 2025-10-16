@@ -363,7 +363,7 @@ export const productsData: Record<string, Product> = {
     name: "Peela Kandhari Raisin",
     navName: "Peela Kandhari",
     heroImage: "/assets/images/latestphotos/Peela Khandhari - Golden Raisin.png",
-    coverPhoto: "/assets/images/coverPhotos/raisins.avif",
+    coverPhoto: "https://res.cloudinary.com/dzjyyemdr/image/upload/v1760552621/raisins_hmvjzs.avif",
     description:
       "Peela Kandhari raisins are a prized variety of golden-green raisins, traditionally sun-dried in Kandahar. These raisins are juicy, sweet, and slightly chewy, with a natural sugary taste.",
     detailedDescription:
