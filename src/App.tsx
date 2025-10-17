@@ -145,12 +145,12 @@ function App() {
                       fontFamily: "'Poppins', sans-serif",
                     }}
                   >
-                   <div className="hero-text">
+                   <div className="hero-text" style={{marginTop:"2rem"}}>
                       <h1>
                         Pure
                         <br />
                         <span className="highlight">
-                          Taste, Trusted and Supply
+                          Taste, Trusted Supply
                         </span>
                         <br />
                         <span style={{ fontSize: "5rem" }}>
@@ -162,27 +162,7 @@ function App() {
                         Your trusted partner for premium dried fruits and nuts,
                         sourced from the finest agricultural lands of Pakistan
                       </p>
-                      <button
-                        className="cta-button"
-                        onClick={() => navigate("/explore-products")}
-                      >
-                        Explore Products
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M5 12h14m-7-7l7 7-7 7"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </button>
+                     
                     </div>
                   </div>
                 </div>
