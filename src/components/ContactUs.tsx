@@ -79,13 +79,15 @@ const ContactUs: React.FC = () => {
               
               <div className="visit-details">
                 <div className="detail-item">
-                  <h3>DryFruit Co. Premium Store</h3>
-                  <p>48 Cours Blaise Pascal</p>
-                  <p>91000 Évry-Courcouronnes, France</p>
+                  <h3>ARYANA INDUS COMPANY PVT LTD</h3>
+                  <p>Unit 66, C1 Block, AWT PHASE 2, Lahore – 54000, Pakistan</p>
                 </div>
                 <div className="detail-item">
-                  <h3>Phone: +33 01 81 85 07 20</h3>
-                  <p>Email: info@dryfruitco.com</p>
+                  <h3>Phone: +33 780790330</h3>
+                  <h3>Phone: +92 3121633358</h3>
+                  <h3>Phone: +92 3061002866</h3>
+                  <p>Email: sales@nutrinoix.com</p>
+                  <p>Email: info@nutrinoix.com</p>
                 </div>
                 <div className="detail-item">
                   <h3>Store Timing</h3>

@@ -27,17 +27,46 @@ body {
 /* Hero Section */
 .hero-section {
   height: 100vh;
-  background: linear-gradient(
-    rgba(45, 90, 39, 0.7),
-    rgba(45, 90, 39, 0.6)
-  ),
-  url('/api/placeholder/1920/1080') center/cover;
   display: flex;
   align-items: center;
   position: relative;
   color: white;
   margin-top: 80px;
   min-height: 600px; /* Ensure minimum height for smaller screens */
+  overflow: hidden; /* Prevent video from overflowing */
+  /* Fallback background image in case video fails to load */
+  background: linear-gradient(
+    rgba(45, 90, 39, 0.7),
+    rgba(45, 90, 39, 0.6)
+  ),
+  url('/api/placeholder/1920/1080') center/cover;
+}
+
+/* Video Background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2; /* Behind the overlay */
+}
+
+/* Video Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(45, 90, 39, 0.7),
+    rgba(45, 90, 39, 0.6)
+  );
+  z-index: -1; /* Above video but below content */
+  display: flex;
+  align-items: center;
 }
 
 /* Comprehensive laptop screen responsive design */
@@ -213,18 +242,13 @@ body {
   }
 }
 
-.hero-overlay {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
 .hero-content {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
+  z-index: 1; /* Above the overlay */
 }
 
 .hero-text {
@@ -1109,6 +1133,11 @@ body {
 .mission-cta {
   text-align: center;
   animation: fadeInUp 0.8s ease-out 0.7s both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px; /* spacing between the two buttons */
+  flex-wrap: wrap; /* better on smaller screens */
 }
 
 .sample-button {
@@ -1145,6 +1174,17 @@ body {
 .sample-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(45, 90, 39, 0.3);
+}
+
+/* Unify mission CTA buttons size and look without affecting other sections */
+.mission-cta .about-button,
+.mission-cta .sample-button {
+  padding: 16px 32px; /* same size */
+  font-size: 1.1rem; /* same text size */
+  border-radius: 28px; /* consistent rounding */
+  line-height: 1; /* ensure equal heights */
+  letter-spacing: 0; /* normalize */
+  text-transform: none; /* keep normal casing */
 }
 
 .mission-features .feature-card .feature-icon {
@@ -1275,6 +1315,12 @@ body {
   .hero-section {
     height: 80vh;
     margin-top: 70px;
+  }
+
+  /* Ensure video covers properly on mobile */
+  .hero-video {
+    object-fit: cover;
+    object-position: center;
   }
 
   .hero-text h1 {

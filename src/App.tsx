@@ -73,22 +73,33 @@ function App() {
               <Navbar  />
               {/* Hero Section */}
               <section id="home" className="hero-section">
+                {/* Video Background */}
+                <video
+                  className="hero-video"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                >
+                  <source src="https://res.cloudinary.com/dfrlrzsnk/video/upload/v1760638196/7186189_Nut_Nuts_3840x2160_1_1_lshhyk.mov" type="video/mp4" />
+                  {/* Fallback for browsers that don't support video */}
+                  Your browser does not support the video tag.
+                </video>
                 <div className="hero-overlay">
                   <div className="hero-content">
                     <div className="hero-text">
                       <h1>
-                        Specialist
+                        Pure
                         <br />
                         <span className="highlight">
-                          in Dry Fruits and Nuts
+                          Taste, Trusted and Supply
                         </span>
                         <br />
                         Since 1985
                       </h1>
                       <p>
-                        Premium quality dry fruits and nuts sourced from the
-                        finest farms around the world. We bring you the taste of
-                        nature with uncompromised quality and freshness.
+                      Your trusted partner for premium dried fruits and nuts, sourced from the finest agricultural lands of Pakistan
                       </p>
                       <button 
                         className="cta-button"
@@ -158,10 +169,10 @@ function App() {
                       {[
                         "KambriAlmondsShelled",
                         "KillaSaifullahPistachiosUnshelled",
-                        "RegularFigs",
+                        "SwatdirWalnutsShelled",
                         "BanuChillasPineNutsUnshelled",
                         "ChakwaliPeanutsUnshelled",
-                        "KhilayKalaChannaShelled",
+                        "KishtaApricots",
                       ].map((key) => {
                         const product = productsData[key];
                         if (!product) return null;
@@ -260,6 +271,15 @@ function App() {
                           flavour.
                         </p>
                       </div>
+                    </div>
+
+                    <div className="mission-cta" style={{ marginBottom: "20px" }}>
+                      <button 
+                        className="about-button"
+                        onClick={() => navigate('/mission')}
+                      >
+                        Learn more about our mission
+                      </button>
                     </div>
 
                     <div className="mission-features">
@@ -472,7 +492,12 @@ function App() {
                     </div>
 
                     <div className="mission-cta">
-                      <button className="sample-button">Request Samples</button>
+                      <button 
+                        className="sample-button"
+                        onClick={() => navigate('/contact')}
+                      >
+                        Request Samples
+                      </button>
                     </div>
                   </div>
                 </div>

@@ -61,8 +61,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KambriAlmondsShelled',
     name: "Kambri Almonds",
     navName: "Kambri",
-    heroImage: "/assets/images/latestphotos/Kambri Almond.png",
-    coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633949/Kambri_Almond_Unshelled_yzmlch.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634013/Almond_oq1zep.jpg",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -72,7 +72,7 @@ export const productsData: Record<string, Product> = {
       "Nutty Depth: Known for its rich taste that elevates gourmet blends and fine desserts.",
       "Premium Quality: Ideal for premium nut mixes, dessert toppings like ice creams and yogurts, and chocolate coatings.",
       "Origin: Peshawar – renowned for fertile soils and traditional almond cultivation.",
-      "Size: 26/28 per ounce, ensuring uniform quality.",
+      "Size: 26/28 per ounce.",
       "Storage: Ambient – maintains freshness, aroma, and natural crunch",
     ],
     varieties: [
@@ -81,20 +81,20 @@ export const productsData: Record<string, Product> = {
         name: "Kambri Almonds (Blanche)",
         description:
           "Kambri almonds, also known as Kaghzi or Blanche almonds, come from the mountainous areas of Gilgit-Baltistan and Chitral. They are prized for their ultra-thin shells and light skin, making them easy to peel and perfect for light, healthy snacking. Their mild, delicate flavor and soft crunch make them a favorite in traditional sweets and health-focused diets.",
-        availability: createAvailability([9, 8, 7, 12, 1, 2]),
+        availability: createAvailability([10, 11, 12, 1, 2,3]),
       },
       {
         id: "kalamdana",
         name: "Kalamdana Almonds",
         description:
           "Kalamdana almonds, also referred to as Kalmi or Sonara almonds, are larger in size and richer in taste. These almonds have a naturally sweet, bold flavor and a firm crunch. Their high nutritional value — packed with vitamin E, fiber, magnesium, and healthy fats — makes them ideal for energy mixes, protein bars, or daily snacking for those with active lifestyles.",
-        availability: createAvailability([9, 6, 11, 12]),
+        availability: createAvailability([9, 10, 11, 12, 1, 2,3]),
       },
       {
         id: "said-kheli-white",
-        name: "Said-Kheli Almonds",
+        name: "Katta Jumbo Almonds",
         description:
-          "Said-Kheli almonds are known for their pale white skin and unique appearance. Often used in luxury gifting and traditional celebrations, these almonds offer a fuller, more traditional almond flavor while maintaining a soft texture and clean look.",
+          "Katta Jumbo almonds are known for their pale white skin and unique appearance. Often used in luxury gifting and traditional celebrations, these almonds offer a fuller, more traditional almond flavor while maintaining a soft texture and clean look.",
         availability: createAvailability([9, 10, 11, 12, 1, 2]),
       },
     ],
@@ -111,8 +111,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KambriAlmondsUnshelled',
     name: "Kambri Almonds",
     navName: "Kambri",
-    heroImage: "/assets/images/latestphotos/Kambri Almond Unshelled.png",
-    coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633953/Kambri_Almond_zmuroa.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634013/Almond_oq1zep.jpg",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -122,7 +122,7 @@ export const productsData: Record<string, Product> = {
       "Nutty Depth: Known for its rich taste that elevates gourmet blends and fine desserts.",
       "Premium Quality: Ideal for premium nut mixes, dessert toppings like ice creams and yogurts, and chocolate coatings.",
       "Origin: Peshawar – renowned for fertile soils and traditional almond cultivation.",
-      "Size: 26/28 per ounce, ensuring uniform quality.",
+      "Size: 26/28 per ounce.",
       "Storage: Ambient – maintains freshness, aroma, and natural crunch",
     ],
     varieties: [
@@ -142,9 +142,9 @@ export const productsData: Record<string, Product> = {
       },
       {
         id: "said-kheli-white",
-        name: "Said-Kheli Almonds",
+        name: "Katta Jumbo Almonds",
         description:
-          "Said-Kheli almonds are known for their pale white skin and unique appearance. Often used in luxury gifting and traditional celebrations, these almonds offer a fuller, more traditional almond flavor while maintaining a soft texture and clean look.",
+          "Katta Jumbo almonds are known for their pale white skin and unique appearance. Often used in luxury gifting and traditional celebrations, these almonds offer a fuller, more traditional almond flavor while maintaining a soft texture and clean look.",
         availability: createAvailability([9, 10, 11, 12, 1, 2]),
       },
     ],
@@ -161,8 +161,8 @@ export const productsData: Record<string, Product> = {
     name: "Kalam Dana Almonds",
     navLink:'KalamDanaAlmondsShelled',
     navName: "Kalam Dana",
-    heroImage: "/assets/images/latestphotos/Kalam Dana Almond.png",
-    coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633948/Kalamdana_Almond_shelled_nzxkju.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634013/Almond_oq1zep.jpg",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -172,7 +172,7 @@ export const productsData: Record<string, Product> = {
       "Balanced Flavour: Smooth texture with subtle depth, perfect for functional foods.",
       "Functional Use: Commonly used in nutritional supplements, energy/protein bars, and bakery products focused on performance.",
       "Origin: Kalat – an almond-growing region known for rich, mineral soils.",
-      "Size: 30/32 per ounce – fine grading for consistency.",
+      "Size: 30/32 per ounce.",
       "Storage: Ambient – preserves texture and nutritional integrity.",
     ],
     varieties: [
@@ -192,9 +192,9 @@ export const productsData: Record<string, Product> = {
       },
       {
         id: "said-kheli-white",
-        name: "Said-Kheli Almonds",
+        name: "Katta Jumbo Almonds",
         description:
-          "Said-Kheli almonds are known for their pale white skin and unique appearance. Often used in luxury gifting and traditional celebrations, these almonds offer a fuller, more traditional almond flavor while maintaining a soft texture and clean look.",
+          "Katta Jumbo almonds are known for their pale white skin and unique appearance. Often used in luxury gifting and traditional celebrations, these almonds offer a fuller, more traditional almond flavor while maintaining a soft texture and clean look.",
         availability: createAvailability([9, 10, 11, 12, 1, 2]),
       },
     ],
@@ -211,8 +211,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KalamDanaAlmondsUnshelled',
     name: "Kalam Dana Almonds",
     navName: "Kalam Dana",
-    heroImage: "/assets/images/latestphotos/Kalamdana Almond shelled.png",
-    coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633946/Kalam_Dana_Almond_rx08kb.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634013/Almond_oq1zep.jpg",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -222,7 +222,7 @@ export const productsData: Record<string, Product> = {
       "Balanced Flavour: Smooth texture with subtle depth, perfect for functional foods.",
       "Functional Use: Commonly used in nutritional supplements, energy/protein bars, and bakery products focused on performance.",
       "Origin: Kalat – an almond-growing region known for rich, mineral soils.",
-      "Size: 30/32 per ounce – fine grading for consistency.",
+      "Size: 30/32 per ounce.",
       "Storage: Ambient – preserves texture and nutritional integrity.",
     ],
     varieties: [
@@ -261,8 +261,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KattaJumboAlmondsShelled',
     name: "Katta Jumbo Almonds",
     navName: "Katta Jumbo",
-    heroImage: "/assets/images/latestphotos/Katta Jumbo Shelled.png",
-    coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633951/Katta_Jumbo_Shelled_rh5hss.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634013/Almond_oq1zep.jpg",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -272,7 +272,7 @@ export const productsData: Record<string, Product> = {
       "Delicately Flavoured: A natural hint of sweetness enhances the nut’s refined taste.",
       "Premium Delicacy: Perfect for specialty liqueurs and gourmet dry fruit snacks.",
       "Origin: Skardu – known for its high-altitude almond orchards and rich agricultural heritage.",
-      "Size: 29/31 per ounce – uniform and premium.",
+      "Size: 29/31 per ounce.",
       "Storage: Ambient – ideal for maintaining freshness and natural oils.",
     ],
     varieties: [
@@ -311,8 +311,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KattaJumboAlmondsUnshelled',
     name: "Katta Jumbo Almonds",
     navName: "Katta Jumbo",
-    heroImage: "/assets/images/latestphotos/Katta Jumbo.png",
-    coverPhoto: "/assets/images/coverPhotos/Almond.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633952/Katta_Jumbo_ibnuqb.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634013/Almond_oq1zep.jpg",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -362,8 +362,8 @@ export const productsData: Record<string, Product> = {
     navLink:'PeelaKandhariRaisin',
     name: "Peela Kandhari Raisin",
     navName: "Peela Kandhari",
-    heroImage: "/assets/images/latestphotos/Peela Khandhari - Golden Raisin.png",
-    coverPhoto: "https://res.cloudinary.com/dzjyyemdr/image/upload/v1760552621/raisins_hmvjzs.avif",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633967/Peela_Khandhari_-_Golden_Raisin_aflfhm.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634033/raisins_gee7sw.avif",
     description:
       "Peela Kandhari raisins are a prized variety of golden-green raisins, traditionally sun-dried in Kandahar. These raisins are juicy, sweet, and slightly chewy, with a natural sugary taste.",
     detailedDescription:
@@ -373,7 +373,7 @@ export const productsData: Record<string, Product> = {
       "Golden Appeal: Vibrant colour and balanced sweetness ideal for both snacking and culinary use.",
       "Culinary Use: Perfect for cakes, cereals, salads, and chutneys.",
       "Origin: Chamman – Sabz Chamman, a region known for sun-dried golden grapes.",
-      "Size: 45/55 per ounce ensuring plump, consistent fruit.",
+      "Size: 45/55 per ounce.",
       "Storage: Ambient – retains natural moisture and glossy finish.",
     ],
     varieties: [
@@ -413,8 +413,8 @@ export const productsData: Record<string, Product> = {
     navLink:'SultanaRaisins',
     name: "Sultana Raisins",
     navName: "Sultana",
-    heroImage: "/assets/images/latestphotos/Sultana Raisin.png",
-    coverPhoto: "/assets/images/coverPhotos/raisins.avif",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633969/Sultana_Raisin_gbrctl.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634033/raisins_gee7sw.avif",
     description:
       "Peela Kandhari raisins are a prized variety of golden-green raisins, traditionally sun-dried in Kandahar. These raisins are juicy, sweet, and slightly chewy, with a natural sugary taste.",
     detailedDescription:
@@ -424,7 +424,7 @@ export const productsData: Record<string, Product> = {
       "Mildly Aromatic: Natural sweetness and fruity notes make it a chef’s favourite.",
       "Culinary Use: Used in pastries, curries, pilafs, and cheese boards.",
       "Origin: Kandhar – a key centre for premium raisin production.",
-      "Size: 50/60 per ounce – evenly graded for quality.",
+      "Size: 50/60 per ounce.",
       "Storage: Ambient – preserves juiciness and fresh aroma.",
     ],
     varieties: [
@@ -463,8 +463,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KalaPishin',
     name: "Kala Pishin",
     navName: "Kala Pishin",
-    heroImage: "/assets/images/latestphotos/Kala Pishin - Black Raisin.png",
-    coverPhoto: "/assets/images/coverPhotos/raisins.avif",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633945/Kala_Pishin_-_Black_Raisin_n1lbyk.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634033/raisins_gee7sw.avif",
     description:
       "Peela Kandhari raisins are a prized variety of golden-green raisins, traditionally sun-dried in Kandahar. These raisins are juicy, sweet, and slightly chewy, with a natural sugary taste.",
     detailedDescription:
@@ -474,7 +474,7 @@ export const productsData: Record<string, Product> = {
       "Intense Taste: Naturally dark hue adds depth to culinary presentations.",
       "Culinary Use: Excellent for snacks, hearty breads, pilafs, and stews.",
       "Origin: Pishin – known for producing bold, dark raisins with rich taste.",
-      "Size: 55/65 per ounce for uniformity.",
+      "Size: 55/65 per ounce.",
       "Storage: Ambient – keeps texture soft and flavour robust.",
     ],
     varieties: [
@@ -513,8 +513,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KillaSaifullahPistachiosShelled',
     name: "Killa Saifullah Pistachios",
     navName: "Killa Saifullah",
-    heroImage: "/assets/images/latestphotos/Killah Saifullah Pistachio Shelled.png",
-    coverPhoto: "/assets/images/coverPhotos/Pistachio.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633956/Killah_Saifullah_Pistachio_Shelled_tx1v4b.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pistachio_lhgwgx.jpg",
     description:
       "World-renowned Pakistani pistachios with exceptional taste and quality. A perfect blend of flavor and nutrition.",
     detailedDescription:
@@ -524,7 +524,7 @@ export const productsData: Record<string, Product> = {
       "Elegant Profile: Balanced taste for refined desserts.",
       "Gourmet Use: Suited for gelato, luxury chocolates, macarons, and bakery toppings.",
       "Origin: Kalat – renowned for superior pistachio cultivation.",
-      "Size: 40/45 per ounce – premium grade.",
+      "Size: 40/45 per ounce.",
       "Storage: Ambient – preserves freshness and texture.",
     ],
     varieties: [
@@ -570,14 +570,14 @@ export const productsData: Record<string, Product> = {
     name: "Ziarat Pistachios",
     navLink:'ZiaratPistachiosShelled',
     navName: "Ziarat",
-    heroImage: "/assets/images/latestphotos/Ziarat Pistachio Shelled.png",
-    coverPhoto: "/assets/images/coverPhotos/Pistachio.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633976/Ziarat_Pistachio_Shelled_uwu3w0.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pistachio_lhgwgx.jpg",
     points: [
       "Rich & Earthy: Distinctive, bold nutty taste with slight chewiness.",
       "Robust Texture: Naturally dense and flavourful kernel.",
       "Gourmet Use: Perfect for nougats, pralines, biscotti, and Mediterranean pastries.",
       "Origin: Quetta – celebrated for premium pistachio orchards.",
-      "Size: 45/50 per ounce – consistent calibre for quality presentation.",
+      "Size: 45/50 per ounce.",
       "Storage: Ambient – retains crispness and colour.",
     ],
     description:
@@ -627,8 +627,8 @@ export const productsData: Record<string, Product> = {
     name: "Killa Saifullah Pistachios",
     navName: "Killa Saifullah",
     navLink:'KillaSaifullahPistachiosUnshelled',
-    heroImage: "/assets/images/latestphotos/Killah Saifullah Pistachio.png",
-    coverPhoto: "/assets/images/coverPhotos/Pistachio.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633957/Killah_Saifullah_Pistachio_mkftkw.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pistachio_lhgwgx.jpg",
     description:
       "World-renowned Pakistani pistachios with exceptional taste and quality. A perfect blend of flavor and nutrition.",
     detailedDescription:
@@ -638,7 +638,7 @@ export const productsData: Record<string, Product> = {
       "Elegant Profile: Balanced taste for refined desserts.",
       "Gourmet Use: Suited for gelato, luxury chocolates, macarons, and bakery toppings.",
       "Origin: Kalat – renowned for superior pistachio cultivation.",
-      "Size: 40/45 per ounce – premium grade.",
+      "Size: 40/45 per ounce.",
       "Storage: Ambient – preserves freshness and texture.",
     ],
     varieties: [
@@ -684,14 +684,14 @@ export const productsData: Record<string, Product> = {
     name: "Ziarat Pistachios",
     navLink:'ZiaratPistachiosUnshelled',
     navName: "Ziarat",
-    heroImage: "/assets/images/latestphotos/Ziarat Pista.png",
-    coverPhoto: "/assets/images/coverPhotos/Pistachio.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633975/Ziarat_Pista_hswagd.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pistachio_lhgwgx.jpg",
     points: [
       "Rich & Earthy: Distinctive, bold nutty taste with slight chewiness.",
       "Robust Texture: Naturally dense and flavourful kernel.",
       "Gourmet Use: Perfect for nougats, pralines, biscotti, and Mediterranean pastries.",
       "Origin: Quetta – celebrated for premium pistachio orchards.",
-      "Size: 45/50 per ounce – consistent calibre for quality presentation.",
+      "Size: 45/50 per ounce.",
       "Storage: Ambient – retains crispness and colour.",
     ],
     description:
@@ -742,14 +742,14 @@ export const productsData: Record<string, Product> = {
     name: "Swat-Dir Walnuts",
     navLink:'SwatdirWalnutsShelled',
     navName: "Swat-Dir",
-    heroImage: "/assets/images/latestphotos/Swat-dir Walnut Shelled.png",
-    coverPhoto: "/assets/images/coverPhotos/walnut.webp",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633970/Swat-dir_walnut_shelled_nd9vcx.jpg",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634034/walnut_cr2swc.webp",
     points: [
       "Mildly Sweet & Soft: Subtle sweetness with faint bitterness and an oily texture.",
       "Natural Smoothness: Soft and easy to use in both sweet and savoury dishes.",
       "Culinary Use: Baking, winter snacks, artisan breads, savory salads, cheese pairings, hearty sauces, and walnut oil.",
       "Origin: Swat – a mountain valley known for rich walnut produce.",
-      "Size: 6/8 halves per ounce – large and meaty.",
+      "Size: 6/8 halves per ounce.",
       "Storage: Ambient – maintains oil content and crispness.",
     ],
     description:
@@ -799,14 +799,14 @@ export const productsData: Record<string, Product> = {
     name: "Kaghzi Walnuts",
     navLink:'KaghziWalnutsShelled',
     navName: "Kaghzi",
-    heroImage: "/assets/images/latestphotos/Kaghzi Walnut Shelled.png",
-    coverPhoto: "/assets/images/coverPhotos/walnut.webp",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633944/Kaghzi_Walnut_Shelled_bv9tso.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634034/walnut_cr2swc.webp",
     points: [
       "Paper-Thin Shells: Easy to crack with pale, plump kernels.",
       "Delicate Sweetness: Subtly sweet flavour perfect for premium desserts.",
       "Culinary Use: Ideal for cakes, tarts, confectionery, chocolates, and gourmet nut mixes.",
       "Origin: Gilgit – cool climate producing high-grade walnuts.",
-      "Size: 10/12 halves per ounce ensuring light, clean halves.",
+      "Size: 10/12 halves per ounce.",
       "Storage: Ambient – preserves taste and texture.",
     ],
     description:
@@ -857,14 +857,14 @@ export const productsData: Record<string, Product> = {
     name: "Swat-Dir Walnuts",
     navLink:'SwatdirWalnutsUnshelled',
     navName: "Swat-Dir",
-    heroImage: "/assets/images/latestphotos/Swat-dir Walnut.png",
-    coverPhoto: "/assets/images/coverPhotos/walnut.webp",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633972/Swat-dir_Walnut_jhzdwz.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634034/walnut_cr2swc.webp",
     points: [
       "Mildly Sweet & Soft: Subtle sweetness with faint bitterness and an oily texture.",
       "Natural Smoothness: Soft and easy to use in both sweet and savoury dishes.",
       "Culinary Use: Baking, winter snacks, artisan breads, savory salads, cheese pairings, hearty sauces, and walnut oil.",
       "Origin: Swat – a mountain valley known for rich walnut produce.",
-      "Size: 6/8 halves per ounce – large and meaty.",
+      "Size: 6/8 halves per ounce.",
       "Storage: Ambient – maintains oil content and crispness.",
     ],
     description:
@@ -914,14 +914,14 @@ export const productsData: Record<string, Product> = {
     name: "Kaghzi Walnuts",
     navLink:'KaghziWalnutsUnshelled',
     navName: "Kaghzi",
-    heroImage: "/assets/images/latestphotos/Kaghzi Walnut.png",
-    coverPhoto: "/assets/images/coverPhotos/walnut.webp",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633944/Kaghzi_Walnut_xaubeq.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634034/walnut_cr2swc.webp",
     points: [
       "Paper-Thin Shells: Easy to crack with pale, plump kernels.",
       "Delicate Sweetness: Subtly sweet flavour perfect for premium desserts.",
       "Culinary Use: Ideal for cakes, tarts, confectionery, chocolates, and gourmet nut mixes.",
       "Origin: Gilgit – cool climate producing high-grade walnuts.",
-      "Size: 10/12 halves per ounce ensuring light, clean halves.",
+      "Size: 10/12 halves per ounce.",
       "Storage: Ambient – preserves taste and texture.",
     ],
     description:
@@ -972,14 +972,14 @@ export const productsData: Record<string, Product> = {
     name: "Banu Chillas Pine Nuts",
     navLink:'BanuChillasPineNutsShelled',
     navName: "Banu Chillas",
-    heroImage: "/assets/images/latestphotos/Bannu Pinenut Shelled.png",
-    coverPhoto: "/assets/images/coverPhotos/Pinenuts.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633935/Bannu_Pinenut_shelled_rfxipo.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pinenuts_bvzcbq.jpg",
     points: [
       "Delicate & Buttery: Buttery sweetness with a subtle crunch.",
       "Nutrient Dense: Rich in proteins and healthy fats, prized for natural flavour.",
       "Culinary Use: Ideal for luxury pesto, gourmet baked goods, salads, and fine confections.",
       "Origin: Bannu – region famous for authentic pine nut harvests.",
-      "Size: 150/160 per ounce ensuring fine grading.",
+      "Size: 150/160 per ounce.",
       "Storage: Ambient – maintains texture and aromatic richness.",
     ],
     description:
@@ -1029,14 +1029,14 @@ export const productsData: Record<string, Product> = {
     name: "Waziri Pine Nuts",
     navLink:'WaziriPineNutsShelled',
     navName: "Waziri",
-    heroImage: "/assets/images/latestphotos/Waziri Pinenut Shelled.png",
-    coverPhoto: "/assets/images/coverPhotos/Pinenuts.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633974/Waziri_Pinenut_Shelled_prsbar.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pinenuts_bvzcbq.jpg",
     points: [
       "Rich & Distinct: Slightly firmer with a pronounced nutty aroma.",
       "Globally Prized: Known for premium quality and deep, nutty profile.",
       "Culinary Use: Artisan confections, fine chocolate, creamy desserts, cheese boards, and luxury snacks.",
       "Origin: Waziristan – high-altitude pine forests yielding top-grade produce.",
-      "Size: 120/130 per ounce – premium size.",
+      "Size: 120/130 per ounce.",
       "Storage: Ambient – preserves natural oils and premium texture.",
     ],
     description:
@@ -1086,14 +1086,14 @@ export const productsData: Record<string, Product> = {
     name: "Banu Chillas Pine Nuts",
     navLink:'BanuChillasPineNutsUnshelled',
     navName: "Banu Chillas",
-    heroImage: "/assets/images/latestphotos/Bannu Pinenut.png",
-    coverPhoto: "/assets/images/coverPhotos/Pinenuts.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633936/Bannu_Pinenut_j9xee1.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pinenuts_bvzcbq.jpg",
     points: [
       "Delicate & Buttery: Buttery sweetness with a subtle crunch.",
       "Nutrient Dense: Rich in proteins and healthy fats, prized for natural flavour.",
       "Culinary Use: Ideal for luxury pesto, gourmet baked goods, salads, and fine confections.",
       "Origin: Bannu – region famous for authentic pine nut harvests.",
-      "Size: 150/160 per ounce ensuring fine grading.",
+      "Size: 150/160 per ounce.",
       "Storage: Ambient – maintains texture and aromatic richness.",
     ],
     description:
@@ -1143,14 +1143,14 @@ export const productsData: Record<string, Product> = {
     name: "Waziri Pine Nuts",
     navLink:'WaziriPineNutsUnshelled',
     navName: "Waziri",
-    heroImage: "/assets/images/latestphotos/Waziri Pinenuts.png",
-    coverPhoto: "/assets/images/coverPhotos/Pinenuts.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633994/Waziri_Pinenuts_zeks7z.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pinenuts_bvzcbq.jpg",
     points: [
       "Rich & Distinct: Slightly firmer with a pronounced nutty aroma.",
       "Globally Prized: Known for premium quality and deep, nutty profile.",
       "Culinary Use: Artisan confections, fine chocolate, creamy desserts, cheese boards, and luxury snacks.",
       "Origin: Waziristan – high-altitude pine forests yielding top-grade produce.",
-      "Size: 120/130 per ounce – premium size.",
+      "Size: 120/130 per ounce.",
       "Storage: Ambient – preserves natural oils and premium texture.",
     ],
     description:
@@ -1201,14 +1201,14 @@ export const productsData: Record<string, Product> = {
     name: "Para-Chinar Peanuts",
     navLink:'ParaChinarPeanutsShelled',
     navName: "Para-Chinar",
-    heroImage: "/assets/images/latestphotos/Parachinar Peanut Shelled.png",
-    coverPhoto: "/assets/images/coverPhotos/Peanuts.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633962/Parachinar_Peanut_Shelled_najuoe.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634029/Peanuts_ewoade.jpg",
     points: [
       "Unique & Rich: Full-bodied flavour, rich in protein, healthy fats, vitamins, and minerals.",
       "Nutrient Power: High-quality produce cultivated in clean, mountainous terrain.",
       "Culinary Use: Perfect for gourmet roasted snacks, luxury peanut butter, salad toppers, and artisan baking.",
       "Origin: Para Chinar – known for dense, nutrient-rich soils.",
-      "Size: 45/50 per ounce ensuring consistency.",
+      "Size: 45/50 per ounce.",
       "Storage: Ambient – maintains crunch and flavour.",
     ],
     description:
@@ -1258,14 +1258,14 @@ export const productsData: Record<string, Product> = {
     name: "Chakwali Peanuts",
     navLink:'ChakwaliPeanutsShelled',
     navName: "Chakwali",
-    heroImage: "/assets/images/latestphotos/Chawali Peanut Shelled.png",
-    coverPhoto: "/assets/images/coverPhotos/Peanuts.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633937/Chawali_Peanut_Shelled_htot0w.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634029/Peanuts_ewoade.jpg",
     points: [
       "Sweet & Creamy: Naturally sweet with high nutrition from Pothohar region.",
       "Smooth Texture: Excellent for spreads and savory blends.",
       "Culinary Use: Creamy peanut butters, savory sauces, protein snacks, baking, and chocolates.",
       "Origin: Chakwal – Pothohar plateau, home to fine peanut farming.",
-      "Size: 50/55 per ounce – refined consistency.",
+      "Size: 50/55 per ounce.",
       "Storage: Ambient – retains natural oil balance.",
     ],
     description:
@@ -1315,14 +1315,14 @@ export const productsData: Record<string, Product> = {
     name: "Para-Chinar Peanuts",
     navLink:'ParaChinarPeanutsUnshelled',
     navName: "Para-Chinar",
-    heroImage: "/assets/images/latestphotos/Para chinar Peanut.png",
-    coverPhoto: "/assets/images/coverPhotos/Peanuts.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633960/Para_chinar_Peanut_fs89qp.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634029/Peanuts_ewoade.jpg",
     points: [
       "Unique & Rich: Full-bodied flavour, rich in protein, healthy fats, vitamins, and minerals.",
       "Nutrient Power: High-quality produce cultivated in clean, mountainous terrain.",
       "Culinary Use: Perfect for gourmet roasted snacks, luxury peanut butter, salad toppers, and artisan baking.",
       "Origin: Para Chinar – known for dense, nutrient-rich soils.",
-      "Size: 45/50 per ounce ensuring consistency.",
+      "Size: 45/50 per ounce.",
       "Storage: Ambient – maintains crunch and flavour.",
     ],
     description:
@@ -1372,14 +1372,14 @@ export const productsData: Record<string, Product> = {
     name: "Chakwali Peanuts",
     navLink:'ChakwaliPeanutsUnshelled',
     navName: "Chakwali",
-    heroImage: "/assets/images/latestphotos/Chakwali Peanut.png",
-    coverPhoto: "/assets/images/coverPhotos/Peanuts.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633937/Chakwali_Peanut_xe48nn.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634029/Peanuts_ewoade.jpg",
     points: [
       "Sweet & Creamy: Naturally sweet with high nutrition from Pothohar region.",
       "Smooth Texture: Excellent for spreads and savory blends.",
       "Culinary Use: Creamy peanut butters, savory sauces, protein snacks, baking, and chocolates.",
       "Origin: Chakwal – Pothohar plateau, home to fine peanut farming.",
-      "Size: 50/55 per ounce – refined consistency.",
+      "Size: 50/55 per ounce.",
       "Storage: Ambient – retains natural oil balance.",
     ],
     description:
@@ -1430,16 +1430,16 @@ export const productsData: Record<string, Product> = {
     name: "Fara Ka Kala Channa",
     navLink:'FaraKaKalaChannaShelled',
     navName: "Fara Ka",
-    coverPhoto: "/assets/images/coverPhotos/kalla channa.jpg",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634024/kalla_channa_ntbw3h.jpg",
     points: [
       "Bright & Clean: Softer texture and lighter tone with versatile appeal.",
       "Rich & Healthy: Nutty, high in protein, ideal for modern and traditional recipes.",
       "Culinary Use: Savory high-protein snacks, hearty stews, soups, and slow-cooked Mediterranean dishes.",
       "Origin: Layyah – known for clean, consistent chickpea yields.",
-      "Size: 150/155 per ounce – consistent grading.",
+      "Size: 150/155 per ounce.",
       "Storage: Ambient – ensures freshness and firmness.",
     ],
-    heroImage: "/assets/images/latestphotos/Faraka Channa Shelled.png",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633939/Faraka_Channa_Shelled_henjpb.png",
     description:
       "Traditional black chickpeas known for their earthy flavor, firm bite, and excellent nutritional profile.",
     detailedDescription:
@@ -1467,14 +1467,14 @@ export const productsData: Record<string, Product> = {
     name: "Khilay Kala Channa",
     navName: "Khilay",
     navLink:'KhilayKalaChannaShelled',
-    heroImage: "/assets/images/latestphotos/Khilay Channa Shelled.png",
-    coverPhoto: "/assets/images/coverPhotos/kalla channa.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633953/Khilay_Channa_Shelled_odyl4w.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634024/kalla_channa_ntbw3h.jpg",
     points: [
       "Rustic & Nutty: Brownish hue, firm bite, and rich, earthy flavour.",
       "Wholesome Taste: High satiety and traditional appeal.",
       "Culinary Use: Salads, mezze spreads, gourmet snack mixes, and healthy baking.",
       "Origin: Thal – region recognized for traditional pulse farming.",
-      "Size: 145/150 per ounce for uniform grains.",
+      "Size: 145/150 per ounce.",
       "Storage: Ambient – preserves natural firmness and nutrition.",
     ],
 
@@ -1505,16 +1505,16 @@ export const productsData: Record<string, Product> = {
     name: "Fara Ka Kala Channa",
     navName: "Fara Ka",
     navLink:'FaraKaKalaChannaUnshelled',
-    coverPhoto: "/assets/images/coverPhotos/kalla channa.jpg",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634024/kalla_channa_ntbw3h.jpg",
     points: [
       "Bright & Clean: Softer texture and lighter tone with versatile appeal.",
       "Rich & Healthy: Nutty, high in protein, ideal for modern and traditional recipes.",
       "Culinary Use: Savory high-protein snacks, hearty stews, soups, and slow-cooked Mediterranean dishes.",
       "Origin: Layyah – known for clean, consistent chickpea yields.",
-      "Size: 150/155 per ounce – consistent grading.",
+      "Size: 150/155 per ounce.",
       "Storage: Ambient – ensures freshness and firmness.",
     ],
-    heroImage: "/assets/images/latestphotos/Faraka Chanay.png",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633938/Faraka_Chanay_aiw3wc.png",
     description:
       "Traditional black chickpeas known for their earthy flavor, firm bite, and excellent nutritional profile.",
     detailedDescription:
@@ -1542,14 +1542,14 @@ export const productsData: Record<string, Product> = {
     name: "Khilay Kala Channa",
     navName: "Khilay",
     navLink:'KhilayKalaChannaUnshelled',
-    heroImage: "/assets/images/latestphotos/Khilay Channy.png",
-    coverPhoto: "/assets/images/coverPhotos/kalla channa.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633955/Khilay_Channy_gjggdk.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634024/kalla_channa_ntbw3h.jpg",
     points: [
       "Rustic & Nutty: Brownish hue, firm bite, and rich, earthy flavour.",
       "Wholesome Taste: High satiety and traditional appeal.",
       "Culinary Use: Salads, mezze spreads, gourmet snack mixes, and healthy baking.",
       "Origin: Thal – region recognized for traditional pulse farming.",
-      "Size: 145/150 per ounce for uniform grains.",
+      "Size: 145/150 per ounce.",
       "Storage: Ambient – preserves natural firmness and nutrition.",
     ],
 
@@ -1579,7 +1579,7 @@ export const productsData: Record<string, Product> = {
     name: "Regular Figs",
     navName: "Regular",
     navLink:'RegularFigs',
-    coverPhoto: "/assets/images/coverPhotos/Fig.jpg",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634018/Fig_bxdyex.jpg",
     points: [
       "Sweet & Chewy: Classic flavour with soft texture and earthy undertone.",
       "Nutrient Rich: Naturally sun-dried and rich in minerals.",
@@ -1588,7 +1588,7 @@ export const productsData: Record<string, Product> = {
       "Size: 4/5 per ounce ensuring size consistency.",
       "Storage: Ambient – maintains natural chewiness and aroma.",
     ],
-    heroImage: "/assets/images/latestphotos/Fig Regular.png",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633943/Fig_regular_swzyz3.png",
     description:
       "Sun-dried premium figs with natural sweetness and chewy texture. A healthy and delicious treat.",
     detailedDescription:
@@ -1621,14 +1621,14 @@ export const productsData: Record<string, Product> = {
     name: "Premium Figs",
     navName: "Premium",
     navLink:'PremiumFigs',
-    coverPhoto: "/assets/images/coverPhotos/Fig.jpg",
-    heroImage: "/assets/images/latestphotos/Fig Premium.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634018/Fig_bxdyex.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633941/Fig_premium_ufteai.png",
     points: [
       "Sun-Dried & Sweet: Tree-sun dried for enhanced sweetness and gourmet appeal.",
       "Elegant Look: Lighter colour, larger size, and soft texture.",
       "Culinary Use: Fine confectionery, charcuterie, luxury pastries, and artisanal spreads.",
       "Origin: Chitral – ideal climate for premium figs.",
-      "Size: 3/4 per ounce – larger and uniform.",
+      "Size: 3/4 per ounce.",
       "Storage: Ambient – retains sweetness and supple texture.",
     ],
     description:
@@ -1668,11 +1668,11 @@ export const productsData: Record<string, Product> = {
       "Vitamin-Rich: Loaded with antioxidants and nutrients.",
       "Culinary Use: Luxury confectionery, cheese platters, gourmet baking, and artisanal bars.",
       "Origin: Hunza – known for premium, sun-dried fruits.",
-      "Size: 6/7 per ounce ensuring quality consistency.",
+      "Size: 6/7 per ounce.",
       "Storage: Ambient – maintains vibrant colour and texture.",
     ],
-    heroImage: "/assets/images/latestphotos/Kishta Apricot.png",
-    coverPhoto: "/assets/images/coverPhotos/Apricot.avif",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633958/Kishta_Apricot_okeenn.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634015/Apricot_ozkkl8.avif",
     description:
       "Premium dried apricots from the valleys of northern Pakistan. Sweet, nutritious, and naturally preserved.",
     detailedDescription:
@@ -1713,14 +1713,14 @@ export const productsData: Record<string, Product> = {
     name: "Gol Apricots",
     navName: "Gol",
     navLink:'GolApricots',
-    heroImage: "/assets/images/latestphotos/Gol Apricot.png",
-    coverPhoto: "/assets/images/coverPhotos/Apricot.avif",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633943/Gol_apricot_icizmu.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634015/Apricot_ozkkl8.avif",
     points: [
       "Golden & Soft: Round, flat, and pitted with bright golden hue.",
       "Sweet & Tender: Large, soft, and rich in flavour.",
       "Culinary Use: Granolas, smoothies, everyday snacks, baking, and trail mixes.",
       "Origin: Gilgit – prime growing region for golden apricots.",
-      "Size: 5/6 per ounce – uniform and plump.",
+      "Size: 5/6 per ounce.",
       "Storage: Ambient – retains sweetness and moisture.",
     ],
     description:
@@ -1763,14 +1763,14 @@ export const productsData: Record<string, Product> = {
     name: "Naag Apricots",
     navName: "Naag",
     navLink:'NaagApricots',
-    heroImage: "/assets/images/latestphotos/Naag Apricot.png",
-    coverPhoto: "/assets/images/coverPhotos/Apricot.avif",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633959/Naag_Apricot_d8ifwr.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634015/Apricot_ozkkl8.avif",
     points: [
       "Wholesome & Nutrient Dense: Packed with healthy fats, proteins, and vitamin B17.",
       "Naturally Rich: High in essential nutrients and energy.",
       "Culinary Use: Ideal for energy snacks, sports nutrition blends, immunity mixes, and health supplements.",
       "Origin: Hunza – region known for naturally nutrient-packed fruits.",
-      "Size: 2/3 per ounce ensuring premium grading.",
+      "Size: 2/3 per ounce.",
       "Storage: Ambient – keeps natural flavour and integrity.",
     ],
     description:
