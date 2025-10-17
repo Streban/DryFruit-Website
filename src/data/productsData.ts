@@ -61,8 +61,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KambriAlmondsShelled',
     name: "Kambri Almonds",
     navName: "Kambri",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633949/Kambri_Almond_Unshelled_yzmlch.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634013/Almond_oq1zep.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633949/Kambri_Almond_Unshelled_yzmlch.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634013/Almond_oq1zep.jpg",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -111,8 +111,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KambriAlmondsUnshelled',
     name: "Kambri Almonds",
     navName: "Kambri",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633953/Kambri_Almond_zmuroa.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634013/Almond_oq1zep.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633953/Kambri_Almond_zmuroa.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634013/Almond_oq1zep.jpg",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -161,8 +161,8 @@ export const productsData: Record<string, Product> = {
     name: "Kalam Dana Almonds",
     navLink:'KalamDanaAlmondsShelled',
     navName: "Kalam Dana",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633948/Kalamdana_Almond_shelled_nzxkju.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634013/Almond_oq1zep.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633948/Kalamdana_Almond_shelled_nzxkju.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634013/Almond_oq1zep.jpg",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -211,8 +211,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KalamDanaAlmondsUnshelled',
     name: "Kalam Dana Almonds",
     navName: "Kalam Dana",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633946/Kalam_Dana_Almond_rx08kb.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634013/Almond_oq1zep.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633946/Kalam_Dana_Almond_rx08kb.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634013/Almond_oq1zep.jpg",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -261,8 +261,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KattaJumboAlmondsShelled',
     name: "Katta Jumbo Almonds",
     navName: "Katta Jumbo",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633951/Katta_Jumbo_Shelled_rh5hss.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634013/Almond_oq1zep.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633951/Katta_Jumbo_Shelled_rh5hss.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634013/Almond_oq1zep.jpg",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -311,8 +311,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KattaJumboAlmondsUnshelled',
     name: "Katta Jumbo Almonds",
     navName: "Katta Jumbo",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633952/Katta_Jumbo_ibnuqb.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634013/Almond_oq1zep.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633952/Katta_Jumbo_ibnuqb.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634013/Almond_oq1zep.jpg",
     description:
       "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
     detailedDescription:
@@ -362,8 +362,8 @@ export const productsData: Record<string, Product> = {
     navLink:'PeelaKandhariRaisin',
     name: "Peela Kandhari Raisin",
     navName: "Peela Kandhari",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633967/Peela_Khandhari_-_Golden_Raisin_aflfhm.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634033/raisins_gee7sw.avif",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633967/Peela_Khandhari_-_Golden_Raisin_aflfhm.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634033/raisins_gee7sw.avif",
     description:
       "Peela Kandhari raisins are a prized variety of golden-green raisins, traditionally sun-dried in Kandahar. These raisins are juicy, sweet, and slightly chewy, with a natural sugary taste.",
     detailedDescription:
@@ -413,8 +413,8 @@ export const productsData: Record<string, Product> = {
     navLink:'SultanaRaisins',
     name: "Sultana Raisins",
     navName: "Sultana",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633969/Sultana_Raisin_gbrctl.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634033/raisins_gee7sw.avif",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633969/Sultana_Raisin_gbrctl.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634033/raisins_gee7sw.avif",
     description:
       "Peela Kandhari raisins are a prized variety of golden-green raisins, traditionally sun-dried in Kandahar. These raisins are juicy, sweet, and slightly chewy, with a natural sugary taste.",
     detailedDescription:
@@ -463,8 +463,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KalaPishin',
     name: "Kala Pishin",
     navName: "Kala Pishin",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633945/Kala_Pishin_-_Black_Raisin_n1lbyk.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634033/raisins_gee7sw.avif",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633945/Kala_Pishin_-_Black_Raisin_n1lbyk.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634033/raisins_gee7sw.avif",
     description:
       "Peela Kandhari raisins are a prized variety of golden-green raisins, traditionally sun-dried in Kandahar. These raisins are juicy, sweet, and slightly chewy, with a natural sugary taste.",
     detailedDescription:
@@ -513,8 +513,8 @@ export const productsData: Record<string, Product> = {
     navLink:'KillaSaifullahPistachiosShelled',
     name: "Killa Saifullah Pistachios",
     navName: "Killa Saifullah",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633956/Killah_Saifullah_Pistachio_Shelled_tx1v4b.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pistachio_lhgwgx.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633956/Killah_Saifullah_Pistachio_Shelled_tx1v4b.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634031/Pistachio_lhgwgx.jpg",
     description:
       "World-renowned Pakistani pistachios with exceptional taste and quality. A perfect blend of flavor and nutrition.",
     detailedDescription:
@@ -570,8 +570,8 @@ export const productsData: Record<string, Product> = {
     name: "Ziarat Pistachios",
     navLink:'ZiaratPistachiosShelled',
     navName: "Ziarat",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633976/Ziarat_Pistachio_Shelled_uwu3w0.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pistachio_lhgwgx.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633976/Ziarat_Pistachio_Shelled_uwu3w0.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634031/Pistachio_lhgwgx.jpg",
     points: [
       "Rich & Earthy: Distinctive, bold nutty taste with slight chewiness.",
       "Robust Texture: Naturally dense and flavourful kernel.",
@@ -627,8 +627,8 @@ export const productsData: Record<string, Product> = {
     name: "Killa Saifullah Pistachios",
     navName: "Killa Saifullah",
     navLink:'KillaSaifullahPistachiosUnshelled',
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633957/Killah_Saifullah_Pistachio_mkftkw.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pistachio_lhgwgx.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633957/Killah_Saifullah_Pistachio_mkftkw.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634031/Pistachio_lhgwgx.jpg",
     description:
       "World-renowned Pakistani pistachios with exceptional taste and quality. A perfect blend of flavor and nutrition.",
     detailedDescription:
@@ -684,8 +684,8 @@ export const productsData: Record<string, Product> = {
     name: "Ziarat Pistachios",
     navLink:'ZiaratPistachiosUnshelled',
     navName: "Ziarat",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633975/Ziarat_Pista_hswagd.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pistachio_lhgwgx.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633975/Ziarat_Pista_hswagd.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634031/Pistachio_lhgwgx.jpg",
     points: [
       "Rich & Earthy: Distinctive, bold nutty taste with slight chewiness.",
       "Robust Texture: Naturally dense and flavourful kernel.",
@@ -742,8 +742,8 @@ export const productsData: Record<string, Product> = {
     name: "Swat-Dir Walnuts",
     navLink:'SwatdirWalnutsShelled',
     navName: "Swat-Dir",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633970/Swat-dir_walnut_shelled_nd9vcx.jpg",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634034/walnut_cr2swc.webp",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633970/Swat-dir_walnut_shelled_nd9vcx.jpg",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634034/walnut_cr2swc.webp",
     points: [
       "Mildly Sweet & Soft: Subtle sweetness with faint bitterness and an oily texture.",
       "Natural Smoothness: Soft and easy to use in both sweet and savoury dishes.",
@@ -799,8 +799,8 @@ export const productsData: Record<string, Product> = {
     name: "Kaghzi Walnuts",
     navLink:'KaghziWalnutsShelled',
     navName: "Kaghzi",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633944/Kaghzi_Walnut_Shelled_bv9tso.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634034/walnut_cr2swc.webp",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633944/Kaghzi_Walnut_Shelled_bv9tso.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634034/walnut_cr2swc.webp",
     points: [
       "Paper-Thin Shells: Easy to crack with pale, plump kernels.",
       "Delicate Sweetness: Subtly sweet flavour perfect for premium desserts.",
@@ -857,8 +857,8 @@ export const productsData: Record<string, Product> = {
     name: "Swat-Dir Walnuts",
     navLink:'SwatdirWalnutsUnshelled',
     navName: "Swat-Dir",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633972/Swat-dir_Walnut_jhzdwz.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634034/walnut_cr2swc.webp",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633972/Swat-dir_Walnut_jhzdwz.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634034/walnut_cr2swc.webp",
     points: [
       "Mildly Sweet & Soft: Subtle sweetness with faint bitterness and an oily texture.",
       "Natural Smoothness: Soft and easy to use in both sweet and savoury dishes.",
@@ -914,8 +914,8 @@ export const productsData: Record<string, Product> = {
     name: "Kaghzi Walnuts",
     navLink:'KaghziWalnutsUnshelled',
     navName: "Kaghzi",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633944/Kaghzi_Walnut_xaubeq.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634034/walnut_cr2swc.webp",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633944/Kaghzi_Walnut_xaubeq.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634034/walnut_cr2swc.webp",
     points: [
       "Paper-Thin Shells: Easy to crack with pale, plump kernels.",
       "Delicate Sweetness: Subtly sweet flavour perfect for premium desserts.",
@@ -972,8 +972,8 @@ export const productsData: Record<string, Product> = {
     name: "Banu Chillas Pine Nuts",
     navLink:'BanuChillasPineNutsShelled',
     navName: "Banu Chillas",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633935/Bannu_Pinenut_shelled_rfxipo.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pinenuts_bvzcbq.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633935/Bannu_Pinenut_shelled_rfxipo.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634031/Pinenuts_bvzcbq.jpg",
     points: [
       "Delicate & Buttery: Buttery sweetness with a subtle crunch.",
       "Nutrient Dense: Rich in proteins and healthy fats, prized for natural flavour.",
@@ -1029,8 +1029,8 @@ export const productsData: Record<string, Product> = {
     name: "Waziri Pine Nuts",
     navLink:'WaziriPineNutsShelled',
     navName: "Waziri",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633974/Waziri_Pinenut_Shelled_prsbar.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pinenuts_bvzcbq.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633974/Waziri_Pinenut_Shelled_prsbar.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634031/Pinenuts_bvzcbq.jpg",
     points: [
       "Rich & Distinct: Slightly firmer with a pronounced nutty aroma.",
       "Globally Prized: Known for premium quality and deep, nutty profile.",
@@ -1086,8 +1086,8 @@ export const productsData: Record<string, Product> = {
     name: "Banu Chillas Pine Nuts",
     navLink:'BanuChillasPineNutsUnshelled',
     navName: "Banu Chillas",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633936/Bannu_Pinenut_j9xee1.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pinenuts_bvzcbq.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633936/Bannu_Pinenut_j9xee1.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634031/Pinenuts_bvzcbq.jpg",
     points: [
       "Delicate & Buttery: Buttery sweetness with a subtle crunch.",
       "Nutrient Dense: Rich in proteins and healthy fats, prized for natural flavour.",
@@ -1143,8 +1143,8 @@ export const productsData: Record<string, Product> = {
     name: "Waziri Pine Nuts",
     navLink:'WaziriPineNutsUnshelled',
     navName: "Waziri",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633994/Waziri_Pinenuts_zeks7z.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634031/Pinenuts_bvzcbq.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633994/Waziri_Pinenuts_zeks7z.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634031/Pinenuts_bvzcbq.jpg",
     points: [
       "Rich & Distinct: Slightly firmer with a pronounced nutty aroma.",
       "Globally Prized: Known for premium quality and deep, nutty profile.",
@@ -1201,8 +1201,8 @@ export const productsData: Record<string, Product> = {
     name: "Para-Chinar Peanuts",
     navLink:'ParaChinarPeanutsShelled',
     navName: "Para-Chinar",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633962/Parachinar_Peanut_Shelled_najuoe.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634029/Peanuts_ewoade.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633962/Parachinar_Peanut_Shelled_najuoe.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634029/Peanuts_ewoade.jpg",
     points: [
       "Unique & Rich: Full-bodied flavour, rich in protein, healthy fats, vitamins, and minerals.",
       "Nutrient Power: High-quality produce cultivated in clean, mountainous terrain.",
@@ -1258,8 +1258,8 @@ export const productsData: Record<string, Product> = {
     name: "Chakwali Peanuts",
     navLink:'ChakwaliPeanutsShelled',
     navName: "Chakwali",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633937/Chawali_Peanut_Shelled_htot0w.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634029/Peanuts_ewoade.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633937/Chawali_Peanut_Shelled_htot0w.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634029/Peanuts_ewoade.jpg",
     points: [
       "Sweet & Creamy: Naturally sweet with high nutrition from Pothohar region.",
       "Smooth Texture: Excellent for spreads and savory blends.",
@@ -1315,8 +1315,8 @@ export const productsData: Record<string, Product> = {
     name: "Para-Chinar Peanuts",
     navLink:'ParaChinarPeanutsUnshelled',
     navName: "Para-Chinar",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633960/Para_chinar_Peanut_fs89qp.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634029/Peanuts_ewoade.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633960/Para_chinar_Peanut_fs89qp.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634029/Peanuts_ewoade.jpg",
     points: [
       "Unique & Rich: Full-bodied flavour, rich in protein, healthy fats, vitamins, and minerals.",
       "Nutrient Power: High-quality produce cultivated in clean, mountainous terrain.",
@@ -1372,8 +1372,8 @@ export const productsData: Record<string, Product> = {
     name: "Chakwali Peanuts",
     navLink:'ChakwaliPeanutsUnshelled',
     navName: "Chakwali",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633937/Chakwali_Peanut_xe48nn.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634029/Peanuts_ewoade.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633937/Chakwali_Peanut_xe48nn.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634029/Peanuts_ewoade.jpg",
     points: [
       "Sweet & Creamy: Naturally sweet with high nutrition from Pothohar region.",
       "Smooth Texture: Excellent for spreads and savory blends.",
@@ -1430,7 +1430,7 @@ export const productsData: Record<string, Product> = {
     name: "Fara Ka Kala Channa",
     navLink:'FaraKaKalaChannaShelled',
     navName: "Fara Ka",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634024/kalla_channa_ntbw3h.jpg",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634024/kalla_channa_ntbw3h.jpg",
     points: [
       "Bright & Clean: Softer texture and lighter tone with versatile appeal.",
       "Rich & Healthy: Nutty, high in protein, ideal for modern and traditional recipes.",
@@ -1439,7 +1439,7 @@ export const productsData: Record<string, Product> = {
       "Size: 150/155 per ounce.",
       "Storage: Ambient – ensures freshness and firmness.",
     ],
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633939/Faraka_Channa_Shelled_henjpb.png",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633939/Faraka_Channa_Shelled_henjpb.png",
     description:
       "Traditional black chickpeas known for their earthy flavor, firm bite, and excellent nutritional profile.",
     detailedDescription:
@@ -1467,8 +1467,8 @@ export const productsData: Record<string, Product> = {
     name: "Khilay Kala Channa",
     navName: "Khilay",
     navLink:'KhilayKalaChannaShelled',
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633953/Khilay_Channa_Shelled_odyl4w.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634024/kalla_channa_ntbw3h.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633953/Khilay_Channa_Shelled_odyl4w.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634024/kalla_channa_ntbw3h.jpg",
     points: [
       "Rustic & Nutty: Brownish hue, firm bite, and rich, earthy flavour.",
       "Wholesome Taste: High satiety and traditional appeal.",
@@ -1505,7 +1505,7 @@ export const productsData: Record<string, Product> = {
     name: "Fara Ka Kala Channa",
     navName: "Fara Ka",
     navLink:'FaraKaKalaChannaUnshelled',
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634024/kalla_channa_ntbw3h.jpg",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634024/kalla_channa_ntbw3h.jpg",
     points: [
       "Bright & Clean: Softer texture and lighter tone with versatile appeal.",
       "Rich & Healthy: Nutty, high in protein, ideal for modern and traditional recipes.",
@@ -1514,7 +1514,7 @@ export const productsData: Record<string, Product> = {
       "Size: 150/155 per ounce.",
       "Storage: Ambient – ensures freshness and firmness.",
     ],
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633938/Faraka_Chanay_aiw3wc.png",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633938/Faraka_Chanay_aiw3wc.png",
     description:
       "Traditional black chickpeas known for their earthy flavor, firm bite, and excellent nutritional profile.",
     detailedDescription:
@@ -1542,8 +1542,8 @@ export const productsData: Record<string, Product> = {
     name: "Khilay Kala Channa",
     navName: "Khilay",
     navLink:'KhilayKalaChannaUnshelled',
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633955/Khilay_Channy_gjggdk.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634024/kalla_channa_ntbw3h.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633955/Khilay_Channy_gjggdk.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634024/kalla_channa_ntbw3h.jpg",
     points: [
       "Rustic & Nutty: Brownish hue, firm bite, and rich, earthy flavour.",
       "Wholesome Taste: High satiety and traditional appeal.",
@@ -1671,8 +1671,8 @@ export const productsData: Record<string, Product> = {
       "Size: 6/7 per ounce.",
       "Storage: Ambient – maintains vibrant colour and texture.",
     ],
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633958/Kishta_Apricot_okeenn.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634015/Apricot_ozkkl8.avif",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633958/Kishta_Apricot_okeenn.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634015/Apricot_ozkkl8.avif",
     description:
       "Premium dried apricots from the valleys of northern Pakistan. Sweet, nutritious, and naturally preserved.",
     detailedDescription:
@@ -1713,8 +1713,8 @@ export const productsData: Record<string, Product> = {
     name: "Gol Apricots",
     navName: "Gol",
     navLink:'GolApricots',
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633943/Gol_apricot_icizmu.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634015/Apricot_ozkkl8.avif",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633943/Gol_apricot_icizmu.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634015/Apricot_ozkkl8.avif",
     points: [
       "Golden & Soft: Round, flat, and pitted with bright golden hue.",
       "Sweet & Tender: Large, soft, and rich in flavour.",
@@ -1763,8 +1763,8 @@ export const productsData: Record<string, Product> = {
     name: "Naag Apricots",
     navName: "Naag",
     navLink:'NaagApricots',
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633959/Naag_Apricot_d8ifwr.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760634015/Apricot_ozkkl8.avif",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633959/Naag_Apricot_d8ifwr.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634015/Apricot_ozkkl8.avif",
     points: [
       "Wholesome & Nutrient Dense: Packed with healthy fats, proteins, and vitamin B17.",
       "Naturally Rich: High in essential nutrients and energy.",
