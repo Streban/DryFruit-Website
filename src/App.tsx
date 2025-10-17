@@ -70,25 +70,82 @@ function App() {
           path="/"
           element={
             <>
-              <Navbar  />
+              <Navbar />
               {/* Hero Section */}
               <section id="home" className="hero-section">
                 {/* Video Background */}
-                <video
-                  className="hero-video"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
+                <div
+                  style={{
+                    position: "relative",
+                    width: "100%",
+                    height: "100vh",
+                    overflow: "hidden",
+                  }}
                 >
-                  <source src="https://res.cloudinary.com/dfrlrzsnk/video/upload/v1760638196/7186189_Nut_Nuts_3840x2160_1_1_lshhyk.mov" type="video/mp4" />
-                  {/* Fallback for browsers that don't support video */}
-                  Your browser does not support the video tag.
-                </video>
-                <div className="hero-overlay">
-                  <div className="hero-content">
-                    <div className="hero-text">
+                  {/* <iframe
+                    src="https://www.youtube.com/embed/QNFJUjMVEwA?autoplay=1&mute=1&loop=1&playlist=QNFJUjMVEwA&controls=0&showinfo=0&modestbranding=1&vq=hd1080"
+                    title="YouTube video player"
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      zIndex: 2,
+                      pointerEvents: "none",
+                    }}
+                    frameBorder="0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowFullS
+                    creen
+                  /> */}
+
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      zIndex: 1,
+                    }}
+                  >
+                    <source
+                      src="https://res.cloudinary.com/dfrlrzsnk/video/upload/v1760725423/7186189_Nut_Nuts_3840x2160_1_1_dl22v1.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      background: "rgba(0,0,0,0.35)",
+                      zIndex: 1,
+                    }}
+                  />
+
+                  <div
+                    style={{
+                      position: "relative",
+                      zIndex: 1,
+                      color: "white",
+                      textAlign: "center",
+                      top: "45%",
+                      transform: "translateY(-50%)",
+                      fontFamily: "'Poppins', sans-serif",
+                    }}
+                  >
+                   <div className="hero-text">
                       <h1>
                         Pure
                         <br />
@@ -99,11 +156,12 @@ function App() {
                         Since 1985
                       </h1>
                       <p>
-                      Your trusted partner for premium dried fruits and nuts, sourced from the finest agricultural lands of Pakistan
+                        Your trusted partner for premium dried fruits and nuts,
+                        sourced from the finest agricultural lands of Pakistan
                       </p>
-                      <button 
+                      <button
                         className="cta-button"
-                        onClick={() => navigate('/explore-products')}
+                        onClick={() => navigate("/explore-products")}
                       >
                         Explore Products
                         <svg
@@ -125,19 +183,14 @@ function App() {
                     </div>
                   </div>
                 </div>
-              </section>
-              {/* Service Info */}
-              {/* <section className="service-info">
-                <div className="container">
-                  <div className="service-content">
-                    <h2>At the service of Dry Fruits and Nuts</h2>
-                    <p>
-                      We are looking for a better universe. We can be better to
-                      improve the situation of your business.
-                    </p>
+
+                <div className="hero-overlay">
+                  <div className="hero-content">
+                  
                   </div>
                 </div>
-              </section> */}
+              </section>
+
               {/* Products Section */}
               <section id="products" className="products-section">
                 <div
@@ -146,7 +199,7 @@ function App() {
                     paddingLeft: "10rem",
                   }}
                 >
-                  <div className="products-content" >
+                  <div className="products-content">
                     <div className="products-text">
                       <h2>Our products</h2>
                       <p>
@@ -158,9 +211,9 @@ function App() {
                         processed to deliver exceptional quality and authentic
                         taste.
                       </p>
-                      <button 
+                      <button
                         className="products-button"
-                        onClick={() => navigate('/explore-products')}
+                        onClick={() => navigate("/explore-products")}
                       >
                         Explore all products
                       </button>
@@ -185,7 +238,11 @@ function App() {
                             <div className="product-photo">
                               <img src={product.heroImage} alt={product.name} />
                             </div>
-                            <h3 style={{ fontSize: "18px", fontWeight: "bold" }}>{product.type}</h3>
+                            <h3
+                              style={{ fontSize: "18px", fontWeight: "bold" }}
+                            >
+                              {product.type}
+                            </h3>
                           </div>
                         );
                       })}
@@ -227,9 +284,9 @@ function App() {
                           market, our duo became our strength.
                         </p>
                       </div> */}
-                      <button 
+                      <button
                         className="about-button"
-                        onClick={() => navigate('/about')}
+                        onClick={() => navigate("/about")}
                       >
                         Learn more about our journey
                       </button>
@@ -256,10 +313,16 @@ function App() {
                       <h2>Our Mission?</h2>
                       <div className="mission-intro">
                         <p>
-                        Bridging the gap between Pakistan's unique terroirs and the demands of European professionals, by offering premium quality dried fruits and nuts, cultivated using artisanal methods and selected with care.
+                          Bridging the gap between Pakistan's unique terroirs
+                          and the demands of European professionals, by offering
+                          premium quality dried fruits and nuts, cultivated
+                          using artisanal methods and selected with care.
                         </p>
                         <p>
-                        Through a direct network of partner producers, we ensure full traceability, optimal freshness, and reliable service tailored to the needs of wholesalers, distributors, and food industry professionals.
+                          Through a direct network of partner producers, we
+                          ensure full traceability, optimal freshness, and
+                          reliable service tailored to the needs of wholesalers,
+                          distributors, and food industry professionals.
                         </p>
                         <p>
                           <strong>
@@ -273,10 +336,13 @@ function App() {
                       </div>
                     </div>
 
-                    <div className="mission-cta" style={{ marginBottom: "20px" }}>
-                      <button 
+                    <div
+                      className="mission-cta"
+                      style={{ marginBottom: "20px" }}
+                    >
+                      <button
                         className="about-button"
-                        onClick={() => navigate('/mission')}
+                        onClick={() => navigate("/mission")}
                       >
                         Learn more about our mission
                       </button>
@@ -492,9 +558,9 @@ function App() {
                     </div>
 
                     <div className="mission-cta">
-                      <button 
+                      <button
                         className="sample-button"
-                        onClick={() => navigate('/contact')}
+                        onClick={() => navigate("/contact")}
                       >
                         Request Samples
                       </button>
@@ -627,7 +693,7 @@ function App() {
                           viewBox="0 0 24 24"
                           fill="currentColor"
                         >
-                          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                         </svg>
                       </div>
                       <span>Follow us on YouTube</span>
@@ -653,7 +719,10 @@ function App() {
           }
         />
         <Route path="/explore-products" element={<ExploreProductsWrapper />} />
-        <Route path="/product-types/:categoryName" element={<ProductTypesWrapper />} />
+        <Route
+          path="/product-types/:categoryName"
+          element={<ProductTypesWrapper />}
+        />
         <Route path="/product/:productId" element={<ProductPageWrapper />} />
         <Route path="/contact" element={<ContactUsWrapper />} />
         <Route path="/about" element={<AboutUsWrapper />} />

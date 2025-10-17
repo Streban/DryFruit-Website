@@ -1,255 +1,33 @@
-/* Contact Bottom Bar - Screenshot Design */
-.contact-bottom-bar {
-  color: white;
-  padding: 0;
-  margin: 0;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+/* Social Media Icons Hover Effects */
+.social-icon {
+  transition: all 0.3s ease;
 }
 
-/* Upper Section - Dark Green */
-.footer-upper {
-  background: #1a4d3a; /* Dark green background */
-  padding: 60px 0;
+.social-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
-/* Lower Section - Dark Blue */
-.footer-lower {
-  background: #0d1b2a; /* Dark blue background */
-  padding: 20px 0;
-  text-align: center;
+/* Facebook icon hover */
+.facebook-icon:hover {
+  fill: #42a5f5 !important;
+  transform: scale(1.1);
 }
 
-.footer-lower p {
-  color: #90ee90; /* Light green/lime color for copyright text */
-  margin: 0;
-  font-size: 0.9rem;
+/* YouTube icon hover */
+.youtube-icon:hover {
+  fill: #ff5722 !important;
+  transform: scale(1.1);
 }
 
-/* Footer Container */
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Instagram icon hover */
+.instagram-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2) saturate(1.2);
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  align-items: stretch;
-  min-height: 200px;
+/* LinkedIn icon hover */
+.linkedin-icon:hover {
+  fill: #29b6f6 !important;
+  transform: scale(1.1);
 }
-
-/* Footer Columns */
-.footer-column {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: flex-start;
-}
-
-/* Logo Column */
-.logo-column {
-  align-items: flex-start;
-}
-
-.logo-container {
-  margin-bottom: 20px;
-}
-
-.footer-logo {
-  height: 150px;
-  width: auto;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.contact-info .phone {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: white;
-  margin: 0;
-}
-
-.contact-info .address {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* Description Column */
-.description-column {
-  align-items: center;
-  text-align: center;
-}
-
-.company-description {
-  color: white;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin: 0;
-  max-width: 300px;
-}
-
-/* Navigation Column */
-.navigation-column {
-  align-items: flex-start;
-}
-
-.navigation-column h4 {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-  margin-bottom: 20px;
-  letter-spacing: -0.02em;
-}
-
-/* Footer Links */
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  margin-bottom: 8px;
-}
-
-.footer-links li a {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  color: white;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-  display: block;
-  padding: 2px 0;
-  padding-left: 20px; /* Indent sub-items */
-}
-
-.footer-links li a:hover {
-  color: #a8d5a8;
-}
-
-/* Add vertical separator lines between columns */
-.footer-column:not(:last-child) {
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  padding-right: 30px;
-}
-
-.footer-column:not(:first-child) {
-  padding-left: 30px;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .footer-content {
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-  
-  .footer-column {
-    flex: 1 1 calc(50% - 20px);
-    min-width: 300px;
-  }
-  
-  .description-column {
-    flex: 1 1 100%;
-    margin-top: 20px;
-    padding: 0;
-  }
-  
-  .footer-column:not(:last-child) {
-    border-right: none;
-    padding-right: 0;
-  }
-  
-  .footer-column:not(:first-child) {
-    padding-left: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-upper {
-    padding: 40px 0;
-  }
-  
-  .footer-container {
-    padding: 0 16px;
-  }
-  
-  .footer-content {
-    flex-direction: column;
-    gap: 32px;
-  }
-  
-  .footer-column {
-    flex: none;
-    width: 100%;
-  }
-  
-  .footer-column:not(:last-child) {
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-right: 0;
-    padding-bottom: 30px;
-  }
-  
-  .footer-column:not(:first-child) {
-    padding-left: 0;
-    padding-top: 30px;
-  }
-  
-  .footer-logo {
-    height: 120px;
-  }
-  
-  .navigation-column h4 {
-    font-size: 1.1rem;
-    margin-bottom: 16px;
-  }
-  
-  .company-description {
-    font-size: 0.9rem;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-upper {
-    padding: 30px 0;
-  }
-  
-  .footer-container {
-    padding: 0 12px;
-  }
-  
-  .footer-content {
-    gap: 24px;
-  }
-  
-  .footer-logo {
-    height: 100px;
-  }
-  
-  .contact-info .phone {
-    font-size: 1rem;
-  }
-  
-  .contact-info .address {
-    font-size: 0.85rem;
-  }
-  
-  .company-description {
-    font-size: 0.85rem;
-  }
-  
-  .footer-lower p {
-    font-size: 0.8rem;
-  }
-} 
