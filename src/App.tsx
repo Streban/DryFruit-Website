@@ -153,7 +153,10 @@ function App() {
                           Taste, Trusted and Supply
                         </span>
                         <br />
-                        Since 1985
+                        <span style={{ fontSize: "5rem" }}>
+
+                        Nutrinoix
+                        </span>
                       </h1>
                       <p>
                         Your trusted partner for premium dried fruits and nuts,
