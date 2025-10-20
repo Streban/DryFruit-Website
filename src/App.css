@@ -39,7 +39,7 @@ body {
     rgba(45, 90, 39, 0.7),
     rgba(45, 90, 39, 0.6)
   ),
-  url('/api/placeholder/1920/1080') center/cover;
+  /* url('/api/placeholder/1920/1080') center/cover; */
 }
 
 /* Video Background */
