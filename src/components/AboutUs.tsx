@@ -76,7 +76,7 @@ const AboutUs: React.FC = () => {
               </div>
               <div className="story-image">
                 <img
-                  src='/assets/images/latestphotos/About Us with content on about us page.jpg'
+                  src='https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760636497/About_Us_with_content_on_about_us_page_1_synjsg.jpg'
                   alt="Our team and office"
                 />
               </div>

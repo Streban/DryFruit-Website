@@ -139,10 +139,11 @@ function App() {
                       position: "relative",
                       zIndex: 1,
                       color: "white",
-                      textAlign: "center",
+                      textAlign: "left",
                       top: "45%",
                       transform: "translateY(-50%)",
                       fontFamily: "'Poppins', sans-serif",
+                      paddingLeft: "2rem",
                     }}
                   >
                    <div className="hero-text" style={{marginTop:"2rem"}}>

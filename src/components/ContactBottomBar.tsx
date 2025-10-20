@@ -7,7 +7,7 @@ const ContactBottomBar: React.FC = () => {
 
   const styles = {
     wrapper: {
-      backgroundColor: "#1f3407",
+      backgroundColor: "#003d12",
       color: "white",
       fontFamily: "'Poppins', sans-serif",
       padding: "80px 0",

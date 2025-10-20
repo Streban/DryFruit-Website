@@ -38,7 +38,7 @@ const OurMission: React.FC = () => {
               </div>
               <div className="story-image">
                 <img
-                  src="/assets/images/latestphotos/Our mission Page with content.jpg"
+                  src="https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760635662/Our_mission_cover_photo_pukshx.jpg"
                 />
               </div>
             </div>

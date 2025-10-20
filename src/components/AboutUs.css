@@ -10,7 +10,7 @@
   height: 60vh;
   min-height: 500px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), 
-              url('/assets/images/latestphotos/About Us page cover photo.jpeg');
+              url('https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634009/About_Us_cover_page_mvgvh0.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
