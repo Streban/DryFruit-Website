@@ -179,8 +179,8 @@ function App() {
               <section id="products" className="products-section">
                 <div
                   style={{
-                    maxWidth: "1600px",
-                    paddingLeft: "10rem",
+                    // maxWidth: "1600px",
+                    // paddingLeft: "10rem",
                   }}
                 >
                   <div className="products-content">
@@ -643,7 +643,7 @@ function App() {
                 <div className="container">
                   <h2>Follow us on the networks</h2>
                   <div className="social-grid">
-                    <a href="#" className="social-card facebook">
+                    <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-card facebook">
                       <div className="social-icon">
                         <svg
                           width="24"
@@ -656,7 +656,7 @@ function App() {
                       </div>
                       <span>Follow us on Facebook</span>
                     </a>
-                    <a href="#" className="social-card instagram">
+                    <a href="https://www.instagram.com/nutri_noix/" target="_blank" rel="noreferrer" className="social-card instagram">
                       <div className="social-icon">
                         <svg
                           width="24"
@@ -669,7 +669,7 @@ function App() {
                       </div>
                       <span>Follow us on Instagram</span>
                     </a>
-                    <a href="#" className="social-card youtube">
+                    <a href="https://www.youtube.com/@Nutrinoix" target="_blank" rel="noreferrer" className="social-card youtube">
                       <div className="social-icon">
                         <svg
                           width="24"
@@ -682,7 +682,7 @@ function App() {
                       </div>
                       <span>Follow us on YouTube</span>
                     </a>
-                    <a href="#" className="social-card linkedin">
+                    <a href="https://www.linkedin.com/company/nutrinoix" target="_blank" rel="noreferrer" className="social-card linkedin">
                       <div className="social-icon">
                         <svg
                           width="24"

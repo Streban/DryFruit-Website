@@ -331,70 +331,20 @@ body {
 .products-section {
   padding: 0px 0 100px 0;
   background: white;
-  max-width: 1800px;
+  position: relative;
   overflow-x: hidden; /* Prevent horizontal overflow on all screen sizes */
 }
 
-/* Products section responsive padding for laptops */
-@media (min-width: 1600px) {
-  .products-section > div {
-    padding-left: 12rem !important;
-  }
-}
-
-@media (max-width: 1599px) and (min-width: 1440px) {
-  .products-section {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  
-  .products-section > div {
-    padding-left: 8rem !important;
-  }
-}
-
-@media (max-width: 1439px) and (min-width: 1366px) {
-  .products-section {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  
-  .products-section > div {
-    padding-left: 6rem !important;
-  }
-}
-
-@media (max-width: 1365px) and (min-width: 1280px) {
-  .products-section {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  
-  .products-section > div {
-    padding-left: 5rem !important;
-  }
-}
-
-@media (max-width: 1279px) and (min-width: 1024px) {
-  .products-section {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  
-  .products-section > div {
-    padding-left: 4rem !important;
-  }
-}
 
 .products-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 100px;
-  column-gap: 120px; /* Increase horizontal space between text and photos */
+  gap: 80px;
   align-items: center;
-  max-width: 1200px; /* Allow grid to expand so the gap takes effect */
-  margin:  1px 1px 0px 0px;
-  margin-right: 100px;
+  position: relative;
+  max-width: 1400px; /* Better content width control */
+  margin: 0 auto;
+  z-index: 1;
 }
 
 .products-text h2 {
@@ -435,7 +385,7 @@ body {
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 200px; /* Only horizontal gap between product items/images */
+  column-gap: 2rem; /* Only horizontal gap between product items/images */
 }
 
 /* Mission features responsive grid for laptops */
@@ -503,8 +453,8 @@ body {
 }
 
 .product-photo img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   overflow: hidden;
   background: none;
   padding: 0;
@@ -1259,7 +1209,7 @@ body {
 
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 20px;
   }
   
   .products-section > div {
@@ -1437,6 +1387,53 @@ body {
   .feature-icon svg {
     width: 40px;
     height: 40px;
+  }
+}
+
+/* Company Story Section */
+.story-section {
+  margin-bottom: 100px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.story-heading {
+  font-size: 2.2rem;
+  color: #2d5a27;
+  margin-bottom: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.story-image {
+  float: right;
+  width: min(42%, 520px);
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+}
+
+.story-paragraph {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.story-strong {
+  color: #2d5a27;
+  font-weight: 600;
+  display: inline-block;
+}
+
+@media (max-width: 1024px) {
+  .story-image {
+    float: none;
+    width: 100%;
+    margin: 0 0 24px 0;
   }
 }
 
