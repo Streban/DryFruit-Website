@@ -343,7 +343,7 @@ body {
   align-items: center;
   position: relative;
   max-width: 1400px; /* Better content width control */
-  margin: 0 auto;
+  margin: 3rem auto;
   z-index: 1;
 }
 

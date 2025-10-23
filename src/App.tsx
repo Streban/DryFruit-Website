@@ -317,10 +317,7 @@ function App() {
                           We're not just importers. We're ambassadors of
                           flavour.
                         </p>
-                      </div>
-                    </div>
-
-                    <div
+                        <div
                       className="mission-cta"
                       style={{ marginBottom: "20px" }}
                     >
@@ -332,6 +329,10 @@ function App() {
                       </button>
                     </div>
 
+                      </div>
+                    </div>
+
+               
                     <div className="mission-features">
                       <div className="feature-card">
                         <div className="feature-icon">
