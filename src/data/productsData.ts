@@ -479,7 +479,7 @@ export const productsData: Record<string, Product> = {
     name: "Swat-Dir Walnuts",
     navLink:'SwatdirWalnutsShelled',
     navName: "Swat-Dir",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1761088801/Swat-dir_walnut_shelled_emzjwt.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1761088801/Swat-dir_walnut_shelled_emzjwt.jpg",
     coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634034/walnut_cr2swc.webp",
     points: [
       "Mildly Sweet & Soft: Subtle sweetness with faint bitterness and an oily texture.",
@@ -511,7 +511,7 @@ export const productsData: Record<string, Product> = {
     name: "Kaghzi Walnuts",
     navLink:'KaghziWalnutsShelled',
     navName: "Kaghzi",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1761088882/Kaghzi_Walnut_Shelled_ooy6oq.png",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1761088882/Kaghzi_Walnut_Shelled_ooy6oq.png",
     coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634034/walnut_cr2swc.webp",
     points: [
       "Paper-Thin Shells: Easy to crack with pale, plump kernels.",
