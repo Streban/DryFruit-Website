@@ -247,7 +247,38 @@ export const productsData: Record<string, Product> = {
     nutritionalInfo: "High in protein, vitamin E, magnesium, and healthy fats",
     type: "Almonds",
   },
-
+  SultanaRaisins: {
+    id: "sultana-raisins",
+    navLink:'SultanaRaisins',
+    name: "Sultana Raisins",
+    navName: "Sultana",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633969/Sultana_Raisin_gbrctl.png",
+    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634033/raisins_gee7sw.avif",
+    description:
+      "Pakistani raisins are renowned for their rich flavor, natural sweetness, and traditional sun-drying methods that preserve their authentic taste. Grown in regions of Baluchistan province",
+    detailedDescription:
+      "Our raisins are naturally sun-dried to preserve their nutritional value and enhance their natural sweetness. These golden gems are packed with antioxidants, fiber, and essential minerals. Whether enjoyed as a healthy snack or used in baking and cooking, our raisins deliver exceptional quality and taste.",
+    points: [
+      "Soft & Juicy: Sweet, light, and tender with a subtle golden hue.",
+      "Mildly Aromatic: Natural sweetness and fruity notes make it a chef’s favourite.",
+      "Culinary Use: Used in pastries, curries, pilafs, and cheese boards.",
+      "Origin: Pishin – a key centre for premium raisin production.",
+      "Size: 50/60 per ounce.",
+      "Storage: Ambient – preserves juiciness and fresh aroma.",
+    ],
+    varieties: [
+      {
+        id: "Sultana",
+        name: "Sultana",
+        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3, 4,5]),
+      },
+         ],
+    origins: [
+      { name: "Pishin", coordinates: [30.5833, 66.9833] },
+    ],
+    nutritionalInfo: "Rich in antioxidants, fiber, and natural sugars",
+    type: "Raisin",
+  },
   PeelaKandhariRaisin: {
     id: "peela-kandhari-raisin",
     navLink:'PeelaKandhariRaisin',
@@ -281,38 +312,7 @@ export const productsData: Record<string, Product> = {
     type: "Raisin",
   },
 
-  SultanaRaisins: {
-    id: "sultana-raisins",
-    navLink:'SultanaRaisins',
-    name: "Sultana Raisins",
-    navName: "Sultana",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633969/Sultana_Raisin_gbrctl.png",
-    coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634033/raisins_gee7sw.avif",
-    description:
-      "Pakistani raisins are renowned for their rich flavor, natural sweetness, and traditional sun-drying methods that preserve their authentic taste. Grown in regions of Baluchistan province",
-    detailedDescription:
-      "Our raisins are naturally sun-dried to preserve their nutritional value and enhance their natural sweetness. These golden gems are packed with antioxidants, fiber, and essential minerals. Whether enjoyed as a healthy snack or used in baking and cooking, our raisins deliver exceptional quality and taste.",
-    points: [
-      "Soft & Juicy: Sweet, light, and tender with a subtle golden hue.",
-      "Mildly Aromatic: Natural sweetness and fruity notes make it a chef’s favourite.",
-      "Culinary Use: Used in pastries, curries, pilafs, and cheese boards.",
-      "Origin: Pishin – a key centre for premium raisin production.",
-      "Size: 50/60 per ounce.",
-      "Storage: Ambient – preserves juiciness and fresh aroma.",
-    ],
-    varieties: [
-      {
-        id: "Sultana",
-        name: "Sultana",
-        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3, 4,5]),
-      },
-         ],
-    origins: [
-      { name: "Pishin", coordinates: [30.5833, 66.9833] },
-    ],
-    nutritionalInfo: "Rich in antioxidants, fiber, and natural sugars",
-    type: "Raisin",
-  },
+
   KalaPishin: {
     id: "kala-pishin",
     navLink:'KalaPishin',
