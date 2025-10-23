@@ -207,11 +207,6 @@ console.log(visibleProducts)
                     onClick={() => handleVarietyClick(variety.id)}
                   >
                     <span className="variety-name">{variety.name}</span>
-                    {selectedVariety === variety.id && (
-                      <div className="variety-description">
-                        <p>{variety.description}</p>
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>

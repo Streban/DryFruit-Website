@@ -1,7 +1,6 @@
 export interface Variety {
   id: string;
   name: string;
-  description: string;
   clickable?: boolean;
   availability: AvailabilityMonth[];
 }
@@ -71,37 +70,19 @@ export const productsData: Record<string, Product> = {
       "Firm & Rich: Firm, flavourful, and deeply nutty, offering a satisfying texture with every bite.",
       "Nutty Depth: Known for its rich taste that elevates gourmet blends and fine desserts.",
       "Premium Quality: Ideal for premium nut mixes, dessert toppings like ice creams and yogurts, and chocolate coatings.",
-      "Origin: Peshawar – renowned for fertile soils and traditional almond cultivation.",
+      "Origin: Zhob – renowned for fertile soils and traditional almond cultivation.",
       "Size: 26/28 per ounce.",
       "Storage: Ambient – maintains freshness, aroma, and natural crunch",
     ],
     varieties: [
       {
         id: "kambri-blanched",
-        name: "Kambri Almonds (Blanche)",
-        description:
-          "Kambri almonds, also known as Kaghzi or Blanche almonds, come from the mountainous areas of Gilgit-Baltistan and Chitral. They are prized for their ultra-thin shells and light skin, making them easy to peel and perfect for light, healthy snacking. Their mild, delicate flavor and soft crunch make them a favorite in traditional sweets and health-focused diets.",
+        name: "Kambri Almonds",
         availability: createAvailability([10, 11, 12, 1, 2,3]),
-      },
-      {
-        id: "kalamdana",
-        name: "Kalamdana Almonds",
-        description:
-          "Kalamdana almonds, also referred to as Kalmi or Sonara almonds, are larger in size and richer in taste. These almonds have a naturally sweet, bold flavor and a firm crunch. Their high nutritional value — packed with vitamin E, fiber, magnesium, and healthy fats — makes them ideal for energy mixes, protein bars, or daily snacking for those with active lifestyles.",
-        availability: createAvailability([9, 10, 11, 12, 1, 2,3]),
-      },
-      {
-        id: "said-kheli-white",
-        name: "Katta Jumbo Almonds",
-        description:
-          "Katta Jumbo almonds are known for their pale white skin and unique appearance. Often used in luxury gifting and traditional celebrations, these almonds offer a fuller, more traditional almond flavor while maintaining a soft texture and clean look.",
-        availability: createAvailability([9, 10, 11, 12, 1, 2]),
       },
     ],
     origins: [
-      { name: "Quetta", coordinates: [30.1798, 67.0011] },
-      { name: "Kalat", coordinates: [29.0233, 66.5897] },
-      { name: "Mastung", coordinates: [29.7969, 66.8453] },
+      { name: "Zhob", coordinates: [31.3412, 69.4486] },
     ],
     nutritionalInfo: "High in protein, vitamin E, magnesium, and healthy fats",
     type: "Almonds",
@@ -121,37 +102,19 @@ export const productsData: Record<string, Product> = {
       "Firm & Rich: Firm, flavourful, and deeply nutty, offering a satisfying texture with every bite.",
       "Nutty Depth: Known for its rich taste that elevates gourmet blends and fine desserts.",
       "Premium Quality: Ideal for premium nut mixes, dessert toppings like ice creams and yogurts, and chocolate coatings.",
-      "Origin: Peshawar – renowned for fertile soils and traditional almond cultivation.",
-      "Size: 26/28 per ounce.",
+      "Origin: Zhob – renowned for fertile soils and traditional almond cultivation.",
+      "Size: 11/13 per ounce.",
       "Storage: Ambient – maintains freshness, aroma, and natural crunch",
     ],
     varieties: [
       {
         id: "kambri-blanched",
-        name: "Kambri Almonds (Blanche)",
-        description:
-          "Kambri almonds, also known as Kaghzi or Blanche almonds, come from the mountainous areas of Gilgit-Baltistan and Chitral. They are prized for their ultra-thin shells and light skin, making them easy to peel and perfect for light, healthy snacking. Their mild, delicate flavor and soft crunch make them a favorite in traditional sweets and health-focused diets.",
-        availability: createAvailability([9, 8, 7, 12, 1, 2]),
-      },
-      {
-        id: "kalamdana",
-        name: "Kalamdana Almonds",
-        description:
-          "Kalamdana almonds, also referred to as Kalmi or Sonara almonds, are larger in size and richer in taste. These almonds have a naturally sweet, bold flavor and a firm crunch. Their high nutritional value — packed with vitamin E, fiber, magnesium, and healthy fats — makes them ideal for energy mixes, protein bars, or daily snacking for those with active lifestyles.",
-        availability: createAvailability([9, 6, 11, 12]),
-      },
-      {
-        id: "said-kheli-white",
-        name: "Katta Jumbo Almonds",
-        description:
-          "Katta Jumbo almonds are known for their pale white skin and unique appearance. Often used in luxury gifting and traditional celebrations, these almonds offer a fuller, more traditional almond flavor while maintaining a soft texture and clean look.",
-        availability: createAvailability([9, 10, 11, 12, 1, 2]),
+        name: "Kambri Almonds",
+        availability: createAvailability([10, 11, 12, 1, 2 ,3]),
       },
     ],
     origins: [
-      { name: "Quetta", coordinates: [30.1798, 67.0011] },
-      { name: "Kalat", coordinates: [29.0233, 66.5897] },
-      { name: "Mastung", coordinates: [29.7969, 66.8453] },
+      { name: "Zhob", coordinates: [31.3412, 69.4486] },
     ],
     nutritionalInfo: "High in protein, vitamin E, magnesium, and healthy fats",
     type: "Almonds",
@@ -177,31 +140,13 @@ export const productsData: Record<string, Product> = {
     ],
     varieties: [
       {
-        id: "kambri-blanched",
-        name: "Kambri Almonds (Blanche)",
-        description:
-          "Kambri almonds, also known as Kaghzi or Blanche almonds, come from the mountainous areas of Gilgit-Baltistan and Chitral. They are prized for their ultra-thin shells and light skin, making them easy to peel and perfect for light, healthy snacking. Their mild, delicate flavor and soft crunch make them a favorite in traditional sweets and health-focused diets.",
-        availability: createAvailability([9, 8, 7, 12, 1, 2]),
-      },
-      {
         id: "kalamdana",
         name: "Kalamdana Almonds",
-        description:
-          "Kalamdana almonds, also referred to as Kalmi or Sonara almonds, are larger in size and richer in taste. These almonds have a naturally sweet, bold flavor and a firm crunch. Their high nutritional value — packed with vitamin E, fiber, magnesium, and healthy fats — makes them ideal for energy mixes, protein bars, or daily snacking for those with active lifestyles.",
-        availability: createAvailability([9, 6, 11, 12]),
-      },
-      {
-        id: "said-kheli-white",
-        name: "Katta Jumbo Almonds",
-        description:
-          "Katta Jumbo almonds are known for their pale white skin and unique appearance. Often used in luxury gifting and traditional celebrations, these almonds offer a fuller, more traditional almond flavor while maintaining a soft texture and clean look.",
-        availability: createAvailability([9, 10, 11, 12, 1, 2]),
+        availability: createAvailability([10, 11, 12, 1, 2 ,3]),
       },
     ],
     origins: [
-      { name: "Quetta", coordinates: [30.1798, 67.0011] },
       { name: "Kalat", coordinates: [29.0233, 66.5897] },
-      { name: "Mastung", coordinates: [29.7969, 66.8453] },
     ],
     nutritionalInfo: "High in protein, vitamin E, magnesium, and healthy fats",
     type: "Almonds",
@@ -222,36 +167,18 @@ export const productsData: Record<string, Product> = {
       "Balanced Flavour: Smooth texture with subtle depth, perfect for functional foods.",
       "Functional Use: Commonly used in nutritional supplements, energy/protein bars, and bakery products focused on performance.",
       "Origin: Kalat – an almond-growing region known for rich, mineral soils.",
-      "Size: 30/32 per ounce.",
+      "Size: 13/15 per ounce.",
       "Storage: Ambient – preserves texture and nutritional integrity.",
     ],
     varieties: [
       {
-        id: "kambri-blanched",
-        name: "Kambri Almonds (Blanche)",
-        description:
-          "Kambri almonds, also known as Kaghzi or Blanche almonds, come from the mountainous areas of Gilgit-Baltistan and Chitral. They are prized for their ultra-thin shells and light skin, making them easy to peel and perfect for light, healthy snacking. Their mild, delicate flavor and soft crunch make them a favorite in traditional sweets and health-focused diets.",
-        availability: createAvailability([9, 8, 7, 12, 1, 2]),
-      },
-      {
         id: "kalamdana",
         name: "Kalamdana Almonds",
-        description:
-          "Kalamdana almonds, also referred to as Kalmi or Sonara almonds, are larger in size and richer in taste. These almonds have a naturally sweet, bold flavor and a firm crunch. Their high nutritional value — packed with vitamin E, fiber, magnesium, and healthy fats — makes them ideal for energy mixes, protein bars, or daily snacking for those with active lifestyles.",
-        availability: createAvailability([9, 6, 11, 12]),
-      },
-      {
-        id: "said-kheli-white",
-        name: "Said-Kheli Almonds",
-        description:
-          "Said-Kheli almonds are known for their pale white skin and unique appearance. Often used in luxury gifting and traditional celebrations, these almonds offer a fuller, more traditional almond flavor while maintaining a soft texture and clean look.",
-        availability: createAvailability([9, 10, 11, 12, 1, 2]),
+        availability: createAvailability([10, 11, 12, 1, 2 ,3]),
       },
     ],
     origins: [
-      { name: "Quetta", coordinates: [30.1798, 67.0011] },
       { name: "Kalat", coordinates: [29.0233, 66.5897] },
-      { name: "Mastung", coordinates: [29.7969, 66.8453] },
     ],
     nutritionalInfo: "High in protein, vitamin E, magnesium, and healthy fats",
     type: "Almonds",
@@ -272,36 +199,18 @@ export const productsData: Record<string, Product> = {
       "Delicately Flavoured: A natural hint of sweetness enhances the nut’s refined taste.",
       "Premium Delicacy: Perfect for specialty liqueurs and gourmet dry fruit snacks.",
       "Origin: Skardu – known for its high-altitude almond orchards and rich agricultural heritage.",
-      "Size: 29/31 per ounce.",
+      "Size: 20/22 per ounce.",
       "Storage: Ambient – ideal for maintaining freshness and natural oils.",
     ],
     varieties: [
       {
-        id: "kambri-blanched",
-        name: "Kambri Almonds (Blanche)",
-        description:
-          "Kambri almonds, also known as Kaghzi or Blanche almonds, come from the mountainous areas of Gilgit-Baltistan and Chitral. They are prized for their ultra-thin shells and light skin, making them easy to peel and perfect for light, healthy snacking. Their mild, delicate flavor and soft crunch make them a favorite in traditional sweets and health-focused diets.",
-        availability: createAvailability([9, 8, 7, 12, 1, 2]),
-      },
-      {
-        id: "kalamdana",
-        name: "Kalamdana Almonds",
-        description:
-          "Kalamdana almonds, also referred to as Kalmi or Sonara almonds, are larger in size and richer in taste. These almonds have a naturally sweet, bold flavor and a firm crunch. Their high nutritional value — packed with vitamin E, fiber, magnesium, and healthy fats — makes them ideal for energy mixes, protein bars, or daily snacking for those with active lifestyles.",
-        availability: createAvailability([9, 6, 11, 12]),
-      },
-      {
-        id: "said-kheli-white",
-        name: "Said-Kheli Almonds",
-        description:
-          "Said-Kheli almonds are known for their pale white skin and unique appearance. Often used in luxury gifting and traditional celebrations, these almonds offer a fuller, more traditional almond flavor while maintaining a soft texture and clean look.",
+        id: "Katta Jumbo",
+        name: "Katta Jumbo",
         availability: createAvailability([9, 10, 11, 12, 1, 2]),
       },
     ],
     origins: [
-      { name: "Quetta", coordinates: [30.1798, 67.0011] },
-      { name: "Kalat", coordinates: [29.0233, 66.5897] },
-      { name: "Mastung", coordinates: [29.7969, 66.8453] },
+      { name: "Skardu", coordinates: [35.32471, 75.55096] },
     ],
     nutritionalInfo: "High in protein, vitamin E, magnesium, and healthy fats",
     type: "Almonds",
@@ -314,7 +223,7 @@ export const productsData: Record<string, Product> = {
     heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633952/Katta_Jumbo_ibnuqb.png",
     coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634013/Almond_oq1zep.jpg",
     description:
-      "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients.",
+      "Premium quality almonds sourced from the finest orchards of Pakistan. Rich in protein, healthy fats, and essential nutrients",
     detailedDescription:
       "Our almonds are carefully selected from the best orchards across Pakistan. These nutrient-dense nuts are perfect for snacking, baking, or adding to your favorite recipes. Rich in vitamin E, magnesium, and healthy monounsaturated fats, almonds support heart health and provide sustained energy throughout the day.",
     points: [
@@ -322,36 +231,18 @@ export const productsData: Record<string, Product> = {
       "Delicately Flavoured: A natural hint of sweetness enhances the nut’s refined taste.",
       "Premium Delicacy: Perfect for specialty liqueurs and gourmet dry fruit snacks.",
       "Origin: Skardu – known for its high-altitude almond orchards and rich agricultural heritage.",
-      "Size: 29/31 per ounce",
+      "Size: 8/10 per ounce.",
       "Storage: Ambient – ideal for maintaining freshness and natural oils.",
     ],
     varieties: [
       {
-        id: "kambri-blanched",
-        name: "Kambri Almonds (Blanche)",
-        description:
-          "Kambri almonds, also known as Kaghzi or Blanche almonds, come from the mountainous areas of Gilgit-Baltistan and Chitral. They are prized for their ultra-thin shells and light skin, making them easy to peel and perfect for light, healthy snacking. Their mild, delicate flavor and soft crunch make them a favorite in traditional sweets and health-focused diets.",
-        availability: createAvailability([9, 8, 7, 12, 1, 2]),
-      },
-      {
-        id: "kalamdana",
-        name: "Kalamdana Almonds",
-        description:
-          "Kalamdana almonds, also referred to as Kalmi or Sonara almonds, are larger in size and richer in taste. These almonds have a naturally sweet, bold flavor and a firm crunch. Their high nutritional value — packed with vitamin E, fiber, magnesium, and healthy fats — makes them ideal for energy mixes, protein bars, or daily snacking for those with active lifestyles.",
-        availability: createAvailability([9, 6, 11, 12]),
-      },
-      {
-        id: "said-kheli-white",
-        name: "Said-Kheli Almonds",
-        description:
-          "Said-Kheli almonds are known for their pale white skin and unique appearance. Often used in luxury gifting and traditional celebrations, these almonds offer a fuller, more traditional almond flavor while maintaining a soft texture and clean look.",
+        id: "Katta Jumbo",
+        name: "Katta Jumbo",
         availability: createAvailability([9, 10, 11, 12, 1, 2]),
       },
     ],
     origins: [
-      { name: "Quetta", coordinates: [30.1798, 67.0011] },
-      { name: "Kalat", coordinates: [29.0233, 66.5897] },
-      { name: "Mastung", coordinates: [29.7969, 66.8453] },
+      { name: "Skardu", coordinates: [35.32471, 75.55096] },
     ],
     nutritionalInfo: "High in protein, vitamin E, magnesium, and healthy fats",
     type: "Almonds",
@@ -360,19 +251,19 @@ export const productsData: Record<string, Product> = {
   PeelaKandhariRaisin: {
     id: "peela-kandhari-raisin",
     navLink:'PeelaKandhariRaisin',
-    name: "Peela Kandhari Raisin",
+    name: "Peela Kandhari",
     navName: "Peela Kandhari",
     heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633967/Peela_Khandhari_-_Golden_Raisin_aflfhm.png",
     coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634033/raisins_gee7sw.avif",
     description:
-      "Peela Kandhari raisins are a prized variety of golden-green raisins, traditionally sun-dried in Kandahar. These raisins are juicy, sweet, and slightly chewy, with a natural sugary taste.",
+      "Pakistani raisins are renowned for their rich flavor, natural sweetness, and traditional sun-drying methods that preserve their authentic taste. Grown in regions of Baluchistan province",
     detailedDescription:
       "Our raisins are naturally sun-dried to preserve their nutritional value and enhance their natural sweetness. These golden gems are packed with antioxidants, fiber, and essential minerals. Whether enjoyed as a healthy snack or used in baking and cooking, our raisins deliver exceptional quality and taste.",
     points: [
       "Juicy & Sweet: Naturally sugary with a slightly chewy texture that enhances richness.",
       "Golden Appeal: Vibrant colour and balanced sweetness ideal for both snacking and culinary use.",
       "Culinary Use: Perfect for cakes, cereals, salads, and chutneys.",
-      "Origin: Chamman – Sabz Chamman, a region known for sun-dried golden grapes.",
+      "Origin: Killa Abdullah – a region known for sun-dried golden grapes.",
       "Size: 45/55 per ounce.",
       "Storage: Ambient – retains natural moisture and glossy finish.",
     ],
@@ -380,29 +271,11 @@ export const productsData: Record<string, Product> = {
       {
         id: "peela-kandhari",
         name: "Peela Kandhari",
-        description:
-          "Golden yellow raisins known for their sweet taste and soft texture, premium variety from Kandahar region.",
-        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3]),
+        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3, 4]),
       },
-      {
-        id: "sabz-chamman",
-        name: "Sabz Chamman",
-        description:
-          "Sabz Chamman or Green (golden) raisins are eye-catching with their light green to golden-yellow hue, appearing plump, elongated, and smooth-skinned—like little jewels in the bowl. They're chewy yet moist, offering a lively burst of sweet‐tart flavor with subtle grape-fresh notes that feel vibrant and refreshing on the palate.",
-        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3]),
-      },
-      {
-        id: "kala-pishin",
-        name: "Kala Pishin",
-        description:
-          "Kala Pishin or as Black raisins are deep brown to almost black with a richly wrinkled exterior, often full-bodied and slightly sticky—clearly sun-dried to deepen their sweetness. They deliver a luxurious, caramel-like sweetness paired with mellow grape undertones and a satisfyingly soft but chewy texture that feels indulgent and comforting.",
-        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3]),
-      },
-    ],
+       ],
     origins: [
-      { name: "Pishin", coordinates: [30.5833, 66.9833] },
-      { name: "Kandahar", coordinates: [31.6137, 65.7372] },
-      { name: "Chaman", coordinates: [30.9167, 66.45] },
+      { name: "Killa Abdullah", coordinates: [30.0507, 66.1323] },
     ],
     nutritionalInfo: "Rich in antioxidants, fiber, and natural sugars",
     type: "Raisin",
@@ -416,44 +289,26 @@ export const productsData: Record<string, Product> = {
     heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633969/Sultana_Raisin_gbrctl.png",
     coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634033/raisins_gee7sw.avif",
     description:
-      "Peela Kandhari raisins are a prized variety of golden-green raisins, traditionally sun-dried in Kandahar. These raisins are juicy, sweet, and slightly chewy, with a natural sugary taste.",
+      "Pakistani raisins are renowned for their rich flavor, natural sweetness, and traditional sun-drying methods that preserve their authentic taste. Grown in regions of Baluchistan province",
     detailedDescription:
       "Our raisins are naturally sun-dried to preserve their nutritional value and enhance their natural sweetness. These golden gems are packed with antioxidants, fiber, and essential minerals. Whether enjoyed as a healthy snack or used in baking and cooking, our raisins deliver exceptional quality and taste.",
     points: [
       "Soft & Juicy: Sweet, light, and tender with a subtle golden hue.",
       "Mildly Aromatic: Natural sweetness and fruity notes make it a chef’s favourite.",
       "Culinary Use: Used in pastries, curries, pilafs, and cheese boards.",
-      "Origin: Kandhar – a key centre for premium raisin production.",
+      "Origin: Pishin – a key centre for premium raisin production.",
       "Size: 50/60 per ounce.",
       "Storage: Ambient – preserves juiciness and fresh aroma.",
     ],
     varieties: [
       {
-        id: "peela-kandhari",
-        name: "Peela Kandhari",
-        description:
-          "Golden yellow raisins known for their sweet taste and soft texture, premium variety from Kandahar region.",
-        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3]),
+        id: "Sultana",
+        name: "Sultana",
+        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3, 4,5]),
       },
-      {
-        id: "sabz-chamman",
-        name: "Sabz Chamman",
-        description:
-          "Sabz Chamman or Green (golden) raisins are eye-catching with their light green to golden-yellow hue, appearing plump, elongated, and smooth-skinned—like little jewels in the bowl. They're chewy yet moist, offering a lively burst of sweet‐tart flavor with subtle grape-fresh notes that feel vibrant and refreshing on the palate.",
-        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3]),
-      },
-      {
-        id: "kala-pishin",
-        name: "Kala Pishin",
-        description:
-          "Kala Pishin or as Black raisins are deep brown to almost black with a richly wrinkled exterior, often full-bodied and slightly sticky—clearly sun-dried to deepen their sweetness. They deliver a luxurious, caramel-like sweetness paired with mellow grape undertones and a satisfyingly soft but chewy texture that feels indulgent and comforting.",
-        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3]),
-      },
-    ],
+         ],
     origins: [
       { name: "Pishin", coordinates: [30.5833, 66.9833] },
-      { name: "Kandahar", coordinates: [31.6137, 65.7372] },
-      { name: "Chaman", coordinates: [30.9167, 66.45] },
     ],
     nutritionalInfo: "Rich in antioxidants, fiber, and natural sugars",
     type: "Raisin",
@@ -466,44 +321,26 @@ export const productsData: Record<string, Product> = {
     heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633945/Kala_Pishin_-_Black_Raisin_n1lbyk.png",
     coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634033/raisins_gee7sw.avif",
     description:
-      "Peela Kandhari raisins are a prized variety of golden-green raisins, traditionally sun-dried in Kandahar. These raisins are juicy, sweet, and slightly chewy, with a natural sugary taste.",
+      "Pakistani raisins are renowned for their rich flavor, natural sweetness, and traditional sun-drying methods that preserve their authentic taste. Grown in regions of Baluchistan province",
     detailedDescription:
       "Our raisins are naturally sun-dried to preserve their nutritional value and enhance their natural sweetness. These golden gems are packed with antioxidants, fiber, and essential minerals. Whether enjoyed as a healthy snack or used in baking and cooking, our raisins deliver exceptional quality and taste.",
     points: [
       "Rich & Fruity: Deep, full-bodied flavour with chewy texture and strong sweetness.",
       "Intense Taste: Naturally dark hue adds depth to culinary presentations.",
       "Culinary Use: Excellent for snacks, hearty breads, pilafs, and stews.",
-      "Origin: Pishin – known for producing bold, dark raisins with rich taste.",
+      "Origin: Pishin, known for producing bold, dark raisins with rich taste.",
       "Size: 55/65 per ounce.",
       "Storage: Ambient – keeps texture soft and flavour robust.",
     ],
     varieties: [
       {
-        id: "peela-kandhari",
-        name: "Peela Kandhari",
-        description:
-          "Golden yellow raisins known for their sweet taste and soft texture, premium variety from Kandahar region.",
-        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3]),
-      },
-      {
-        id: "sabz-chamman",
-        name: "Sabz Chamman",
-        description:
-          "Sabz Chamman or Green (golden) raisins are eye-catching with their light green to golden-yellow hue, appearing plump, elongated, and smooth-skinned—like little jewels in the bowl. They're chewy yet moist, offering a lively burst of sweet‐tart flavor with subtle grape-fresh notes that feel vibrant and refreshing on the palate.",
-        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3]),
-      },
-      {
         id: "kala-pishin",
         name: "Kala Pishin",
-        description:
-          "Kala Pishin or as Black raisins are deep brown to almost black with a richly wrinkled exterior, often full-bodied and slightly sticky—clearly sun-dried to deepen their sweetness. They deliver a luxurious, caramel-like sweetness paired with mellow grape undertones and a satisfyingly soft but chewy texture that feels indulgent and comforting.",
-        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3]),
+        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3, 4, 5]),
       },
     ],
     origins: [
       { name: "Pishin", coordinates: [30.5833, 66.9833] },
-      { name: "Kandahar", coordinates: [31.6137, 65.7372] },
-      { name: "Chaman", coordinates: [30.9167, 66.45] },
     ],
     nutritionalInfo: "Rich in antioxidants, fiber, and natural sugars",
     type: "Raisin",
@@ -523,44 +360,19 @@ export const productsData: Record<string, Product> = {
       "Smooth & Delicate: Slightly rounder with a mild, sweet flavour and soft crunch.",
       "Elegant Profile: Balanced taste for refined desserts.",
       "Gourmet Use: Suited for gelato, luxury chocolates, macarons, and bakery toppings.",
-      "Origin: Kalat – renowned for superior pistachio cultivation.",
+      "Origin: Killah Saifullah – renowned for superior pistachio cultivation.",
       "Size: 40/45 per ounce.",
       "Storage: Ambient – preserves freshness and texture.",
     ],
     varieties: [
       {
-        id: "ziarat-pista",
-        name: "Ziarat Pista",
-        description:
-          "Ziarat pistachios come from the cool, dry region of Ziarat in Balochistan, Pakistan. These nuts are known for their rich, buttery flavor and satisfying crunch. Grown in a unique microclimate, Ziarat pistachios have a full-bodied taste that stands out among regional varieties.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
-      },
-      {
-        id: "ziarat-pista-shell",
-        name: "Ziarat Pista w shell",
-        description:
-          "Ziarat pistachios come from the cool, dry region of Ziarat in Balochistan, Pakistan. These nuts are known for their rich, buttery flavor and satisfying crunch. Grown in a unique microclimate, Ziarat pistachios have a full-bodied taste that stands out among regional varieties.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
-      },
-      {
         id: "killa-saifullah-pista",
         name: "Killa Saifullah Pista",
-        description:
-          "From the highlands of Killa Saifullah in northern Balochistan, this pistachio variety is known for its robust flavor and traditional sun-drying techniques. They are consumed both with and without shells and are particularly popular when roasted, making them a premium offering.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
-      },
-      {
-        id: "killa-saifullah-roasted",
-        name: "Killa Saifullah Pista Roasted with Shell",
-        description:
-          "From the highlands of Killa Saifullah in northern Balochistan, this pistachio variety is known for its robust flavor and traditional sun-drying techniques. They are consumed both with and without shells and are particularly popular when roasted, making them a premium offering.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
+        availability: createAvailability([9, 10, 11, 12, 1, 2, 3, 4]),
       },
     ],
     origins: [
-      { name: "Ziarat", coordinates: [30.3811, 67.7261] },
       { name: "Killa Saifullah", coordinates: [30.7056, 68.7444] },
-      { name: "Sherani", coordinates: [30.2264, 68.9383] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and antioxidants",
     type: "Pistachio",
@@ -576,7 +388,7 @@ export const productsData: Record<string, Product> = {
       "Rich & Earthy: Distinctive, bold nutty taste with slight chewiness.",
       "Robust Texture: Naturally dense and flavourful kernel.",
       "Gourmet Use: Perfect for nougats, pralines, biscotti, and Mediterranean pastries.",
-      "Origin: Quetta – celebrated for premium pistachio orchards.",
+      "Origin: Ziarat – celebrated for premium pistachio orchards.",
       "Size: 45/50 per ounce.",
       "Storage: Ambient – retains crispness and colour.",
     ],
@@ -588,36 +400,11 @@ export const productsData: Record<string, Product> = {
       {
         id: "ziarat-pista",
         name: "Ziarat Pista",
-        description:
-          "Ziarat pistachios come from the cool, dry region of Ziarat in Balochistan, Pakistan. These nuts are known for their rich, buttery flavor and satisfying crunch. Grown in a unique microclimate, Ziarat pistachios have a full-bodied taste that stands out among regional varieties.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
+        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3, 4]),
       },
-      {
-        id: "ziarat-pista-shell",
-        name: "Ziarat Pista w shell",
-        description:
-          "Ziarat pistachios come from the cool, dry region of Ziarat in Balochistan, Pakistan. These nuts are known for their rich, buttery flavor and satisfying crunch. Grown in a unique microclimate, Ziarat pistachios have a full-bodied taste that stands out among regional varieties.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
-      },
-      {
-        id: "killa-saifullah-pista",
-        name: "Killa Saifullah Pista",
-        description:
-          "From the highlands of Killa Saifullah in northern Balochistan, this pistachio variety is known for its robust flavor and traditional sun-drying techniques. They are consumed both with and without shells and are particularly popular when roasted, making them a premium offering.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
-      },
-      {
-        id: "killa-saifullah-roasted",
-        name: "Killa Saifullah Pista Roasted with Shell",
-        description:
-          "From the highlands of Killa Saifullah in northern Balochistan, this pistachio variety is known for its robust flavor and traditional sun-drying techniques. They are consumed both with and without shells and are particularly popular when roasted, making them a premium offering.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
-      },
-    ],
+         ],
     origins: [
       { name: "Ziarat", coordinates: [30.3811, 67.7261] },
-      { name: "Killa Saifullah", coordinates: [30.7056, 68.7444] },
-      { name: "Sherani", coordinates: [30.2264, 68.9383] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and antioxidants",
     type: "Pistachio",
@@ -637,44 +424,19 @@ export const productsData: Record<string, Product> = {
       "Smooth & Delicate: Slightly rounder with a mild, sweet flavour and soft crunch.",
       "Elegant Profile: Balanced taste for refined desserts.",
       "Gourmet Use: Suited for gelato, luxury chocolates, macarons, and bakery toppings.",
-      "Origin: Kalat – renowned for superior pistachio cultivation.",
-      "Size: 40/45 per ounce.",
+      "Origin: Killah Saifullah – renowned for superior pistachio cultivation.",
+      "Size: 30/32 per ounce.",
       "Storage: Ambient – preserves freshness and texture.",
     ],
     varieties: [
-      {
-        id: "ziarat-pista",
-        name: "Ziarat Pista",
-        description:
-          "Ziarat pistachios come from the cool, dry region of Ziarat in Balochistan, Pakistan. These nuts are known for their rich, buttery flavor and satisfying crunch. Grown in a unique microclimate, Ziarat pistachios have a full-bodied taste that stands out among regional varieties.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
-      },
-      {
-        id: "ziarat-pista-shell",
-        name: "Ziarat Pista w shell",
-        description:
-          "Ziarat pistachios come from the cool, dry region of Ziarat in Balochistan, Pakistan. These nuts are known for their rich, buttery flavor and satisfying crunch. Grown in a unique microclimate, Ziarat pistachios have a full-bodied taste that stands out among regional varieties.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
-      },
-      {
-        id: "killa-saifullah-pista",
-        name: "Killa Saifullah Pista",
-        description:
-          "From the highlands of Killa Saifullah in northern Balochistan, this pistachio variety is known for its robust flavor and traditional sun-drying techniques. They are consumed both with and without shells and are particularly popular when roasted, making them a premium offering.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
-      },
-      {
+           {
         id: "killa-saifullah-roasted",
-        name: "Killa Saifullah Pista Roasted with Shell",
-        description:
-          "From the highlands of Killa Saifullah in northern Balochistan, this pistachio variety is known for its robust flavor and traditional sun-drying techniques. They are consumed both with and without shells and are particularly popular when roasted, making them a premium offering.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
+        name: "Killa Saifullah Pista",
+        availability: createAvailability([9, 10, 11, 12, 1, 2, 3, 4]),
       },
     ],
     origins: [
-      { name: "Ziarat", coordinates: [30.3811, 67.7261] },
       { name: "Killa Saifullah", coordinates: [30.7056, 68.7444] },
-      { name: "Sherani", coordinates: [30.2264, 68.9383] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and antioxidants",
     type: "Pistachio",
@@ -690,8 +452,8 @@ export const productsData: Record<string, Product> = {
       "Rich & Earthy: Distinctive, bold nutty taste with slight chewiness.",
       "Robust Texture: Naturally dense and flavourful kernel.",
       "Gourmet Use: Perfect for nougats, pralines, biscotti, and Mediterranean pastries.",
-      "Origin: Quetta – celebrated for premium pistachio orchards.",
-      "Size: 45/50 per ounce.",
+      "Origin: Ziarat – celebrated for premium pistachio orchards.",
+      "Size: 31/33 per ounce.",
       "Storage: Ambient – retains crispness and colour.",
     ],
     description:
@@ -700,38 +462,13 @@ export const productsData: Record<string, Product> = {
       "Pakistan produces some of the world's finest pistachios, known for their distinctive flavor and superior quality. Our pistachios are carefully harvested and processed to maintain their natural taste and nutritional benefits. Rich in protein, healthy fats, and antioxidants, they make an excellent healthy snack.",
     varieties: [
       {
-        id: "ziarat-pista",
-        name: "Ziarat Pista",
-        description:
-          "Ziarat pistachios come from the cool, dry region of Ziarat in Balochistan, Pakistan. These nuts are known for their rich, buttery flavor and satisfying crunch. Grown in a unique microclimate, Ziarat pistachios have a full-bodied taste that stands out among regional varieties.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
-      },
-      {
         id: "ziarat-pista-shell",
         name: "Ziarat Pista w shell",
-        description:
-          "Ziarat pistachios come from the cool, dry region of Ziarat in Balochistan, Pakistan. These nuts are known for their rich, buttery flavor and satisfying crunch. Grown in a unique microclimate, Ziarat pistachios have a full-bodied taste that stands out among regional varieties.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
+        availability: createAvailability([8, 9, 10, 11, 12, 1, 2, 3, 4]),
       },
-      {
-        id: "killa-saifullah-pista",
-        name: "Killa Saifullah Pista",
-        description:
-          "From the highlands of Killa Saifullah in northern Balochistan, this pistachio variety is known for its robust flavor and traditional sun-drying techniques. They are consumed both with and without shells and are particularly popular when roasted, making them a premium offering.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
-      },
-      {
-        id: "killa-saifullah-roasted",
-        name: "Killa Saifullah Pista Roasted with Shell",
-        description:
-          "From the highlands of Killa Saifullah in northern Balochistan, this pistachio variety is known for its robust flavor and traditional sun-drying techniques. They are consumed both with and without shells and are particularly popular when roasted, making them a premium offering.",
-        availability: createAvailability([9, 10, 11, 12, 1]),
-      },
-    ],
+         ],
     origins: [
       { name: "Ziarat", coordinates: [30.3811, 67.7261] },
-      { name: "Killa Saifullah", coordinates: [30.7056, 68.7444] },
-      { name: "Sherani", coordinates: [30.2264, 68.9383] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and antioxidants",
     type: "Pistachio",
@@ -742,7 +479,7 @@ export const productsData: Record<string, Product> = {
     name: "Swat-Dir Walnuts",
     navLink:'SwatdirWalnutsShelled',
     navName: "Swat-Dir",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1761088801/Swat-dir_walnut_shelled_emzjwt.jpg ",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1761088801/Swat-dir_walnut_shelled_emzjwt.jpg",
     coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634034/walnut_cr2swc.webp",
     points: [
       "Mildly Sweet & Soft: Subtle sweetness with faint bitterness and an oily texture.",
@@ -757,39 +494,14 @@ export const productsData: Record<string, Product> = {
     detailedDescription:
       "Our walnuts come from the pristine valleys of northern Pakistan, where the climate and soil conditions produce nuts of exceptional quality. These brain-healthy nuts are rich in omega-3 fatty acids, protein, and antioxidants. Perfect for snacking, baking, or adding to salads and cereals.",
     varieties: [
-      {
-        id: "swat-dir-shell",
-        name: "Swat-Dir Walnut w shell",
-        description:
-          "These walnuts are harvested from the valleys of Swat and Dir in northern Pakistan, where the cool climate helps develop their distinctive taste. Swat-Dir walnuts are mildly sweet with a faint bitterness and have a soft, oily texture. They are widely used in baking, winter snacks, and for extracting walnut oil due to their rich lipid content.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
-      },
-      {
+       {
         id: "swat-dir-shelled",
         name: "Swat-Dir Walnut",
-        description:
-          "These walnuts are harvested from the valleys of Swat and Dir in northern Pakistan, where the cool climate helps develop their distinctive taste. Swat-Dir walnuts are mildly sweet with a faint bitterness and have a soft, oily texture. They are widely used in baking, winter snacks, and for extracting walnut oil due to their rich lipid content.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
+        availability: createAvailability([10, 11, 12, 1, 2, 3, 4]),
       },
-      {
-        id: "kaghzi-walnut",
-        name: "Kaghzi Walnut",
-        description:
-          "Kaghzi walnuts are known for their paper-thin shells and easy cracking. The kernels inside are pale, plump, and subtly sweet. Their high yield and easy usability make them popular.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
-      },
-      {
-        id: "kaghzi-shell",
-        name: "Kaghzi Walnut w Shell",
-        description:
-          "Kaghzi walnuts are known for their paper-thin shells and easy cracking. The kernels inside are pale, plump, and subtly sweet. Their high yield and easy usability make them popular.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
-      },
-    ],
+        ],
     origins: [
       { name: "Swat", coordinates: [35.2227, 72.4258] },
-      { name: "Dir", coordinates: [35.2058, 71.8786] },
-      { name: "Chitral", coordinates: [35.8518, 71.7864] },
     ],
     nutritionalInfo: "Rich in omega-3 fatty acids, protein, and antioxidants",
     type: "Walnut",
@@ -799,13 +511,13 @@ export const productsData: Record<string, Product> = {
     name: "Kaghzi Walnuts",
     navLink:'KaghziWalnutsShelled',
     navName: "Kaghzi",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1761088882/Kaghzi_Walnut_Shelled_ooy6oq.png ",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1761088882/Kaghzi_Walnut_Shelled_ooy6oq.png",
     coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634034/walnut_cr2swc.webp",
     points: [
       "Paper-Thin Shells: Easy to crack with pale, plump kernels.",
       "Delicate Sweetness: Subtly sweet flavour perfect for premium desserts.",
       "Culinary Use: Ideal for cakes, tarts, confectionery, chocolates, and gourmet nut mixes.",
-      "Origin: Gilgit – cool climate producing high-grade walnuts.",
+      "Origin: Chitral – cool climate producing high-grade walnuts.",
       "Size: 10/12 halves per ounce.",
       "Storage: Ambient – preserves taste and texture.",
     ],
@@ -814,38 +526,13 @@ export const productsData: Record<string, Product> = {
     detailedDescription:
       "Our walnuts come from the pristine valleys of northern Pakistan, where the climate and soil conditions produce nuts of exceptional quality. These brain-healthy nuts are rich in omega-3 fatty acids, protein, and antioxidants. Perfect for snacking, baking, or adding to salads and cereals.",
     varieties: [
-      {
-        id: "swat-dir-shell",
-        name: "Swat-Dir Walnut w shell",
-        description:
-          "These walnuts are harvested from the valleys of Swat and Dir in northern Pakistan, where the cool climate helps develop their distinctive taste. Swat-Dir walnuts are mildly sweet with a faint bitterness and have a soft, oily texture. They are widely used in baking, winter snacks, and for extracting walnut oil due to their rich lipid content.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
-      },
-      {
-        id: "swat-dir-shelled",
-        name: "Swat-Dir Walnut",
-        description:
-          "These walnuts are harvested from the valleys of Swat and Dir in northern Pakistan, where the cool climate helps develop their distinctive taste. Swat-Dir walnuts are mildly sweet with a faint bitterness and have a soft, oily texture. They are widely used in baking, winter snacks, and for extracting walnut oil due to their rich lipid content.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
-      },
-      {
+           {
         id: "kaghzi-walnut",
         name: "Kaghzi Walnut",
-        description:
-          "Kaghzi walnuts are known for their paper-thin shells and easy cracking. The kernels inside are pale, plump, and subtly sweet. Their high yield and easy usability make them popular.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
-      },
-      {
-        id: "kaghzi-shell",
-        name: "Kaghzi Walnut w Shell",
-        description:
-          "Kaghzi walnuts are known for their paper-thin shells and easy cracking. The kernels inside are pale, plump, and subtly sweet. Their high yield and easy usability make them popular.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
+        availability: createAvailability([10, 11, 12, 1, 2, 3, 4]),
       },
     ],
     origins: [
-      { name: "Swat", coordinates: [35.2227, 72.4258] },
-      { name: "Dir", coordinates: [35.2058, 71.8786] },
       { name: "Chitral", coordinates: [35.8518, 71.7864] },
     ],
     nutritionalInfo: "Rich in omega-3 fatty acids, protein, and antioxidants",
@@ -864,7 +551,7 @@ export const productsData: Record<string, Product> = {
       "Natural Smoothness: Soft and easy to use in both sweet and savoury dishes.",
       "Culinary Use: Baking, winter snacks, artisan breads, savory salads, cheese pairings, hearty sauces, and walnut oil.",
       "Origin: Swat – a mountain valley known for rich walnut produce.",
-      "Size: 6/8 halves per ounce.",
+      "Size: 2/3 halves per ounce.",
       "Storage: Ambient – maintains oil content and crispness.",
     ],
     description:
@@ -875,36 +562,11 @@ export const productsData: Record<string, Product> = {
       {
         id: "swat-dir-shell",
         name: "Swat-Dir Walnut w shell",
-        description:
-          "These walnuts are harvested from the valleys of Swat and Dir in northern Pakistan, where the cool climate helps develop their distinctive taste. Swat-Dir walnuts are mildly sweet with a faint bitterness and have a soft, oily texture. They are widely used in baking, winter snacks, and for extracting walnut oil due to their rich lipid content.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
+        availability: createAvailability([10, 11, 12, 1, 2, 3, 4]),
       },
-      {
-        id: "swat-dir-shelled",
-        name: "Swat-Dir Walnut",
-        description:
-          "These walnuts are harvested from the valleys of Swat and Dir in northern Pakistan, where the cool climate helps develop their distinctive taste. Swat-Dir walnuts are mildly sweet with a faint bitterness and have a soft, oily texture. They are widely used in baking, winter snacks, and for extracting walnut oil due to their rich lipid content.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
-      },
-      {
-        id: "kaghzi-walnut",
-        name: "Kaghzi Walnut",
-        description:
-          "Kaghzi walnuts are known for their paper-thin shells and easy cracking. The kernels inside are pale, plump, and subtly sweet. Their high yield and easy usability make them popular.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
-      },
-      {
-        id: "kaghzi-shell",
-        name: "Kaghzi Walnut w Shell",
-        description:
-          "Kaghzi walnuts are known for their paper-thin shells and easy cracking. The kernels inside are pale, plump, and subtly sweet. Their high yield and easy usability make them popular.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
-      },
-    ],
+         ],
     origins: [
       { name: "Swat", coordinates: [35.2227, 72.4258] },
-      { name: "Dir", coordinates: [35.2058, 71.8786] },
-      { name: "Chitral", coordinates: [35.8518, 71.7864] },
     ],
     nutritionalInfo: "Rich in omega-3 fatty acids, protein, and antioxidants",
     type: "Walnut",
@@ -920,8 +582,8 @@ export const productsData: Record<string, Product> = {
       "Paper-Thin Shells: Easy to crack with pale, plump kernels.",
       "Delicate Sweetness: Subtly sweet flavour perfect for premium desserts.",
       "Culinary Use: Ideal for cakes, tarts, confectionery, chocolates, and gourmet nut mixes.",
-      "Origin: Gilgit – cool climate producing high-grade walnuts.",
-      "Size: 10/12 halves per ounce.",
+      "Origin: Chitral – cool climate producing high-grade walnuts.",
+      "Size: 4/5 halves per ounce.",
       "Storage: Ambient – preserves taste and texture.",
     ],
     description:
@@ -930,37 +592,12 @@ export const productsData: Record<string, Product> = {
       "Our walnuts come from the pristine valleys of northern Pakistan, where the climate and soil conditions produce nuts of exceptional quality. These brain-healthy nuts are rich in omega-3 fatty acids, protein, and antioxidants. Perfect for snacking, baking, or adding to salads and cereals.",
     varieties: [
       {
-        id: "swat-dir-shell",
-        name: "Swat-Dir Walnut w shell",
-        description:
-          "These walnuts are harvested from the valleys of Swat and Dir in northern Pakistan, where the cool climate helps develop their distinctive taste. Swat-Dir walnuts are mildly sweet with a faint bitterness and have a soft, oily texture. They are widely used in baking, winter snacks, and for extracting walnut oil due to their rich lipid content.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
-      },
-      {
-        id: "swat-dir-shelled",
-        name: "Swat-Dir Walnut",
-        description:
-          "These walnuts are harvested from the valleys of Swat and Dir in northern Pakistan, where the cool climate helps develop their distinctive taste. Swat-Dir walnuts are mildly sweet with a faint bitterness and have a soft, oily texture. They are widely used in baking, winter snacks, and for extracting walnut oil due to their rich lipid content.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
-      },
-      {
-        id: "kaghzi-walnut",
-        name: "Kaghzi Walnut",
-        description:
-          "Kaghzi walnuts are known for their paper-thin shells and easy cracking. The kernels inside are pale, plump, and subtly sweet. Their high yield and easy usability make them popular.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
-      },
-      {
         id: "kaghzi-shell",
         name: "Kaghzi Walnut w Shell",
-        description:
-          "Kaghzi walnuts are known for their paper-thin shells and easy cracking. The kernels inside are pale, plump, and subtly sweet. Their high yield and easy usability make them popular.",
-        availability: createAvailability([10, 11, 12, 1, 2, 3]),
+        availability: createAvailability([10, 11, 12, 1, 2, 3, 4]),
       },
     ],
     origins: [
-      { name: "Swat", coordinates: [35.2227, 72.4258] },
-      { name: "Dir", coordinates: [35.2058, 71.8786] },
       { name: "Chitral", coordinates: [35.8518, 71.7864] },
     ],
     nutritionalInfo: "Rich in omega-3 fatty acids, protein, and antioxidants",
@@ -978,7 +615,7 @@ export const productsData: Record<string, Product> = {
       "Delicate & Buttery: Buttery sweetness with a subtle crunch.",
       "Nutrient Dense: Rich in proteins and healthy fats, prized for natural flavour.",
       "Culinary Use: Ideal for luxury pesto, gourmet baked goods, salads, and fine confections.",
-      "Origin: Bannu – region famous for authentic pine nut harvests.",
+      "Origin: Chilas – region famous for authentic pine nut harvests.",
       "Size: 150/160 per ounce.",
       "Storage: Ambient – maintains texture and aromatic richness.",
     ],
@@ -987,39 +624,15 @@ export const productsData: Record<string, Product> = {
     detailedDescription:
       "Pine nuts are harvested from pine cones in the remote forests of northern Pakistan. These premium nuts have a distinctive buttery flavor and are considered a delicacy worldwide. Rich in protein, healthy fats, and minerals, they're perfect for gourmet cooking and traditional recipes.",
     varieties: [
-      {
-        id: "banu-chilas-shell",
-        name: "Banu-Chilas Pinenut in shell",
-        description:
-          "These pinenuts hail from Banu and Chilas in Gilgit-Baltistan and are among the most premium dry fruits in Pakistan. Known for their soft bite and buttery flavor, Banu-Chilas pinenuts are wild-harvested and sold with or without shell. Their natural sweetness makes them ideal for both snacking and garnishing sweets or pulao.",
-        availability: createAvailability([8, 9, 10, 11]),
-      },
+
       {
         id: "banu-chilas-shelled",
         name: "Banu-Chilas Pinenut",
-        description:
-          "These pinenuts hail from Banu and Chilas in Gilgit-Baltistan and are among the most premium dry fruits in Pakistan. Known for their soft bite and buttery flavor, Banu-Chilas pinenuts are wild-harvested and sold with or without shell. Their natural sweetness makes them ideal for both snacking and garnishing sweets or pulao.",
-        availability: createAvailability([8, 9, 10, 11]),
+        availability: createAvailability([9, 10, 11, 12, 1, 2, 3, 4]),
       },
-      {
-        id: "waziri-pinenuts",
-        name: "Waziri Pinenuts",
-        description:
-          "Waziri pinenuts are collected from the rugged Waziristan region and share a similar profile with Banu-Chilas varieties. Slightly firmer, they offer a rich, nutty flavor and high oil content. They're often roasted and used in traditional tribal dishes or sold as a delicacy.",
-        availability: createAvailability([8, 9, 10, 11]),
-      },
-      {
-        id: "waziri-shell",
-        name: "Waziri Pinenuts in shell",
-        description:
-          "Waziri pinenuts are collected from the rugged Waziristan region and share a similar profile with Banu-Chilas varieties. Slightly firmer, they offer a rich, nutty flavor and high oil content. They're often roasted and used in traditional tribal dishes or sold as a delicacy.",
-        availability: createAvailability([8, 9, 10, 11]),
-      },
-    ],
+         ],
     origins: [
       { name: "Chilas", coordinates: [35.4167, 74.0833] },
-      { name: "Bannu", coordinates: [32.9889, 70.6056] },
-      { name: "Waziristan", coordinates: [32.3617, 69.4306] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and essential minerals",
     type: "Pine Nut",
@@ -1045,37 +658,12 @@ export const productsData: Record<string, Product> = {
       "Pine nuts are harvested from pine cones in the remote forests of northern Pakistan. These premium nuts have a distinctive buttery flavor and are considered a delicacy worldwide. Rich in protein, healthy fats, and minerals, they're perfect for gourmet cooking and traditional recipes.",
     varieties: [
       {
-        id: "banu-chilas-shell",
-        name: "Banu-Chilas Pinenut in shell",
-        description:
-          "These pinenuts hail from Banu and Chilas in Gilgit-Baltistan and are among the most premium dry fruits in Pakistan. Known for their soft bite and buttery flavor, Banu-Chilas pinenuts are wild-harvested and sold with or without shell. Their natural sweetness makes them ideal for both snacking and garnishing sweets or pulao.",
-        availability: createAvailability([8, 9, 10, 11]),
-      },
-      {
-        id: "banu-chilas-shelled",
-        name: "Banu-Chilas Pinenut",
-        description:
-          "These pinenuts hail from Banu and Chilas in Gilgit-Baltistan and are among the most premium dry fruits in Pakistan. Known for their soft bite and buttery flavor, Banu-Chilas pinenuts are wild-harvested and sold with or without shell. Their natural sweetness makes them ideal for both snacking and garnishing sweets or pulao.",
-        availability: createAvailability([8, 9, 10, 11]),
-      },
-      {
         id: "waziri-pinenuts",
         name: "Waziri Pinenuts",
-        description:
-          "Waziri pinenuts are collected from the rugged Waziristan region and share a similar profile with Banu-Chilas varieties. Slightly firmer, they offer a rich, nutty flavor and high oil content. They're often roasted and used in traditional tribal dishes or sold as a delicacy.",
-        availability: createAvailability([8, 9, 10, 11]),
+        availability: createAvailability([9, 10, 11, 12, 1, 2, 3, 4]),
       },
-      {
-        id: "waziri-shell",
-        name: "Waziri Pinenuts in shell",
-        description:
-          "Waziri pinenuts are collected from the rugged Waziristan region and share a similar profile with Banu-Chilas varieties. Slightly firmer, they offer a rich, nutty flavor and high oil content. They're often roasted and used in traditional tribal dishes or sold as a delicacy.",
-        availability: createAvailability([8, 9, 10, 11]),
-      },
-    ],
+         ],
     origins: [
-      { name: "Chilas", coordinates: [35.4167, 74.0833] },
-      { name: "Bannu", coordinates: [32.9889, 70.6056] },
       { name: "Waziristan", coordinates: [32.3617, 69.4306] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and essential minerals",
@@ -1092,8 +680,8 @@ export const productsData: Record<string, Product> = {
       "Delicate & Buttery: Buttery sweetness with a subtle crunch.",
       "Nutrient Dense: Rich in proteins and healthy fats, prized for natural flavour.",
       "Culinary Use: Ideal for luxury pesto, gourmet baked goods, salads, and fine confections.",
-      "Origin: Bannu – region famous for authentic pine nut harvests.",
-      "Size: 150/160 per ounce.",
+      "Origin: Chilas – region famous for authentic pine nut harvests.",
+      "Size: 135/145 per ounce.",
       "Storage: Ambient – maintains texture and aromatic richness.",
     ],
     description:
@@ -1104,36 +692,11 @@ export const productsData: Record<string, Product> = {
       {
         id: "banu-chilas-shell",
         name: "Banu-Chilas Pinenut in shell",
-        description:
-          "These pinenuts hail from Banu and Chilas in Gilgit-Baltistan and are among the most premium dry fruits in Pakistan. Known for their soft bite and buttery flavor, Banu-Chilas pinenuts are wild-harvested and sold with or without shell. Their natural sweetness makes them ideal for both snacking and garnishing sweets or pulao.",
-        availability: createAvailability([8, 9, 10, 11]),
+        availability: createAvailability([9, 10, 11, 12, 1, 2, 3, 4]),
       },
-      {
-        id: "banu-chilas-shelled",
-        name: "Banu-Chilas Pinenut",
-        description:
-          "These pinenuts hail from Banu and Chilas in Gilgit-Baltistan and are among the most premium dry fruits in Pakistan. Known for their soft bite and buttery flavor, Banu-Chilas pinenuts are wild-harvested and sold with or without shell. Their natural sweetness makes them ideal for both snacking and garnishing sweets or pulao.",
-        availability: createAvailability([8, 9, 10, 11]),
-      },
-      {
-        id: "waziri-pinenuts",
-        name: "Waziri Pinenuts",
-        description:
-          "Waziri pinenuts are collected from the rugged Waziristan region and share a similar profile with Banu-Chilas varieties. Slightly firmer, they offer a rich, nutty flavor and high oil content. They're often roasted and used in traditional tribal dishes or sold as a delicacy.",
-        availability: createAvailability([8, 9, 10, 11]),
-      },
-      {
-        id: "waziri-shell",
-        name: "Waziri Pinenuts in shell",
-        description:
-          "Waziri pinenuts are collected from the rugged Waziristan region and share a similar profile with Banu-Chilas varieties. Slightly firmer, they offer a rich, nutty flavor and high oil content. They're often roasted and used in traditional tribal dishes or sold as a delicacy.",
-        availability: createAvailability([8, 9, 10, 11]),
-      },
-    ],
+         ],
     origins: [
       { name: "Chilas", coordinates: [35.4167, 74.0833] },
-      { name: "Bannu", coordinates: [32.9889, 70.6056] },
-      { name: "Waziristan", coordinates: [32.3617, 69.4306] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and essential minerals",
     type: "Pine Nut",
@@ -1150,7 +713,7 @@ export const productsData: Record<string, Product> = {
       "Globally Prized: Known for premium quality and deep, nutty profile.",
       "Culinary Use: Artisan confections, fine chocolate, creamy desserts, cheese boards, and luxury snacks.",
       "Origin: Waziristan – high-altitude pine forests yielding top-grade produce.",
-      "Size: 120/130 per ounce.",
+      "Size: 105/115 per ounce.",
       "Storage: Ambient – preserves natural oils and premium texture.",
     ],
     description:
@@ -1158,38 +721,13 @@ export const productsData: Record<string, Product> = {
     detailedDescription:
       "Pine nuts are harvested from pine cones in the remote forests of northern Pakistan. These premium nuts have a distinctive buttery flavor and are considered a delicacy worldwide. Rich in protein, healthy fats, and minerals, they're perfect for gourmet cooking and traditional recipes.",
     varieties: [
-      {
-        id: "banu-chilas-shell",
-        name: "Banu-Chilas Pinenut in shell",
-        description:
-          "These pinenuts hail from Banu and Chilas in Gilgit-Baltistan and are among the most premium dry fruits in Pakistan. Known for their soft bite and buttery flavor, Banu-Chilas pinenuts are wild-harvested and sold with or without shell. Their natural sweetness makes them ideal for both snacking and garnishing sweets or pulao.",
-        availability: createAvailability([8, 9, 10, 11]),
-      },
-      {
-        id: "banu-chilas-shelled",
-        name: "Banu-Chilas Pinenut",
-        description:
-          "These pinenuts hail from Banu and Chilas in Gilgit-Baltistan and are among the most premium dry fruits in Pakistan. Known for their soft bite and buttery flavor, Banu-Chilas pinenuts are wild-harvested and sold with or without shell. Their natural sweetness makes them ideal for both snacking and garnishing sweets or pulao.",
-        availability: createAvailability([8, 9, 10, 11]),
-      },
-      {
-        id: "waziri-pinenuts",
-        name: "Waziri Pinenuts",
-        description:
-          "Waziri pinenuts are collected from the rugged Waziristan region and share a similar profile with Banu-Chilas varieties. Slightly firmer, they offer a rich, nutty flavor and high oil content. They're often roasted and used in traditional tribal dishes or sold as a delicacy.",
-        availability: createAvailability([8, 9, 10, 11]),
-      },
-      {
+           {
         id: "waziri-shell",
         name: "Waziri Pinenuts in shell",
-        description:
-          "Waziri pinenuts are collected from the rugged Waziristan region and share a similar profile with Banu-Chilas varieties. Slightly firmer, they offer a rich, nutty flavor and high oil content. They're often roasted and used in traditional tribal dishes or sold as a delicacy.",
-        availability: createAvailability([8, 9, 10, 11]),
+        availability: createAvailability([9, 10, 11, 12, 1, 2, 3, 4]),
       },
     ],
     origins: [
-      { name: "Chilas", coordinates: [35.4167, 74.0833] },
-      { name: "Bannu", coordinates: [32.9889, 70.6056] },
       { name: "Waziristan", coordinates: [32.3617, 69.4306] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and essential minerals",
@@ -1212,43 +750,18 @@ export const productsData: Record<string, Product> = {
       "Storage: Ambient – maintains crunch and flavour.",
     ],
     description:
-      "Fresh, crunchy peanuts packed with protein and flavor. Available in various preparations to suit every taste.",
+      "Our peanuts are sourced from the best agricultural regions of Pakistan, known for producing high-quality groundnuts. Whether raw or roasted, shelled or unshelled, our peanuts deliver consistent quality and taste.",
     detailedDescription:
       "Our peanuts are sourced from the best agricultural regions of Pakistan, known for producing high-quality groundnuts. Whether raw or roasted, shelled or unshelled, our peanuts deliver consistent quality and taste. High in protein, healthy fats, and essential nutrients.",
     varieties: [
-      {
-        id: "para-chinar-shell",
-        name: "Para-Chinar Peanuts w Shell",
-        description:
-          "From the tribal belt of Para-Chinar in Kurram district, these peanuts are a traditional snack, roasted over open fire or coals. They have a smoky, savory flavor with a crunchy shell and are commonly sold in paper cones by street vendors. They're appreciated for their rustic, authentic taste and affordability.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
-      },
-      {
+          {
         id: "para-chinar-shelled",
-        name: "Para-Chinar Peanuts shelled",
-        description:
-          "From the tribal belt of Para-Chinar in Kurram district, these peanuts are a traditional snack, roasted over open fire or coals. They have a smoky, savory flavor with a crunchy shell and are commonly sold in paper cones by street vendors. They're appreciated for their rustic, authentic taste and affordability.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
+        name: "Para-Chinar Shelled",
+        availability: createAvailability([10, 11, 12, 1, 2, 3, 4]),
       },
-      {
-        id: "chakwali-roasted-shell",
-        name: "Chaqwali Peanuts Roasted w Shell",
-        description:
-          "Chaqwali peanuts are similar in use and flavor to Para-Chinar types, but are typically a bit smaller and have a more intense roasted profile. Often roasted with salt, they are commonly consumed in colder months and during festive gatherings.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
-      },
-      {
-        id: "chakwali-roasted-shelled",
-        name: "Chaqwali Peanuts Roasted shelled",
-        description:
-          "Chaqwali peanuts are similar in use and flavor to Para-Chinar types, but are typically a bit smaller and have a more intense roasted profile. Often roasted with salt, they are commonly consumed in colder months and during festive gatherings.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
-      },
-    ],
+         ],
     origins: [
       { name: "Parachinar", coordinates: [33.9019, 70.0719] },
-      { name: "Chakwal", coordinates: [32.9328, 72.8522] },
-      { name: "Attock", coordinates: [33.7667, 72.3667] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and niacin",
     type: "Peanut",
@@ -1269,43 +782,18 @@ export const productsData: Record<string, Product> = {
       "Storage: Ambient – retains natural oil balance.",
     ],
     description:
-      "Fresh, crunchy peanuts packed with protein and flavor. Available in various preparations to suit every taste.",
+      "Our peanuts are sourced from the best agricultural regions of Pakistan, known for producing high-quality groundnuts. Whether raw or roasted, shelled or unshelled, our peanuts deliver consistent quality and taste..",
     detailedDescription:
       "Our peanuts are sourced from the best agricultural regions of Pakistan, known for producing high-quality groundnuts. Whether raw or roasted, shelled or unshelled, our peanuts deliver consistent quality and taste. High in protein, healthy fats, and essential nutrients.",
     varieties: [
       {
-        id: "para-chinar-shell",
-        name: "Para-Chinar Peanuts w Shell",
-        description:
-          "From the tribal belt of Para-Chinar in Kurram district, these peanuts are a traditional snack, roasted over open fire or coals. They have a smoky, savory flavor with a crunchy shell and are commonly sold in paper cones by street vendors. They're appreciated for their rustic, authentic taste and affordability.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
-      },
-      {
-        id: "para-chinar-shelled",
-        name: "Para-Chinar Peanuts shelled",
-        description:
-          "From the tribal belt of Para-Chinar in Kurram district, these peanuts are a traditional snack, roasted over open fire or coals. They have a smoky, savory flavor with a crunchy shell and are commonly sold in paper cones by street vendors. They're appreciated for their rustic, authentic taste and affordability.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
-      },
-      {
-        id: "chakwali-roasted-shell",
-        name: "Chaqwali Peanuts Roasted w Shell",
-        description:
-          "Chaqwali peanuts are similar in use and flavor to Para-Chinar types, but are typically a bit smaller and have a more intense roasted profile. Often roasted with salt, they are commonly consumed in colder months and during festive gatherings.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
-      },
-      {
         id: "chakwali-roasted-shelled",
-        name: "Chaqwali Peanuts Roasted shelled",
-        description:
-          "Chaqwali peanuts are similar in use and flavor to Para-Chinar types, but are typically a bit smaller and have a more intense roasted profile. Often roasted with salt, they are commonly consumed in colder months and during festive gatherings.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
+        name: "Chaqwali Peanuts Shelled",
+        availability: createAvailability([10, 11, 12, 1, 2, 3, 4]),
       },
     ],
     origins: [
-      { name: "Parachinar", coordinates: [33.9019, 70.0719] },
       { name: "Chakwal", coordinates: [32.9328, 72.8522] },
-      { name: "Attock", coordinates: [33.7667, 72.3667] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and niacin",
     type: "Peanut",
@@ -1322,47 +810,22 @@ export const productsData: Record<string, Product> = {
       "Nutrient Power: High-quality produce cultivated in clean, mountainous terrain.",
       "Culinary Use: Perfect for gourmet roasted snacks, luxury peanut butter, salad toppers, and artisan baking.",
       "Origin: Para Chinar – known for dense, nutrient-rich soils.",
-      "Size: 45/50 per ounce.",
+      "Size: 13/18 per ounce.",
       "Storage: Ambient – maintains crunch and flavour.",
     ],
     description:
-      "Fresh, crunchy peanuts packed with protein and flavor. Available in various preparations to suit every taste.",
+      "Our peanuts are sourced from the best agricultural regions of Pakistan, known for producing high-quality groundnuts. Whether raw or roasted, shelled or unshelled, our peanuts deliver consistent quality and taste.",
     detailedDescription:
       "Our peanuts are sourced from the best agricultural regions of Pakistan, known for producing high-quality groundnuts. Whether raw or roasted, shelled or unshelled, our peanuts deliver consistent quality and taste. High in protein, healthy fats, and essential nutrients.",
     varieties: [
       {
-        id: "para-chinar-shell",
-        name: "Para-Chinar Peanuts w Shell",
-        description:
-          "From the tribal belt of Para-Chinar in Kurram district, these peanuts are a traditional snack, roasted over open fire or coals. They have a smoky, savory flavor with a crunchy shell and are commonly sold in paper cones by street vendors. They're appreciated for their rustic, authentic taste and affordability.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
+        id: "para-chinar-unshelled",
+        name: "Para-Chinar",
+        availability: createAvailability([10, 11, 12, 1, 2, 3, 4]),
       },
-      {
-        id: "para-chinar-shelled",
-        name: "Para-Chinar Peanuts shelled",
-        description:
-          "From the tribal belt of Para-Chinar in Kurram district, these peanuts are a traditional snack, roasted over open fire or coals. They have a smoky, savory flavor with a crunchy shell and are commonly sold in paper cones by street vendors. They're appreciated for their rustic, authentic taste and affordability.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
-      },
-      {
-        id: "chakwali-roasted-shell",
-        name: "Chaqwali Peanuts Roasted w Shell",
-        description:
-          "Chaqwali peanuts are similar in use and flavor to Para-Chinar types, but are typically a bit smaller and have a more intense roasted profile. Often roasted with salt, they are commonly consumed in colder months and during festive gatherings.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
-      },
-      {
-        id: "chakwali-roasted-shelled",
-        name: "Chaqwali Peanuts Roasted shelled",
-        description:
-          "Chaqwali peanuts are similar in use and flavor to Para-Chinar types, but are typically a bit smaller and have a more intense roasted profile. Often roasted with salt, they are commonly consumed in colder months and during festive gatherings.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
-      },
-    ],
+        ],
     origins: [
       { name: "Parachinar", coordinates: [33.9019, 70.0719] },
-      { name: "Chakwal", coordinates: [32.9328, 72.8522] },
-      { name: "Attock", coordinates: [33.7667, 72.3667] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and niacin",
     type: "Peanut",
@@ -1379,47 +842,22 @@ export const productsData: Record<string, Product> = {
       "Smooth Texture: Excellent for spreads and savory blends.",
       "Culinary Use: Creamy peanut butters, savory sauces, protein snacks, baking, and chocolates.",
       "Origin: Chakwal – Pothohar plateau, home to fine peanut farming.",
-      "Size: 50/55 per ounce.",
+      "Size: 25/30 per ounce.",
       "Storage: Ambient – retains natural oil balance.",
     ],
     description:
-      "Fresh, crunchy peanuts packed with protein and flavor. Available in various preparations to suit every taste.",
+      "Our peanuts are sourced from the best agricultural regions of Pakistan, known for producing high-quality groundnuts. Whether raw or roasted, shelled or unshelled, our peanuts deliver consistent quality and taste.",
     detailedDescription:
       "Our peanuts are sourced from the best agricultural regions of Pakistan, known for producing high-quality groundnuts. Whether raw or roasted, shelled or unshelled, our peanuts deliver consistent quality and taste. High in protein, healthy fats, and essential nutrients.",
     varieties: [
       {
-        id: "para-chinar-shell",
-        name: "Para-Chinar Peanuts w Shell",
-        description:
-          "From the tribal belt of Para-Chinar in Kurram district, these peanuts are a traditional snack, roasted over open fire or coals. They have a smoky, savory flavor with a crunchy shell and are commonly sold in paper cones by street vendors. They're appreciated for their rustic, authentic taste and affordability.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
-      },
-      {
-        id: "para-chinar-shelled",
-        name: "Para-Chinar Peanuts shelled",
-        description:
-          "From the tribal belt of Para-Chinar in Kurram district, these peanuts are a traditional snack, roasted over open fire or coals. They have a smoky, savory flavor with a crunchy shell and are commonly sold in paper cones by street vendors. They're appreciated for their rustic, authentic taste and affordability.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
-      },
-      {
         id: "chakwali-roasted-shell",
-        name: "Chaqwali Peanuts Roasted w Shell",
-        description:
-          "Chaqwali peanuts are similar in use and flavor to Para-Chinar types, but are typically a bit smaller and have a more intense roasted profile. Often roasted with salt, they are commonly consumed in colder months and during festive gatherings.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
+        name: "Chaqwali Peanuts",
+        availability: createAvailability([10, 11, 12, 1, 2, 3, 4]),
       },
-      {
-        id: "chakwali-roasted-shelled",
-        name: "Chaqwali Peanuts Roasted shelled",
-        description:
-          "Chaqwali peanuts are similar in use and flavor to Para-Chinar types, but are typically a bit smaller and have a more intense roasted profile. Often roasted with salt, they are commonly consumed in colder months and during festive gatherings.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
-      },
-    ],
+         ],
     origins: [
-      { name: "Parachinar", coordinates: [33.9019, 70.0719] },
       { name: "Chakwal", coordinates: [32.9328, 72.8522] },
-      { name: "Attock", coordinates: [33.7667, 72.3667] },
     ],
     nutritionalInfo: "High in protein, healthy fats, and niacin",
     type: "Peanut",
@@ -1448,14 +886,10 @@ export const productsData: Record<string, Product> = {
       {
         id: "fara-ka-kala-channa",
         name: "Fara Ka Kala Channa",
-        description:
-          "Smaller, darker grains with a firmer bite and concentrated flavor. Great for boiling, roasting, or pressure-cooking without turning mushy.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
+        availability: createAvailability([9, 10, 11, 12, 1, 2, 3, 4]),
       },
     ],
     origins: [
-      { name: "Chakwal", coordinates: [32.9328, 72.8522] },
-      { name: "Bhakkar", coordinates: [31.6333, 71.0667] },
       { name: "Layyah", coordinates: [30.9676, 70.9444] },
     ],
     nutritionalInfo: "High in plant protein, fiber, iron, and folate",
@@ -1473,28 +907,24 @@ export const productsData: Record<string, Product> = {
       "Rustic & Nutty: Brownish hue, firm bite, and rich, earthy flavour.",
       "Wholesome Taste: High satiety and traditional appeal.",
       "Culinary Use: Salads, mezze spreads, gourmet snack mixes, and healthy baking.",
-      "Origin: Thal – region recognized for traditional pulse farming.",
+      "Origin: Bhakkar – region recognized for traditional pulse farming.",
       "Size: 145/150 per ounce.",
       "Storage: Ambient – preserves natural firmness and nutrition.",
     ],
 
     description:
-      "Black chickpeas with a fuller grain and softer cook, perfect for chaats, pulao, and home-style gravies.",
+      "Traditional black chickpeas or Kalla Channa known for their earthy flavor, firm bite, and excellent nutritional profile.",
     detailedDescription:
       "Khilay Kala Channa features a slightly larger grain that cooks to a pleasantly soft, creamy center while retaining a wholesome chew. Its balanced, savory profile pairs well with classic South Asian spices, making it a favorite for festive chaats, pulao, and everyday gravies.",
     varieties: [
       {
         id: "khilay-kala-channa",
         name: "Khilay Kala Channa",
-        description:
-          "Slightly larger grains that hydrate well and cook evenly, yielding a softer texture ideal for chaats and gravies.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
+        availability: createAvailability([9, 10, 11, 12, 1, 2, 3, 4]),
       },
     ],
     origins: [
-      { name: "Chakwal", coordinates: [32.9328, 72.8522] },
       { name: "Bhakkar", coordinates: [31.6333, 71.0667] },
-      { name: "Layyah", coordinates: [30.9676, 70.9444] },
     ],
     nutritionalInfo: "Rich in protein, dietary fiber, and essential minerals",
     type: "Chickpea",
@@ -1511,26 +941,22 @@ export const productsData: Record<string, Product> = {
       "Rich & Healthy: Nutty, high in protein, ideal for modern and traditional recipes.",
       "Culinary Use: Savory high-protein snacks, hearty stews, soups, and slow-cooked Mediterranean dishes.",
       "Origin: Layyah – known for clean, consistent chickpea yields.",
-      "Size: 150/155 per ounce.",
+      "Size: 145/150 per ounce.",
       "Storage: Ambient – ensures freshness and firmness.",
     ],
     heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760633938/Faraka_Chanay_aiw3wc.png",
     description:
-      "Traditional black chickpeas known for their earthy flavor, firm bite, and excellent nutritional profile.",
+      "Traditional black chickpeas or Kalla Channa known for their earthy flavor, firm bite, and excellent nutritional profile.",
     detailedDescription:
       "Fara Ka Kala Channa is a traditional variety of black chickpeas prized for its dense texture and deep, nutty taste. It holds shape wonderfully when boiled, making it ideal for chaats, curries, and slow-cooked stews. Naturally rich in plant protein, fiber, iron, and folate, it provides sustained energy and supports a balanced diet.",
     varieties: [
       {
         id: "fara-ka-kala-channa",
         name: "Fara Ka Kala Channa",
-        description:
-          "Smaller, darker grains with a firmer bite and concentrated flavor. Great for boiling, roasting, or pressure-cooking without turning mushy.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
+        availability: createAvailability([9, 10, 11, 12, 1, 2, 3, 4]),
       },
     ],
     origins: [
-      { name: "Chakwal", coordinates: [32.9328, 72.8522] },
-      { name: "Bhakkar", coordinates: [31.6333, 71.0667] },
       { name: "Layyah", coordinates: [30.9676, 70.9444] },
     ],
     nutritionalInfo: "High in plant protein, fiber, iron, and folate",
@@ -1548,28 +974,24 @@ export const productsData: Record<string, Product> = {
       "Rustic & Nutty: Brownish hue, firm bite, and rich, earthy flavour.",
       "Wholesome Taste: High satiety and traditional appeal.",
       "Culinary Use: Salads, mezze spreads, gourmet snack mixes, and healthy baking.",
-      "Origin: Thal – region recognized for traditional pulse farming.",
-      "Size: 145/150 per ounce.",
+      "Origin: Bhakkar – region recognized for traditional pulse farming.",
+      "Size: 135/140 per ounce.",
       "Storage: Ambient – preserves natural firmness and nutrition.",
     ],
 
     description:
-      "Black chickpeas with a fuller grain and softer cook, perfect for chaats, pulao, and home-style gravies.",
+      "Traditional black chickpeas or Kalla Channa known for their earthy flavor, firm bite, and excellent nutritional profile.",
     detailedDescription:
       "Khilay Kala Channa features a slightly larger grain that cooks to a pleasantly soft, creamy center while retaining a wholesome chew. Its balanced, savory profile pairs well with classic South Asian spices, making it a favorite for festive chaats, pulao, and everyday gravies.",
     varieties: [
       {
         id: "khilay-kala-channa",
         name: "Khilay Kala Channa",
-        description:
-          "Slightly larger grains that hydrate well and cook evenly, yielding a softer texture ideal for chaats and gravies.",
-        availability: createAvailability([11, 12, 1, 2, 3, 4]),
+        availability: createAvailability([9, 10, 11, 12, 1, 2, 3, 4]),
       },
     ],
     origins: [
-      { name: "Chakwal", coordinates: [32.9328, 72.8522] },
       { name: "Bhakkar", coordinates: [31.6333, 71.0667] },
-      { name: "Layyah", coordinates: [30.9676, 70.9444] },
     ],
     nutritionalInfo: "Rich in protein, dietary fiber, and essential minerals",
     type: "Chickpea",
@@ -1590,28 +1012,18 @@ export const productsData: Record<string, Product> = {
     ],
     heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633943/Fig_regular_swzyz3.png",
     description:
-      "Sun-dried premium figs with natural sweetness and chewy texture. A healthy and delicious treat.",
+      "Naturally Sun-dried premium figs with natural sweetness and chewy texture. A healthy and delicious treat.",
     detailedDescription:
       "Our figs are carefully sun-dried to preserve their natural sweetness and nutritional benefits. These fiber-rich fruits are perfect for healthy snacking, baking, or adding to cereals and salads. Rich in fiber, potassium, and antioxidants, figs support digestive health and overall wellness.",
     varieties: [
       {
         id: "chitrali-regular",
-        name: "Chitrali Regular",
-        description:
-          "Chitrali figs come from the mountainous Chitral region in northern Pakistan, where they are sun-dried naturally without additives. The regular variety is chewy and sweet with a slightly earthy undertone. They are nutrient-dense and commonly consumed in winter for energy and digestion.",
-        availability: createAvailability([8, 9, 10, 11, 12, 1]),
-      },
-      {
-        id: "chitrali-premium",
-        name: "Chitrali Premium",
-        description:
-          "Chitrali figs come from the mountainous Chitral region in northern Pakistan, where they are sun-dried naturally without additives. The premium type is larger, plumper, and richer in flavor. They are nutrient-dense and commonly consumed in winter for energy and digestion.",
-        availability: createAvailability([8, 9, 10, 11, 12, 1]),
+        name: "Fig Regular ",
+        availability: createAvailability([5, 6, 7, 8, 9, 10, 11, 12]),
       },
     ],
     origins: [
       { name: "Chitral", coordinates: [35.8518, 71.7864] },
-      { name: "Dir", coordinates: [35.2058, 71.8786] },
     ],
     nutritionalInfo: "High in fiber, potassium, and antioxidants",
     type: "Fig",
@@ -1632,28 +1044,18 @@ export const productsData: Record<string, Product> = {
       "Storage: Ambient – retains sweetness and supple texture.",
     ],
     description:
-      "Sun-dried premium figs with natural sweetness and chewy texture. A healthy and delicious treat.",
+      "Naturally Sun-dried premium figs with natural sweetness and chewy texture. A healthy and delicious treat.",
     detailedDescription:
       "Our figs are carefully sun-dried to preserve their natural sweetness and nutritional benefits. These fiber-rich fruits are perfect for healthy snacking, baking, or adding to cereals and salads. Rich in fiber, potassium, and antioxidants, figs support digestive health and overall wellness.",
     varieties: [
       {
-        id: "chitrali-regular",
-        name: "Chitrali Regular",
-        description:
-          "Chitrali figs come from the mountainous Chitral region in northern Pakistan, where they are sun-dried naturally without additives. The regular variety is chewy and sweet with a slightly earthy undertone. They are nutrient-dense and commonly consumed in winter for energy and digestion.",
-        availability: createAvailability([8, 9, 10, 11, 12, 1]),
-      },
-      {
         id: "chitrali-premium",
-        name: "Chitrali Premium",
-        description:
-          "Chitrali figs come from the mountainous Chitral region in northern Pakistan, where they are sun-dried naturally without additives. The premium type is larger, plumper, and richer in flavor. They are nutrient-dense and commonly consumed in winter for energy and digestion.",
-        availability: createAvailability([8, 9, 10, 11, 12, 1]),
+        name: "Fig Premium",
+        availability: createAvailability([5, 6, 7, 8, 9, 10, 11, 12]),
       },
     ],
     origins: [
       { name: "Chitral", coordinates: [35.8518, 71.7864] },
-      { name: "Dir", coordinates: [35.2058, 71.8786] },
     ],
     nutritionalInfo: "High in fiber, potassium, and antioxidants",
     type: "Fig",
@@ -1678,32 +1080,14 @@ export const productsData: Record<string, Product> = {
     detailedDescription:
       "Our apricots come from the pristine valleys of northern Pakistan, where the climate produces fruits of exceptional quality. These sun-dried apricots retain their natural sweetness and are packed with vitamins A and C, fiber, and antioxidants. Perfect for healthy snacking and culinary applications.",
     varieties: [
-      {
-        id: "naag-seed",
-        name: "Naag w seed",
-        description:
-          "These apricots are dried whole, with the pit left intact, resulting in a smaller, denser fruit that offers a chewy, compact texture and an intensely concentrated, almond-like sweetness thanks to the nutty flavor imparted by the pit.",
-        availability: createAvailability([6, 7, 8, 9, 10]),
-      },
-      {
+           {
         id: "kishta-seedless",
         name: "Kishta without seed",
-        description:
-          "These apricots are carefully halved and sun-dried, achieving a moderately sized piece that maintains a well-balanced moisture level—neither too dry nor too soft. This method preserves their natural sweetness and chewy texture, offering a satisfying bite that's tender yet firm, with a sweet and slightly tart apricot flavor.",
-        availability: createAvailability([6, 7, 8, 9, 10]),
+        availability: createAvailability([7, 8, 9, 10, 11, 12, 1, 2, 3, 4]),
       },
-      {
-        id: "gol-seedless",
-        name: "Gol without seed",
-        description:
-          "These apricots are harvested at peak ripeness, then halved and pitted before being dried, resulting in large, round, and somewhat flattened pieces. Their generous size and soft texture make them exceptionally tender, offering a plush, melt-in-your-mouth experience while retaining a luscious, honeyed sweetness that's richer than whole-dried apricots.",
-        availability: createAvailability([6, 7, 8, 9, 10]),
-      },
-    ],
+         ],
     origins: [
       { name: "Hunza", coordinates: [36.3167, 74.65] },
-      { name: "Skardu", coordinates: [35.2971, 75.6333] },
-      { name: "Gilgit", coordinates: [35.92, 74.31] },
     ],
     nutritionalInfo: "Rich in vitamin A, vitamin C, and fiber",
     type: "Apricot",
@@ -1728,31 +1112,13 @@ export const productsData: Record<string, Product> = {
     detailedDescription:
       "Our apricots come from the pristine valleys of northern Pakistan, where the climate produces fruits of exceptional quality. These sun-dried apricots retain their natural sweetness and are packed with vitamins A and C, fiber, and antioxidants. Perfect for healthy snacking and culinary applications.",
     varieties: [
-      {
-        id: "naag-seed",
-        name: "Naag w seed",
-        description:
-          "These apricots are dried whole, with the pit left intact, resulting in a smaller, denser fruit that offers a chewy, compact texture and an intensely concentrated, almond-like sweetness thanks to the nutty flavor imparted by the pit.",
-        availability: createAvailability([6, 7, 8, 9, 10]),
-      },
-      {
-        id: "kishta-seedless",
-        name: "Kishta without seed",
-        description:
-          "These apricots are carefully halved and sun-dried, achieving a moderately sized piece that maintains a well-balanced moisture level—neither too dry nor too soft. This method preserves their natural sweetness and chewy texture, offering a satisfying bite that's tender yet firm, with a sweet and slightly tart apricot flavor.",
-        availability: createAvailability([6, 7, 8, 9, 10]),
-      },
-      {
+          {
         id: "gol-seedless",
         name: "Gol without seed",
-        description:
-          "These apricots are harvested at peak ripeness, then halved and pitted before being dried, resulting in large, round, and somewhat flattened pieces. Their generous size and soft texture make them exceptionally tender, offering a plush, melt-in-your-mouth experience while retaining a luscious, honeyed sweetness that's richer than whole-dried apricots.",
-        availability: createAvailability([6, 7, 8, 9, 10]),
+        availability: createAvailability([7, 8, 9, 10, 11, 12, 1, 2, 3, 4]),
       },
     ],
     origins: [
-      { name: "Hunza", coordinates: [36.3167, 74.65] },
-      { name: "Skardu", coordinates: [35.2971, 75.6333] },
       { name: "Gilgit", coordinates: [35.92, 74.31] },
     ],
     nutritionalInfo: "Rich in vitamin A, vitamin C, and fiber",
@@ -1781,29 +1147,11 @@ export const productsData: Record<string, Product> = {
       {
         id: "naag-seed",
         name: "Naag w seed",
-        description:
-          "These apricots are dried whole, with the pit left intact, resulting in a smaller, denser fruit that offers a chewy, compact texture and an intensely concentrated, almond-like sweetness thanks to the nutty flavor imparted by the pit.",
-        availability: createAvailability([6, 7, 8, 9, 10]),
+        availability: createAvailability([7, 8, 9, 10, 11, 12, 1, 2, 3, 4]),
       },
-      {
-        id: "kishta-seedless",
-        name: "Kishta without seed",
-        description:
-          "These apricots are carefully halved and sun-dried, achieving a moderately sized piece that maintains a well-balanced moisture level—neither too dry nor too soft. This method preserves their natural sweetness and chewy texture, offering a satisfying bite that's tender yet firm, with a sweet and slightly tart apricot flavor.",
-        availability: createAvailability([6, 7, 8, 9, 10]),
-      },
-      {
-        id: "gol-seedless",
-        name: "Gol without seed",
-        description:
-          "These apricots are harvested at peak ripeness, then halved and pitted before being dried, resulting in large, round, and somewhat flattened pieces. Their generous size and soft texture make them exceptionally tender, offering a plush, melt-in-your-mouth experience while retaining a luscious, honeyed sweetness that's richer than whole-dried apricots.",
-        availability: createAvailability([6, 7, 8, 9, 10]),
-      },
-    ],
+        ],
     origins: [
       { name: "Hunza", coordinates: [36.3167, 74.65] },
-      { name: "Skardu", coordinates: [35.2971, 75.6333] },
-      { name: "Gilgit", coordinates: [35.92, 74.31] },
     ],
     nutritionalInfo: "Rich in vitamin A, vitamin C, and fiber",
     type: "Apricot",
