@@ -35,9 +35,18 @@ const Navbar = () => {
   }
 
   // Handle navigation to product types page
-  const handleCategoryClick = (categoryName: string) => {
+  const handleCategoryClick = (categoryName: string, sectionType?: string) => {
     const categoryType = getCategoryType(categoryName)
-    navigate(`/product-types/${categoryType}`)
+    let url = `/product-types/${categoryType}`
+    
+    // Add query parameter based on section type
+    if (sectionType === 'shelled') {
+      url += '?type=shelled'
+    } else if (sectionType === 'whole') {
+      url += '?type=unshelled'
+    }
+    
+    navigate(url)
     // Close the dropdown menus
     setHoveredMenu(null)
     setHoveredSubMenu(null)
@@ -145,7 +154,7 @@ const Navbar = () => {
                             >
                               <div 
                                 className="dropdown-item-content clickable"
-                                onClick={() => handleCategoryClick(itemName)}
+                                onClick={() => handleCategoryClick(itemName, menu.key)}
                               >
                                 {itemName}
                                 {subItems.length > 0 && <span className="arrow-right">‹</span>}

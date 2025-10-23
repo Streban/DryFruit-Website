@@ -1,15 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { productsData, type Product } from '../data/productsData';
 import './ProductTypes.css';
 
 const ProductTypes: React.FC = () => {
   const navigate = useNavigate();
   const { categoryName } = useParams<{ categoryName: string }>();
+  const [searchParams] = useSearchParams();
   const [selectedSubtype, setSelectedSubtype] = useState<'shelled' | 'unshelled'>('shelled');
+  
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []); 
+    
+    // Read query parameter to set initial button state
+    const typeParam = searchParams.get('type');
+    if (typeParam === 'shelled') {
+      setSelectedSubtype('shelled');
+    } else if (typeParam === 'unshelled') {
+      setSelectedSubtype('unshelled');
+    }
+  }, [searchParams]); 
   // Convert URL parameter back to category name
   const getCategoryDisplayName = (urlName: string | undefined): string => {
     if (!urlName) return '';
