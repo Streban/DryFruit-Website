@@ -93,7 +93,6 @@ const ContactBottomBar: React.FC = () => {
       fill: "#0077B5",
       cursor: "pointer",
       transition: "all 0.3s ease",
-      marginLeft:'-0.3rem'
     },
     link: {
       color: "white",
@@ -204,7 +203,7 @@ const ContactBottomBar: React.FC = () => {
           </div>
 
           <div style={styles.socialIcons}>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">
+            <a href="https://www.facebook.com/people/Nutrinoix/61582638035255" target="_blank" rel="noreferrer">
               <svg
                 style={styles.facebookIcon}
                 className="social-icon facebook-icon"

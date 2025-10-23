@@ -643,7 +643,7 @@ function App() {
                 <div className="container">
                   <h2>Follow us on the networks</h2>
                   <div className="social-grid">
-                    <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-card facebook">
+                    <a href="https://www.facebook.com/people/Nutrinoix/61582638035255/" target="_blank" rel="noreferrer" className="social-card facebook">
                       <div className="social-icon">
                         <svg
                           width="24"
