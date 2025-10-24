@@ -479,7 +479,7 @@ export const productsData: Record<string, Product> = {
     name: "Swat-Dir Walnuts",
     navLink:'SwatdirWalnutsShelled',
     navName: "Swat-Dir",
-    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1761088801/Swat-dir_walnut_shelled_emzjwt.jpg",
+    heroImage: "https://res.cloudinary.com/dfrlrzsnk/image/upload/v1760633944/Kaghzi_Walnut_Shelled_bv9tso.png",
     coverPhoto: "https://res.cloudinary.com/dfrlrzsnk/image/upload/f_auto,q_auto,w_1600/v1760634034/walnut_cr2swc.webp",
     points: [
       "Mildly Sweet & Soft: Subtle sweetness with faint bitterness and an oily texture.",
