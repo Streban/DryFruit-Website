@@ -39,22 +39,45 @@ const ContactUs: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
     
-    // Reset form
-    setFormData({
-      companyName: '',
-      name: '',
-      businessType: [],
-      email: '',
-      phone: '',
-      postalCode: '',
-      message: ''
-    });
+    try {
+      const response = await fetch('https://formspree.io/f/xvgvzpee', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          companyName: formData.companyName,
+          name: formData.name,
+          businessType: formData.businessType.join(', '),
+          email: formData.email,
+          phone: formData.phone,
+          postalCode: formData.postalCode,
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        alert('Thank you for your message! We will get back to you soon.');
+        // Reset form
+        setFormData({
+          companyName: '',
+          name: '',
+          businessType: [],
+          email: '',
+          phone: '',
+          postalCode: '',
+          message: ''
+        });
+      } else {
+        alert('Oops! There was a problem submitting your form. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Oops! There was a problem submitting your form. Please try again.');
+    }
   };
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
