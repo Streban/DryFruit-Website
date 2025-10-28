@@ -31,3 +31,88 @@
   fill: #29b6f6 !important;
   transform: scale(1.1);
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .contact-bottom-wrapper {
+    padding: 2rem 0 !important;
+  }
+
+  .contact-bottom-container {
+    flex-direction: column !important;
+    width: 95% !important;
+    align-items: center !important;
+  }
+
+  .contact-column-left {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding-right: 0 !important;
+    padding-bottom: 2rem !important;
+    width: 100%;
+    text-align: center !important;
+  }
+
+  .contact-column-left > div {
+    justify-content: center !important;
+  }
+
+  .contact-column-middle {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 2rem 1rem !important;
+    text-align: center !important;
+    width: 100%;
+    font-size: 14px !important;
+  }
+
+  .contact-column-right {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 2rem 0 !important;
+    padding-left: 0 !important;
+    width: 100%;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .contact-social-icons {
+    flex-direction: row !important;
+    justify-content: center !important;
+    padding-top: 2rem !important;
+    padding-bottom: 1rem !important;
+    margin-left: 0 !important;
+    gap: 2rem !important;
+  }
+}
+
+/* Tablet Responsive Styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .contact-bottom-container {
+    flex-wrap: wrap !important;
+    width: 95% !important;
+  }
+
+  .contact-column-left {
+    flex: 1 1 45% !important;
+    min-width: 250px;
+    margin-bottom: 2rem;
+  }
+
+  .contact-column-middle {
+    flex: 1 1 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 2rem !important;
+  }
+
+  .contact-column-right {
+    flex: 1 1 45% !important;
+    min-width: 250px;
+    padding-left: 2rem !important;
+  }
+
+  .contact-social-icons {
+    margin-left: 2rem !important;
+  }
+}

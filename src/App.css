@@ -68,7 +68,9 @@ body {
   display: flex;
   align-items: center;
 }
-
+.ComapnyName{
+  font-size: 5rem;
+}
 /* Comprehensive laptop screen responsive design */
 
 /* Large laptops (1600px and above) */
@@ -1330,6 +1332,11 @@ body {
     width: 180px;
     height: 180px;
   }
+  
+  .products-button {
+    display: block;
+    margin: 0 auto;
+  }
 
   .stats-grid {
     grid-template-columns: 1fr;
@@ -1490,6 +1497,12 @@ body {
   .product-photo {
     width: 150px;
     height: 150px;
+  }
+  
+  .products-button {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
   }
 
   .timeline-year {

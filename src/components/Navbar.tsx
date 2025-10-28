@@ -1,21 +1,78 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { productsData } from '../data/productsData'
 import './Navbar.css'
 
 const Navbar = () => {
+  // Desktop hover states
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null)
   const [hoveredSubMenu, setHoveredSubMenu] = useState<string | null>(null)
   const [hoveredThirdMenu, setHoveredThirdMenu] = useState<string | null>(null)
+  
+  // Mobile menu states
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [mobileExpandedMenu, setMobileExpandedMenu] = useState<string | null>(null)
+  const [mobileExpandedSubMenu, setMobileExpandedSubMenu] = useState<string | null>(null)
+  const [mobileExpandedThirdMenu, setMobileExpandedThirdMenu] = useState<string | null>(null)
+  const [isMobile, setIsMobile] = useState(false)
+  
   const navigate = useNavigate()
+
+  // Detect mobile viewport
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 767)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false)
+    setMobileExpandedMenu(null)
+    setMobileExpandedSubMenu(null)
+    setMobileExpandedThirdMenu(null)
+  }, [navigate])
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isMobileMenuOpen])
+
+  // Toggle mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+    if (isMobileMenuOpen) {
+      // Reset all expanded states when closing
+      setMobileExpandedMenu(null)
+      setMobileExpandedSubMenu(null)
+      setMobileExpandedThirdMenu(null)
+    }
+  }
 
   // Handle navigation to product page
   const handleProductClick = (productId: string) => {
     navigate(`/product/${productId}`)
-    // Close the dropdown menus
+    // Close all menus
     setHoveredMenu(null)
     setHoveredSubMenu(null)
     setHoveredThirdMenu(null)
+    setIsMobileMenuOpen(false)
+    setMobileExpandedMenu(null)
+    setMobileExpandedSubMenu(null)
+    setMobileExpandedThirdMenu(null)
   }
 
   // Map category names to URL-friendly types that ProductTypes expects
@@ -47,10 +104,30 @@ const Navbar = () => {
     }
     
     navigate(url)
-    // Close the dropdown menus
+    // Close all menus
     setHoveredMenu(null)
     setHoveredSubMenu(null)
     setHoveredThirdMenu(null)
+    setIsMobileMenuOpen(false)
+    setMobileExpandedMenu(null)
+    setMobileExpandedSubMenu(null)
+    setMobileExpandedThirdMenu(null)
+  }
+
+  // Mobile menu toggle handlers
+  const toggleMobileMainMenu = () => {
+    setMobileExpandedMenu(mobileExpandedMenu === 'products' ? null : 'products')
+    setMobileExpandedSubMenu(null)
+    setMobileExpandedThirdMenu(null)
+  }
+
+  const toggleMobileSubMenu = (key: string) => {
+    setMobileExpandedSubMenu(mobileExpandedSubMenu === key ? null : key)
+    setMobileExpandedThirdMenu(null)
+  }
+
+  const toggleMobileThirdMenu = (itemName: string) => {
+    setMobileExpandedThirdMenu(mobileExpandedThirdMenu === itemName ? null : itemName)
   }
 
   const dryFruitMap: Record<string, string[]> = {
@@ -91,41 +168,97 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+      {/* Mobile menu backdrop overlay */}
+      {isMobileMenuOpen && (
+        <div 
+          className="mobile-menu-backdrop"
+          onClick={toggleMobileMenu}
+          aria-hidden="true"
+        />
+      )}
+
       <div className="navbar-container">
-        <Link to="/" className="logo-link">
+        <Link 
+          to="/" 
+          className="logo-link"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
           <img src="/assets/images/latestphotos/Nutrinoix LOGO wb.png" alt="Logo" className="logo-img" />
           <span className="logo-text">Nutrinoix</span>
         </Link>
 
-        <ul className="navbar-menu">
+        {/* Hamburger Menu Button */}
+        <button 
+          className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
+          onClick={toggleMobileMenu}
+          aria-label="Toggle menu"
+          aria-expanded={isMobileMenuOpen}
+        >
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
+
+        <ul className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           <li className="navbar-item">
-            <Link to="/about" className="navbar-link">About Us</Link>
+            <Link 
+              to="/about" 
+              className="navbar-link"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              About Us
+            </Link>
           </li>
 
           <li className="navbar-item">
-            <Link to="/mission" className="navbar-link">Our Mission</Link>
+            <Link 
+              to="/mission" 
+              className="navbar-link"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Our Mission
+            </Link>
           </li>
 
           <li
             className="navbar-item dropdown"
-            onMouseEnter={() => setHoveredMenu('products')}
+            onMouseEnter={() => !isMobile && setHoveredMenu('products')}
             onMouseLeave={() => {
-              setHoveredMenu(null)
-              setHoveredSubMenu(null)
-              setHoveredThirdMenu(null)
+              if (!isMobile) {
+                setHoveredMenu(null)
+                setHoveredSubMenu(null)
+                setHoveredThirdMenu(null)
+              }
             }}
           >
             <button 
               className="navbar-link dropdown-toggle"
-              onClick={() => navigate('/explore-products')}
+              onClick={() => {
+                if (isMobile) {
+                  toggleMobileMainMenu()
+                } else {
+                  navigate('/explore-products')
+                }
+              }}
             >
               Our Products
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg 
+                width="14" 
+                height="14" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+                style={isMobile && mobileExpandedMenu === 'products' ? { transform: 'rotate(180deg)' } : {}}
+              >
                 <path d="M6 9l6 6 6-6" />
               </svg>
             </button>
 
-            {hoveredMenu === 'products' && (
+            {/* Desktop Dropdown (hover-based) */}
+            {!isMobile && hoveredMenu === 'products' && (
               <div className="dropdown-menu main-dropdown">
                 {menuData.map((menu) => (
                   <div
@@ -182,10 +315,94 @@ const Navbar = () => {
                 ))}
               </div>
             )}
+
+            {/* Mobile Dropdown (click-based) */}
+            {isMobile && mobileExpandedMenu === 'products' && (
+              <div className="mobile-dropdown-menu">
+                {menuData.map((menu) => (
+                  <div key={menu.key} className="mobile-dropdown-section">
+                    <div 
+                      className="mobile-dropdown-item parent-item"
+                      onClick={() => toggleMobileSubMenu(menu.key)}
+                    >
+                      <span>{menu.title}</span>
+                      <svg 
+                        width="14" 
+                        height="14" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2"
+                        style={mobileExpandedSubMenu === menu.key ? { transform: 'rotate(180deg)' } : {}}
+                      >
+                        <path d="M6 9l6 6 6-6" />
+                      </svg>
+                    </div>
+
+                    {mobileExpandedSubMenu === menu.key && (
+                      <div className="mobile-dropdown-submenu">
+                        {Object.entries(categoryToMap(menu.key as 'dry' | 'whole' | 'shelled')).map(
+                          ([itemName, subItems]) => (
+                            <div key={itemName} className="mobile-dropdown-subsection">
+                              <div 
+                                className="mobile-dropdown-item category-item"
+                                onClick={(e) => {
+                                  if (subItems.length === 0) {
+                                    handleCategoryClick(itemName, menu.key)
+                                  } else {
+                                    e.stopPropagation()
+                                    toggleMobileThirdMenu(itemName)
+                                  }
+                                }}
+                              >
+                                <span>{itemName}</span>
+                                {subItems.length > 0 && (
+                                  <svg 
+                                    width="12" 
+                                    height="12" 
+                                    viewBox="0 0 24 24" 
+                                    fill="none" 
+                                    stroke="currentColor" 
+                                    strokeWidth="2"
+                                    style={mobileExpandedThirdMenu === itemName ? { transform: 'rotate(180deg)' } : {}}
+                                  >
+                                    <path d="M6 9l6 6 6-6" />
+                                  </svg>
+                                )}
+                              </div>
+
+                              {mobileExpandedThirdMenu === itemName && subItems.length > 0 && (
+                                <div className="mobile-dropdown-products">
+                                  {subItems.map((sub) => (
+                                    <div 
+                                      key={sub} 
+                                      className="mobile-dropdown-item product-item"
+                                      onClick={() => handleProductClick(sub)}
+                                    >
+                                      {productsData[sub]?.navName || sub}
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          )
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
           </li>
 
           <li className="navbar-item">
-            <Link to="/contact" className="navbar-link">Contact</Link>
+            <Link 
+              to="/contact" 
+              className="navbar-link"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </div>

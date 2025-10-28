@@ -118,9 +118,9 @@ const ContactBottomBar: React.FC = () => {
 
   return (
     <>
-      <div style={styles.wrapper}>
-        <div style={styles.container}>
-          <div style={styles.columnLeft}>
+      <div style={styles.wrapper} className="contact-bottom-wrapper">
+        <div style={styles.container} className="contact-bottom-container">
+          <div style={styles.columnLeft} className="contact-column-left">
             <img
               src="/assets/images/latestphotos/Nutrinoix LOGO wb.png"
               alt="Logo"
@@ -174,7 +174,7 @@ const ContactBottomBar: React.FC = () => {
             <a style={styles.link}></a>
           </div>
 
-          <div style={styles.columnMiddle}>
+          <div style={styles.columnMiddle} className="contact-column-middle">
             Our company, born in Lyon from the alliance between a French and a
             Pakistani entrepreneur, builds a direct bridge between Pakistan and
             European professionals. Based in Lahore, we specialized in the trade
@@ -182,7 +182,7 @@ const ContactBottomBar: React.FC = () => {
             ensure quality and traceability.
           </div>
 
-          <div style={styles.columnRight}>
+          <div style={styles.columnRight} className="contact-column-right">
             <a style={styles.link} onClick={() => navigate("/about")}>
               About us
             </a>
@@ -203,7 +203,7 @@ const ContactBottomBar: React.FC = () => {
             <a style={styles.link}></a>
           </div>
 
-          <div style={styles.socialIcons}>
+          <div style={styles.socialIcons} className="contact-social-icons">
             <a
               href="https://www.facebook.com/people/Nutrinoix/61582638035255"
               target="_blank"

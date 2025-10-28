@@ -154,7 +154,7 @@ function App() {
                           Taste, Trusted Supply
                         </span>
                         <br />
-                        <span style={{ fontSize: "5rem" }}>
+                        <span className="CompanyName">
 
                         Nutrinoix
                         </span>
